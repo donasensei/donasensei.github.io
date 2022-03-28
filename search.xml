@@ -614,6 +614,34 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
       </tags>
   </entry>
   <entry>
+    <title>Mathjax 작성법</title>
+    <url>/2022/03/27/2022/03/mathjax-test/</url>
+    <content><![CDATA[<p>이산수학 관련 게시글을 위한 Mathjax 예시들을 몇개 적어보자.</p>
+<p><span class="math display">\[a^2 + b^2 = c^2\]</span></p>
+<p>기본적으로 <code>\[’원하는 식\]</code> 의 형태이다.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\[a^2 + b^2 = c^2\]</span><br></pre></td></tr></table></figure>
+<p>만약 문장 안쪽에 식을 적고 싶다면 <code>\( 원하는 식) ]\</code> 처럼
+사용한다.</p>
+<p><span class="math display">\[ A = \begin{pmatrix} P &amp; Q \\ R
+&amp; S \end{pmatrix} \]</span></p>
+<p><span class="math display">\[ \text{The function \(f\) is not defined
+at \(a\).} \]</span></p>
+<p><span class="math display">\[ P = \left\{ x \,\vert\, x \text{ is a
+positive real number.} \right\}\]</span></p>
+<p><span class="math display">\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k}
+\mathbf{B}\_{k,p} \]</span></p>
+<p><br></p>
+<p><strong>WIP...</strong></p>
+]]></content>
+      <categories>
+        <category>Mathjax</category>
+      </categories>
+      <tags>
+        <tag>mathjax</tag>
+        <tag>kramdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Kramdown 작성법</title>
     <url>/2022/03/27/2022/03/kramdown-write/</url>
     <content><![CDATA[<h1 id="목차">목차</h1>
@@ -817,34 +845,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       <tags>
         <tag>kramdown</tag>
         <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mathjax 작성법</title>
-    <url>/2022/03/27/2022/03/mathjax-test/</url>
-    <content><![CDATA[<p>이산수학 관련 게시글을 위한 Mathjax 예시들을 몇개 적어보자.</p>
-<p><span class="math display">\[a^2 + b^2 = c^2\]</span></p>
-<p>기본적으로 <code>\[’원하는 식\]</code> 의 형태이다.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\[a^2 + b^2 = c^2\]</span><br></pre></td></tr></table></figure>
-<p>만약 문장 안쪽에 식을 적고 싶다면 <code>\( 원하는 식) ]\</code> 처럼
-사용한다.</p>
-<p><span class="math display">\[ A = \begin{pmatrix} P &amp; Q \\ R
-&amp; S \end{pmatrix} \]</span></p>
-<p><span class="math display">\[ \text{The function \(f\) is not defined
-at \(a\).} \]</span></p>
-<p><span class="math display">\[ P = \left\{ x \,\vert\, x \text{ is a
-positive real number.} \right\}\]</span></p>
-<p><span class="math display">\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k}
-\mathbf{B}\_{k,p} \]</span></p>
-<p><br></p>
-<p><strong>WIP...</strong></p>
-]]></content>
-      <categories>
-        <category>Mathjax</category>
-      </categories>
-      <tags>
-        <tag>kramdown</tag>
-        <tag>mathjax</tag>
       </tags>
   </entry>
   <entry>
