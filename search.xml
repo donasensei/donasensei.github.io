@@ -79,6 +79,7 @@ dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는
 때문이다.</p>
 <p>그 기준이 되는 크기가 <span
 class="math inline">\(\mathrm{dB_{spl}}\)</span>이다.</p>
+<hr />
 <h1 id="mathrmdb_spl"><span
 class="math inline">\(\mathrm{dB_{spl}}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dB_{spl}}\)</span>은 Sound
@@ -91,17 +92,20 @@ class="math display">\[L_{\mathrm{dB_{spl}}}/\mathrm{dB_{spl}} =
 <p>이 <span class="math inline">\(\mathrm{dB_{spl}}\)</span>이 보통 소음
 측정등에서 말하는 데시벨 측정이다. 통상 spl을 생략하여 말하기 때문에
 dB와 혼동하는 경우가 많다.</p>
+<hr />
 <h1 id="mathrmdbm"><span
 class="math inline">\(\mathrm{dBm}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dBm}\)</span>은 1mW을 기준으로
 하는 dB scale이다. 1mW를 기준으로 하긴 하지만 임피던스에 따라 바뀔 수도
 있다. 통상, 50Ω이나 75Ω에서 1mW를 0dBm이라고 한다.</p>
+<hr />
 <h1 id="mathrmdbu"><span
 class="math inline">\(\mathrm{dBu}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dBu}\)</span>는 <span
 class="math inline">\(\mathrm{dBm}\)</span>에서 600Ω에서의 1mW를
 기준으로 잡는 방식이다. 계산하면, <span class="math display">\[V_{ref} =
 √(1mW × 600Ω) ≈ 0.775V_{rms}\]</span> 0.775Vrms를 기준점으로 한다.</p>
+<hr />
 <h1 id="mathrmdbv"><span
 class="math inline">\(\mathrm{dBV}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dBV}\)</span>는 dBu와 달리 전압이
@@ -109,6 +113,7 @@ class="math inline">\(\mathrm{dBV}\)</span></h1>
 class="math display">\[L\mathrm{_{dBV}} =
 20\log_{10}(\frac{V_1}{V_{ref}})\]</span></p>
 <p>사실상 식은 크게 바뀌지 않고 기준만 바뀔 뿐이다.</p>
+<hr />
 <h1 id="mathrmdbfs"><span
 class="math inline">\(\mathrm{dBFS}\)</span></h1>
 <p>디지털에서의 0dB는 아날로그와 달리 Max Level을 의미한다. 아날로그의
@@ -136,212 +141,6 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
         <tag>dBV</tag>
         <tag>dBu</tag>
         <tag>dBFS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kramdown 작성법</title>
-    <url>/2022/03/27/2022/03/kramdown-write/</url>
-    <content><![CDATA[<h1 id="목차">목차</h1>
-<ul>
-<li><a href="#목차">목차</a></li>
-<li><a href="#헤더">헤더</a></li>
-<li><a href="#텍스트-스타일">텍스트 스타일</a></li>
-<li><a href="#이미지">이미지</a></li>
-<li><a href="#각주">각주</a></li>
-<li><a href="#블록-인용구">블록 인용구</a></li>
-<li><a href="#리스트">리스트</a></li>
-<li><a href="#테이블">테이블</a></li>
-<li><a href="#링크">링크</a></li>
-<li><a href="#유튜브">유튜브</a></li>
-<li><a href="#체크박스">체크박스</a></li>
-</ul>
-<p><strong>코드</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [<span class="string">목차</span>](<span class="link">#목차</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">헤더</span>](<span class="link">#헤더</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">텍스트 스타일</span>](<span class="link">#텍스트-스타일</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">이미지</span>](<span class="link">#이미지</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">각주</span>](<span class="link">#각주</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">블록 인용구</span>](<span class="link">#블록-인용구</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">리스트</span>](<span class="link">#리스트</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">테이블</span>](<span class="link">#테이블</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">링크</span>](<span class="link">#링크</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">유튜브</span>](<span class="link">#유튜브</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">체크박스</span>](<span class="link">#체크박스</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="헤더">헤더</h1>
-<p><code>This is Header1</code> <code>===============</code>
-<code>This is Header2</code> <code>---------------</code> <br></p>
-<p><strong>코드</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">This is Header1</span></span><br><span class="line"><span class="section">===============</span></span><br><span class="line"><span class="section">This is Header2</span></span><br><span class="line"><span class="section">---------------</span></span><br></pre></td></tr></table></figure>
-<p>다른 방법으로는 H1, H2, ..., H6에 #을 붙이는 방법이 있다.</p>
-<p><code># Header1</code> <code>## Header2</code>
-<code>### Header3</code> <code>#### Header4</code>
-<code>##### Header5</code> <code>###### Header6</code> <br></p>
-<p><strong>코드</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Header1</span></span><br><span class="line"><span class="section">## Header2</span></span><br><span class="line"><span class="section">### Header3</span></span><br><span class="line"><span class="section">#### Header4</span></span><br><span class="line"><span class="section">##### Header5</span></span><br><span class="line"><span class="section">###### Header6</span></span><br></pre></td></tr></table></figure>
-<h1 id="텍스트-스타일">텍스트 스타일</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Markdown</th>
-<th style="text-align: center;">Rendered Output</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>*Be Italic*</code></td>
-<td style="text-align: center;"><em>Be Italic</em></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>_Be Italic_</code></td>
-<td style="text-align: center;"><em>Be Italic</em></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>**Be Bold**</code></td>
-<td style="text-align: center;"><strong>Be Bold</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>__Be Bold__</code></td>
-<td style="text-align: center;"><strong>Be Bold</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>`Code Spans`</code></td>
-<td style="text-align: center;"><code>Code Spans</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| Markdown           | Rendered Output |</span><br><span class="line">| :----------------- | :-------------: |</span><br><span class="line">| <span class="code">`*Be Italic*`</span>      |   <span class="emphasis">*Be Italic*</span>   |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>      |   <span class="emphasis">_Be Italic_</span>   |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>      |   <span class="strong">**Be Bold**</span>   |</span><br><span class="line">| <span class="code">`__Be Bold__`</span>      |   <span class="strong">__Be Bold__</span>   |</span><br><span class="line">| <span class="code">`` `</span>Code Spans<span class="code">` `</span><span class="code">` |  `</span>Code Spans`   |</span><br></pre></td></tr></table></figure></p>
-<h1 id="이미지">이미지</h1>
-<figure>
-<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4"
-alt="DJ_MORIKUBO" />
-<figcaption aria-hidden="true">DJ_MORIKUBO</figcaption>
-</figure>
-<p>이미지 첨부는 <code>![대체_텍스트](이미지_경로)</code>처럼 사용한다.
-<br></p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">DJ_MORIKUBO</span>](<span class="link">https://avatars.githubusercontent.com/u/99321942?v=4</span>)</span><br></pre></td></tr></table></figure> <br></p>
-<p><img data-src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="A" width="100%" height="auto"></p>
-<p>이미지 크기 조절이 필요할 경우, <code>&lt;img&gt;</code>태그를
-사용한다. <br></p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://avatars.githubusercontent.com/u/99321942?v=4&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;DJ_MORIKUBO&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;auto&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure> <br></p>
-<p align="center">
-<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="DJ_MORIKUBO">
-</p>
-<p>가운데 정렬은 <code>&lt;img&gt;</code>태그를
-<code>&lt;p&gt;</code>태그로 감싸고 <code>align="center"</code> 속성을
-주는 방식으로 사용한다. <br></p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://avatars.githubusercontent.com/u/99321942?v=4&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;DJ_MORIKUBO&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br></pre></td></tr></table></figure> <br></p>
-<h1 id="각주">각주</h1>
-<details>
-<summary>
-펼쳐보기
-</summary>
-<p>How to Print in Python<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>.<br />
-How to Print in Rust<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>.</p>
-<p>내 환경에 작동하지 않는다.</p>
-<strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; How to Print in Python[^1].  </span></span><br><span class="line"><span class="quote">&gt; How to Print in Rust[^2].</span></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">`print(&quot;Hello, world!&quot;)`</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">`fn main() &#123; println!(&quot;Hello, world!&quot;); &#125;`</span></span><br></pre></td></tr></table></figure>
-</details>
-<h1 id="블록-인용구">블록 인용구</h1>
-<blockquote>
-<p>Main Blockquote &gt; Sub Blockquote &gt;&gt; SubSub Blockquote
-&gt;&gt;&gt; And so on... <br></p>
-</blockquote>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; Main Blockquote</span></span><br><span class="line">&gt;&gt; Sub Blockquote</span><br><span class="line">&gt;&gt;&gt; SubSub Blockquote</span><br><span class="line">&gt;&gt;&gt;&gt; And so on...</span><br></pre></td></tr></table></figure></p>
-<h1 id="리스트">리스트</h1>
-<p>Ordered List is... 1. List 2. List 3. List 1. New list 2. New List 4.
-List <br></p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Ordered List is...</span><br><span class="line"><span class="bullet">1.</span> List</span><br><span class="line"><span class="bullet">2.</span> List</span><br><span class="line"><span class="bullet">3.</span> List</span><br><span class="line"><span class="bullet">    1.</span> New list</span><br><span class="line"><span class="bullet">    2.</span> New List</span><br><span class="line"><span class="bullet">4.</span> List</span><br></pre></td></tr></table></figure></p>
-<p>순서가 없는 경우<br />
-Unordered List is... * List - List + List * New list - New List + List
-<br></p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Unordered List is...</span><br><span class="line"><span class="bullet">*</span> List</span><br><span class="line"><span class="bullet">-</span> List</span><br><span class="line"><span class="bullet">+</span> List</span><br><span class="line"><span class="bullet">    *</span> New list</span><br><span class="line"><span class="bullet">    -</span> New List</span><br><span class="line"><span class="bullet">+</span> List</span><br></pre></td></tr></table></figure></p>
-<h1 id="테이블">테이블</h1>
-<div class="overflow-table" data-markdown="block">
-<table>
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 43%" />
-<col style="width: 26%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Markdown</th>
-<th style="text-align: left;">HTML</th>
-<th style="text-align: center;">Rendered Output</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>[Example Link](#link)</code></td>
-<td
-style="text-align: left;"><code>&lt;a href="#link"&gt;Example Link&lt;/a&gt;</code></td>
-<td style="text-align: center;"><a href="#Link">Example Link</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>_Be Italic_</code></td>
-<td
-style="text-align: left;"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
-<td style="text-align: center;"><em>Be Italic</em></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>**Be Bold**</code></td>
-<td
-style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
-<td style="text-align: center;"><strong>Be Bold</strong></td>
-</tr>
-</tbody>
-</table>
-<p>테이블의 경우 개인 설정에 따라 다를 수 있다.</p>
-</div>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;overflow-table&quot;</span> <span class="attr">markdown</span>=<span class="string">&quot;block&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">| Markdown                | HTML                               |    Rendered Output    |</span><br><span class="line">| :---------------------- | :--------------------------------- | :-------------------: |</span><br><span class="line">| <span class="code">`[Example Link](#link)`</span> | <span class="code">`&lt;a href=&quot;#link&quot;&gt;Example Link&lt;/a&gt;`</span> | [<span class="string">Example Link</span>](<span class="link">#Link</span>) |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>           | <span class="code">`&lt;em&gt;Be Italic&lt;em/&gt;`</span>               |      <span class="emphasis">_Be Italic_</span>      |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>           | <span class="code">`&lt;strong&gt;Be Italic&lt;strong/&gt;`</span>       |      <span class="strong">**Be Bold**</span>      |</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<h1 id="링크">링크</h1>
-<ul>
-<li>Basic Link : <a href="https://github.com/donasensei">Github</a></li>
-<li>Open New Tab : <a
-href="https://github.com/donasensei">Github</a>{:target="_blank"}
-<br></li>
-</ul>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> Basic Link : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)</span><br><span class="line"><span class="bullet">-</span> Open New Tab : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)&#123;:target=&quot;<span class="emphasis">_blank&quot;&#125;</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="유튜브">유튜브</h1>
-<p><a href="https://youtu.be/RBmWaW-3Cug"
-title="HIMEHINA『3分ガール』MV"><img
-src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg"
-alt="HIMEHINA『3分ガール』MV" /></a> <br></p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![HIMEHINA『3分ガール』MV</span>](<span class="link">https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg</span>)](<span class="link">https://youtu.be/RBmWaW-3Cug &quot;HIMEHINA『3分ガール』MV&quot;</span>)</span><br></pre></td></tr></table></figure> 사실상 이미지에 링크를 걸어주는
-방식이라 이런 방법도 가능하다.</p>
-<!-- Stellar Stellar / 星街すいせい(official) -->
-<p align="center">
-<a href="https://youtu.be/a51VH9BYzZA" target="_blank">
-<img data-src="https://img.youtube.com/vi/a51VH9BYzZA/0.jpg" alt="Stellar Stellar / 星街すいせい(official)" width="100%" height="auto">
-</a>
-</p>
-<p><br></p>
-<p><strong>코드</strong> <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Stellar Stellar / 星街すいせい(official) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://youtu.be/a51VH9BYzZA&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.youtube.com/vi/a51VH9BYzZA/0.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Stellar Stellar / 星街すいせい(official)&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;auto&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure> <br></p>
-<!-- 『眩しいDNAだけ』 -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VJy8qZ77bpE" title="YouTube video player" frameborder="0" allowfullscreen>
-</iframe>
-<p>그럼에도 iframe이 제일 편하고 좋다.</p>
-<p><strong>코드</strong> <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 『眩しいDNAだけ』 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;560&quot;</span> <span class="attr">height</span>=<span class="string">&quot;315&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/VJy8qZ77bpE&quot;</span> <span class="attr">title</span>=<span class="string">&quot;YouTube video player&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allow</span>=<span class="string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="체크박스">체크박스</h1>
-<ul class="task-list">
-<li><input type="checkbox" disabled="" />
-CheckBox(False)</li>
-<li><input type="checkbox" disabled="" checked="" />
-CheckBox(True)</li>
-</ul>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] CheckBox(False)</span><br><span class="line"><span class="bullet">-</span> [x] CheckBox(True)</span><br></pre></td></tr></table></figure></p>
-<p><br></p>
-<p><strong><em>여기서부터 각주</em></strong></p>
-<section class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
-<ol>
-<li id="fn1" role="doc-endnote"><p><code>print("Hello, world!")</code><a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"
-role="doc-endnote"><p><code>fn main() &#123; println!("Hello, world!"); &#125;</code>
-내용 설명은 문서 최하단에 위치한다. <br><a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>Guide</category>
-      </categories>
-      <tags>
-        <tag>kramdown</tag>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -955,6 +754,437 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
         <tag>propositional_logic</tag>
         <tag>이산수학</tag>
         <tag>명제</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kramdown 작성법</title>
+    <url>/2022/03/27/2022/03/kramdown-write/</url>
+    <content><![CDATA[<h1 id="목차">목차</h1>
+<ul>
+<li><a href="#목차">목차</a></li>
+<li><a href="#헤더">헤더</a></li>
+<li><a href="#텍스트-스타일">텍스트 스타일</a></li>
+<li><a href="#이미지">이미지</a></li>
+<li><a href="#각주">각주</a></li>
+<li><a href="#블록-인용구">블록 인용구</a></li>
+<li><a href="#리스트">리스트</a></li>
+<li><a href="#테이블">테이블</a></li>
+<li><a href="#링크">링크</a></li>
+<li><a href="#유튜브">유튜브</a></li>
+<li><a href="#체크박스">체크박스</a></li>
+</ul>
+<p><strong>코드</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [<span class="string">목차</span>](<span class="link">#목차</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">헤더</span>](<span class="link">#헤더</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">텍스트 스타일</span>](<span class="link">#텍스트-스타일</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">이미지</span>](<span class="link">#이미지</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">각주</span>](<span class="link">#각주</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">블록 인용구</span>](<span class="link">#블록-인용구</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">리스트</span>](<span class="link">#리스트</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">테이블</span>](<span class="link">#테이블</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">링크</span>](<span class="link">#링크</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">유튜브</span>](<span class="link">#유튜브</span>)</span><br><span class="line"><span class="bullet">-</span> [<span class="string">체크박스</span>](<span class="link">#체크박스</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="헤더">헤더</h1>
+<p><code>This is Header1</code> <code>===============</code>
+<code>This is Header2</code> <code>---------------</code> <br></p>
+<p><strong>코드</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">This is Header1</span></span><br><span class="line"><span class="section">===============</span></span><br><span class="line"><span class="section">This is Header2</span></span><br><span class="line"><span class="section">---------------</span></span><br></pre></td></tr></table></figure>
+<p>다른 방법으로는 H1, H2, ..., H6에 #을 붙이는 방법이 있다.</p>
+<p><code># Header1</code> <code>## Header2</code>
+<code>### Header3</code> <code>#### Header4</code>
+<code>##### Header5</code> <code>###### Header6</code> <br></p>
+<p><strong>코드</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># Header1</span></span><br><span class="line"><span class="section">## Header2</span></span><br><span class="line"><span class="section">### Header3</span></span><br><span class="line"><span class="section">#### Header4</span></span><br><span class="line"><span class="section">##### Header5</span></span><br><span class="line"><span class="section">###### Header6</span></span><br></pre></td></tr></table></figure>
+<h1 id="텍스트-스타일">텍스트 스타일</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Markdown</th>
+<th style="text-align: center;">Rendered Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>*Be Italic*</code></td>
+<td style="text-align: center;"><em>Be Italic</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>_Be Italic_</code></td>
+<td style="text-align: center;"><em>Be Italic</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>**Be Bold**</code></td>
+<td style="text-align: center;"><strong>Be Bold</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>__Be Bold__</code></td>
+<td style="text-align: center;"><strong>Be Bold</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>`Code Spans`</code></td>
+<td style="text-align: center;"><code>Code Spans</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| Markdown           | Rendered Output |</span><br><span class="line">| :----------------- | :-------------: |</span><br><span class="line">| <span class="code">`*Be Italic*`</span>      |   <span class="emphasis">*Be Italic*</span>   |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>      |   <span class="emphasis">_Be Italic_</span>   |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>      |   <span class="strong">**Be Bold**</span>   |</span><br><span class="line">| <span class="code">`__Be Bold__`</span>      |   <span class="strong">__Be Bold__</span>   |</span><br><span class="line">| <span class="code">`` `</span>Code Spans<span class="code">` `</span><span class="code">` |  `</span>Code Spans`   |</span><br></pre></td></tr></table></figure></p>
+<h1 id="이미지">이미지</h1>
+<figure>
+<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4"
+alt="DJ_MORIKUBO" />
+<figcaption aria-hidden="true">DJ_MORIKUBO</figcaption>
+</figure>
+<p>이미지 첨부는 <code>![대체_텍스트](이미지_경로)</code>처럼 사용한다.
+<br></p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">DJ_MORIKUBO</span>](<span class="link">https://avatars.githubusercontent.com/u/99321942?v=4</span>)</span><br></pre></td></tr></table></figure> <br></p>
+<p><img data-src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="A" width="100%" height="auto"></p>
+<p>이미지 크기 조절이 필요할 경우, <code>&lt;img&gt;</code>태그를
+사용한다. <br></p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://avatars.githubusercontent.com/u/99321942?v=4&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;DJ_MORIKUBO&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;auto&quot;</span>&gt;</span></span></span><br></pre></td></tr></table></figure> <br></p>
+<p align="center">
+<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="DJ_MORIKUBO">
+</p>
+<p>가운데 정렬은 <code>&lt;img&gt;</code>태그를
+<code>&lt;p&gt;</code>태그로 감싸고 <code>align="center"</code> 속성을
+주는 방식으로 사용한다. <br></p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://avatars.githubusercontent.com/u/99321942?v=4&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;DJ_MORIKUBO&quot;</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br></pre></td></tr></table></figure> <br></p>
+<h1 id="각주">각주</h1>
+<details>
+<summary>
+펼쳐보기
+</summary>
+<p>How to Print in Python<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>.<br />
+How to Print in Rust<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>.</p>
+<p>내 환경에 작동하지 않는다.</p>
+<strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; How to Print in Python[^1].  </span></span><br><span class="line"><span class="quote">&gt; How to Print in Rust[^2].</span></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">`print(&quot;Hello, world!&quot;)`</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">`fn main() &#123; println!(&quot;Hello, world!&quot;); &#125;`</span></span><br></pre></td></tr></table></figure>
+</details>
+<h1 id="블록-인용구">블록 인용구</h1>
+<blockquote>
+<p>Main Blockquote &gt; Sub Blockquote &gt;&gt; SubSub Blockquote
+&gt;&gt;&gt; And so on... <br></p>
+</blockquote>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; Main Blockquote</span></span><br><span class="line">&gt;&gt; Sub Blockquote</span><br><span class="line">&gt;&gt;&gt; SubSub Blockquote</span><br><span class="line">&gt;&gt;&gt;&gt; And so on...</span><br></pre></td></tr></table></figure></p>
+<h1 id="리스트">리스트</h1>
+<p>Ordered List is... 1. List 2. List 3. List 1. New list 2. New List 4.
+List <br></p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Ordered List is...</span><br><span class="line"><span class="bullet">1.</span> List</span><br><span class="line"><span class="bullet">2.</span> List</span><br><span class="line"><span class="bullet">3.</span> List</span><br><span class="line"><span class="bullet">    1.</span> New list</span><br><span class="line"><span class="bullet">    2.</span> New List</span><br><span class="line"><span class="bullet">4.</span> List</span><br></pre></td></tr></table></figure></p>
+<p>순서가 없는 경우<br />
+Unordered List is... * List - List + List * New list - New List + List
+<br></p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Unordered List is...</span><br><span class="line"><span class="bullet">*</span> List</span><br><span class="line"><span class="bullet">-</span> List</span><br><span class="line"><span class="bullet">+</span> List</span><br><span class="line"><span class="bullet">    *</span> New list</span><br><span class="line"><span class="bullet">    -</span> New List</span><br><span class="line"><span class="bullet">+</span> List</span><br></pre></td></tr></table></figure></p>
+<h1 id="테이블">테이블</h1>
+<div class="overflow-table" data-markdown="block">
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 43%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Markdown</th>
+<th style="text-align: left;">HTML</th>
+<th style="text-align: center;">Rendered Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>[Example Link](#link)</code></td>
+<td
+style="text-align: left;"><code>&lt;a href="#link"&gt;Example Link&lt;/a&gt;</code></td>
+<td style="text-align: center;"><a href="#Link">Example Link</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>_Be Italic_</code></td>
+<td
+style="text-align: left;"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
+<td style="text-align: center;"><em>Be Italic</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>**Be Bold**</code></td>
+<td
+style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
+<td style="text-align: center;"><strong>Be Bold</strong></td>
+</tr>
+</tbody>
+</table>
+<p>테이블의 경우 개인 설정에 따라 다를 수 있다.</p>
+</div>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;overflow-table&quot;</span> <span class="attr">markdown</span>=<span class="string">&quot;block&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">| Markdown                | HTML                               |    Rendered Output    |</span><br><span class="line">| :---------------------- | :--------------------------------- | :-------------------: |</span><br><span class="line">| <span class="code">`[Example Link](#link)`</span> | <span class="code">`&lt;a href=&quot;#link&quot;&gt;Example Link&lt;/a&gt;`</span> | [<span class="string">Example Link</span>](<span class="link">#Link</span>) |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>           | <span class="code">`&lt;em&gt;Be Italic&lt;em/&gt;`</span>               |      <span class="emphasis">_Be Italic_</span>      |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>           | <span class="code">`&lt;strong&gt;Be Italic&lt;strong/&gt;`</span>       |      <span class="strong">**Be Bold**</span>      |</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="링크">링크</h1>
+<ul>
+<li>Basic Link : <a href="https://github.com/donasensei">Github</a></li>
+<li>Open New Tab : <a
+href="https://github.com/donasensei">Github</a>{:target="_blank"}
+<br></li>
+</ul>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> Basic Link : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)</span><br><span class="line"><span class="bullet">-</span> Open New Tab : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)&#123;:target=&quot;<span class="emphasis">_blank&quot;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="유튜브">유튜브</h1>
+<p><a href="https://youtu.be/RBmWaW-3Cug"
+title="HIMEHINA『3分ガール』MV"><img
+src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg"
+alt="HIMEHINA『3分ガール』MV" /></a> <br></p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![HIMEHINA『3分ガール』MV</span>](<span class="link">https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg</span>)](<span class="link">https://youtu.be/RBmWaW-3Cug &quot;HIMEHINA『3分ガール』MV&quot;</span>)</span><br></pre></td></tr></table></figure> 사실상 이미지에 링크를 걸어주는
+방식이라 이런 방법도 가능하다.</p>
+<!-- Stellar Stellar / 星街すいせい(official) -->
+<p align="center">
+<a href="https://youtu.be/a51VH9BYzZA" target="_blank">
+<img data-src="https://img.youtube.com/vi/a51VH9BYzZA/0.jpg" alt="Stellar Stellar / 星街すいせい(official)" width="100%" height="auto">
+</a>
+</p>
+<p><br></p>
+<p><strong>코드</strong> <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Stellar Stellar / 星街すいせい(official) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://youtu.be/a51VH9BYzZA&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.youtube.com/vi/a51VH9BYzZA/0.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Stellar Stellar / 星街すいせい(official)&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;auto&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure> <br></p>
+<!-- 『眩しいDNAだけ』 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VJy8qZ77bpE" title="YouTube video player" frameborder="0" allowfullscreen>
+</iframe>
+<p>그럼에도 iframe이 제일 편하고 좋다.</p>
+<p><strong>코드</strong> <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 『眩しいDNAだけ』 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;560&quot;</span> <span class="attr">height</span>=<span class="string">&quot;315&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/VJy8qZ77bpE&quot;</span> <span class="attr">title</span>=<span class="string">&quot;YouTube video player&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allow</span>=<span class="string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="체크박스">체크박스</h1>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+CheckBox(False)</li>
+<li><input type="checkbox" disabled="" checked="" />
+CheckBox(True)</li>
+</ul>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] CheckBox(False)</span><br><span class="line"><span class="bullet">-</span> [x] CheckBox(True)</span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<p><strong><em>여기서부터 각주</em></strong></p>
+<section class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p><code>print("Hello, world!")</code><a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"
+role="doc-endnote"><p><code>fn main() &#123; println!("Hello, world!"); &#125;</code>
+내용 설명은 문서 최하단에 위치한다. <br><a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>Guide</category>
+      </categories>
+      <tags>
+        <tag>kramdown</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Discrete Mathmatics] 2. Propositional Equivalences(명제 동치)</title>
+    <url>/2022/03/29/2022/03/discrete-mathmatics-02-propositional-equivalences/</url>
+    <content><![CDATA[<p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
+기준으로 작성.</p>
+<hr />
+<h1 id="compound합성-명제">Compound(합성 명제)</h1>
+<p>합성 명제는 truth value에 따라 세 종류로 나눌 수 있다.</p>
+<ul>
+<li>Tautology(항진명제)</li>
+<li>Contradiction(모순명제)</li>
+<li>Contingency(사건명제)</li>
+</ul>
+<hr />
+<h2 id="tautology항진명제">Tautology(항진명제)</h2>
+<blockquote>
+<p>A <strong>tautology</strong> is a proposition which is <strong>always
+true</strong>.</p>
+</blockquote>
+<p>항상 True값을 가지는 명제를 항진명제라고 한다. <span
+class="math inline">\(p∨¬p\)</span>의 경우 p가 T일 때 ¬p는 F가 되어
+T∨F이기 때문에 항상 참이 된다.</p>
+<hr />
+<h2 id="contradiction모순명제">Contradiction(모순명제)</h2>
+<blockquote>
+<p>A <strong>contradiction</strong> is a proposition which is
+<strong>always false</strong>.</p>
+</blockquote>
+<p>항진명제와 반대로 항상 False값을 가지는 명제를 모순명제라고 한다.
+<span class="math inline">\(p∧¬p\)</span>은 T∧F이기 때문에 항상
+거짓이다.</p>
+<hr />
+<h2 id="contingency사건명제">Contingency(사건명제)</h2>
+<blockquote>
+<p>A <strong>contingency</strong> is a proposition which is
+<strong>neither</strong> a tautology nor a contradiction, such as p</p>
+</blockquote>
+<p>항진명제도, 모순명제도 아닌 명제를 사건명제라고 한다. 정의의 예시처럼
+p의 경우 T도 가능하고 F도 가능하기 때문에 사건명제다.</p>
+<hr />
+<h1 id="logically-equivalent동치">Logically Equivalent(동치)</h1>
+<p>그래서 만일 <span class="math inline">\(p↔q\)</span>가 항진명제면 p와
+q는 논리적으로 동치이고 <span class="math inline">\(p≡q\)</span>, <span
+class="math inline">\(p⇔q\)</span>로 나타낸다.<br />
+그리고 진리표에서 열의 값이 동일하면 동치이다. 예를 들면,</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(¬p\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(¬q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p →
+q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬q →
+¬p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td style="text-align: center;"><strong>T</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td style="text-align: center;"><strong>T</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td style="text-align: center;"><strong>T</strong></td>
+</tr>
+</tbody>
+</table>
+<p>이 진리표에서 <span class="math inline">\(p → q\)</span>와 <span
+class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 때문에 <span
+class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q →
+¬p\)</span>는 동치이다.</p>
+<h2 id="논리적-동치법칙">논리적 동치법칙</h2>
+<table>
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">논리적 동치</th>
+<th style="text-align: center;">법칙</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p∧T≡p\)</span><br><span
+class="math inline">\(p∨F≡p\)</span></td>
+<td style="text-align: center;">Identity Law(항등법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(p∧F≡F\)</span><br><span
+class="math inline">\(p∨T≡T\)</span></td>
+<td style="text-align: center;">Domination Law(지배법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p∧¬p=F\)</span><br><span
+class="math inline">\(p∨¬p=T\)</span></td>
+<td style="text-align: center;">Negation Law(부정법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(¬(¬p)≡p\)</span></td>
+<td style="text-align: center;">Double Negation Law(이중 부정법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p∧p≡p\)</span><br><span
+class="math inline">\(p∨p≡p\)</span></td>
+<td style="text-align: center;">Idempotent Law(멱등법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(p∧q≡q∧p\)</span><br><span
+class="math inline">\(p∨q≡q∨p\)</span></td>
+<td style="text-align: center;">Commutative Law(교환법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
+class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
+<td style="text-align: center;">Associative Law(결합법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
+class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
+<td style="text-align: center;">Distributive Law(분배법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span><br><span
+class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span></td>
+<td style="text-align: center;">De Morgan's Law(드 모르간 법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(p∧(p∨q)≡p\)</span><br><span
+class="math inline">\(p∨(p∧q)≡p\)</span></td>
+<td style="text-align: center;">Absorption Law(흡수법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p→q≡¬p∨q\)</span></td>
+<td style="text-align: center;">Implication Law(함축법칙)</td>
+</tr>
+</tbody>
+</table>
+예로 <span class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>를
+증명하면,
+<span class="math display">\[\begin{aligned}
+¬(p∨(¬p∧q)) &amp;≡ ¬p∧¬(¬p∧q) \\
+  &amp;≡ ¬p∧[¬(¬p)∨¬q] \\
+  &amp;≡ ¬p∧(p∨¬q) \\
+  &amp;≡ (¬p∧p)∨(¬p∧¬q) \\
+  &amp;≡ F∨(¬p∧¬q) \\
+  &amp;≡ (¬p∧¬q)∨F \\
+  &amp;≡ ¬p∧¬q
+\end{aligned}\]</span>
+<p>한줄씩 따라가보면,<br />
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
+2법칙으로 <span class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span>를 적용해
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
+1법칙으로 <span class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span>를 적용해
+<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>은 이중 부정법칙으로
+<span class="math inline">\(¬(¬p)≡p\)</span>가 되어 <span
+class="math inline">\(¬p∧(p∨¬q)\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧(p∨¬q)\)</span>은 분배법칙으로 괄호 밖에
+있는 <span class="math inline">\(¬p∧\)</span>를 분배해 <span
+class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>가 된다.<br />
+<span class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>에서 <span
+class="math inline">\((¬p∧p)\)</span>는 항상 거짓이기 때문에(모순명제)
+<span class="math inline">\(F∨(¬p∧¬q)\)</span>가 된다.<br />
+<span class="math inline">\(F∨(¬p∧¬q)\)</span>은 논리합에서의 교환법칙에
+따라 <span class="math inline">\((¬p∧¬q)∨F\)</span>처럼 바꿔 쓸 수
+있다.<br />
+<span class="math inline">\((¬p∧¬q)∨F\)</span>은 항등법칙에 의해 <span
+class="math inline">\(p∨F≡p\)</span>, <span
+class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명이
+완료된다.</p>
+]]></content>
+      <categories>
+        <category>Discrete Mathmatics</category>
+      </categories>
+      <tags>
+        <tag>discrete_mathmatics</tag>
+        <tag>이산수학</tag>
+        <tag>propositional_equivalences</tag>
+        <tag>동치</tag>
       </tags>
   </entry>
   <entry>
