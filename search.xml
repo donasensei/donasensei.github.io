@@ -1,6 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>dB(데시벨)</title>
+    <url>/2022/03/29/2022/03/dB-%EB%8D%B0%EC%8B%9C%EB%B2%A8/</url>
+    <content><![CDATA[<h1 id="mathrmdb"><span class="math inline">\(\mathrm{dB}\)</span></h1>
+<p>dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다.</p>
+<p>dB에서 <strong>d</strong>는 deci는 <span
+class="math inline">\(×10^{-1} = ×\frac{1}{10}\)</span>을 표현하는 SI
+접두어고 <strong>B</strong>는 Alexander Graham Bell의 이름에서
+가져왔다.</p>
+<p>과거 전화는 전선의 저항 때문에 거리가 멀어지면 멀어질수록 신호가
+약해져서 일정 간격마다 증폭기를 이용해서 손실된 만큼 다시 증폭을 해주는
+방식이였는데 이 기준을 위해 만들어진 것이 dB이다.</p>
+<p>식으로 보면 이렇다. <span class="math display">\[\mathrm{dB} =
+10\log(\frac{P}{Pref})\]</span></p>
+<p>여기서 <span class="math inline">\(P\)</span>는 전력이나 소리의
+세기의 양이고 <span class="math inline">\(Pref\)</span>는 그
+기준이다.</p>
+<p>여기에 값들을 대입해보면</p>
+<ul>
+<li><span class="math inline">\(-3.010 ≈
+10\log(\frac{0.5}{1})\)</span></li>
+<li><span class="math inline">\(0 = 10\log(\frac{1}{1})\)</span></li>
+<li><span class="math inline">\(3.010 ≈
+10\log(\frac{2}{1})\)</span></li>
+<li><span class="math inline">\(10 = 10\log(\frac{10}{1})\)</span></li>
+</ul>
+<p>이런 식으로 dB을 구할 수 있다. 표로 나타내면 다음과 같다.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(\mathrm{dB}\)</span></th>
+<th style="text-align: center;">소리의 세기</th>
+<th style="text-align: center;">Loudness</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(-6\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\frac{1}{4}\)</span>배</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(-3\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\frac{1}{2}\)</span>배</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(0\mathrm{dB}\)</span></td>
+<td style="text-align: center;">1배</td>
+<td style="text-align: center;"><strong>1배</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(10\mathrm{dB}\)</span></td>
+<td style="text-align: center;">10배</td>
+<td style="text-align: center;"><strong>2배</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(20\mathrm{dB}\)</span></td>
+<td style="text-align: center;">20배</td>
+<td style="text-align: center;"><strong>4배</strong></td>
+</tr>
+</tbody>
+</table>
+<p>여기서 Loudness는 인간이 느끼는 음량의 정도를 말한다. 즉 10dB만큼
+높아지면 2배 크게 들리는 것이다.</p>
+<p>그렇다고 A라는 소리가 소리 B와 -3dB의 차이가 날 때, A가 B보다 작은
+소리인 것은 아니다.<br />
+dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는 아니기
+때문이다.</p>
+<p>그 기준이 되는 크기가 <span
+class="math inline">\(\mathrm{dB_{spl}}\)</span>이다.</p>
+<h1 id="mathrmdb_spl"><span
+class="math inline">\(\mathrm{dB_{spl}}\)</span></h1>
+<p><span class="math inline">\(\mathrm{dB_{spl}}\)</span>은 Sound
+Pressure Level(음압 레벨)을 뜻하고 사람이 들을 수 있는 가장 작은 소리의
+음압을 기준으로 <span class="math inline">\(0.00020 \mathrm{dyn/cm^2} =
+20μPa\)</span>을 절대값으로 한다.</p>
+<p>이를 식으로 표현한 것이 아래의 식이다. <span
+class="math display">\[L_{\mathrm{dB_{spl}}}/\mathrm{dB_{spl}} =
+20\log_{10}(\frac{P}{20μPa})\]</span></p>
+<p>이 <span class="math inline">\(\mathrm{dB_{spl}}\)</span>이 보통 소음
+측정등에서 말하는 데시벨 측정이다. 통상 spl을 생략하여 말하기 때문에
+dB와 혼동하는 경우가 많다.</p>
+<h1 id="mathrmdbm"><span
+class="math inline">\(\mathrm{dBm}\)</span></h1>
+<p><span class="math inline">\(\mathrm{dBm}\)</span>은 1mW을 기준으로
+하는 dB scale이다. 1mW를 기준으로 하긴 하지만 임피던스에 따라 바뀔 수도
+있다. 통상, 50Ω이나 75Ω에서 1mW를 0dBm이라고 한다.</p>
+<h1 id="mathrmdbu"><span
+class="math inline">\(\mathrm{dBu}\)</span></h1>
+<p><span class="math inline">\(\mathrm{dBu}\)</span>는 <span
+class="math inline">\(\mathrm{dBm}\)</span>에서 600Ω에서의 1mW를
+기준으로 잡는 방식이다. 계산하면, <span class="math display">\[V_{ref} =
+√(1mW × 600Ω) ≈ 0.775V_{rms}\]</span> 0.775Vrms를 기준점으로 한다.</p>
+<h1 id="mathrmdbv"><span
+class="math inline">\(\mathrm{dBV}\)</span></h1>
+<p><span class="math inline">\(\mathrm{dBV}\)</span>는 dBu와 달리 전압이
+아닌 절대값인 1V를 Vref로 잡는 방식이다. 식으로 표현하면, <span
+class="math display">\[\mathrm{L_{dBV}} =
+20\log_{10}(\frac{V_1}{V_{ref}})\]</span></p>
+<p>사실상 식은 크게 바뀌지 않고 기준만 바뀔 뿐이다.</p>
+<h1 id="mathrmdbfs"><span
+class="math inline">\(\mathrm{dBFS}\)</span></h1>
+<p>디지털에서의 0dB는 아날로그와 달리 Max Level을 의미한다. 아날로그의
+Dynamic Range가 0dB이상으로 Head Room이 존재하는 것과 다르게
+디지털에서의 DR은 전체에서의 최고점과 최저점이다. 결국 ADC에서 1로
+변환되는 경우가 0dBFS이다.</p>
+<p>이를 통해 bit에 따른 디지털에서의 DR을 알 수 있는데 식으로 표현하면,
+<span class="math display">\[\mathrm{dBFS} =
+20\log_{10}(\frac{2^n}{1})\]</span> 여기서의 <span
+class="math inline">\(n\)</span>은 bit, 디지털에서의 진폭이다.</p>
+<p>예를 들어 24-bit 환경에서의 DR을 계산한다면, <span
+class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
+144\]</span> 즉, 24-bit 환경에서의 다이나믹 레인지는 144dBFS를 가질 수
+있다.</p>
+]]></content>
+      <categories>
+        <category>Digital Sound</category>
+      </categories>
+      <tags>
+        <tag>digital_sound</tag>
+        <tag>데시벨</tag>
+        <tag>dB</tag>
+        <tag>dBspl</tag>
+        <tag>dBm</tag>
+        <tag>dBV</tag>
+        <tag>dBu</tag>
+        <tag>dBFS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mathjax 작성법</title>
+    <url>/2022/03/27/2022/03/mathjax-test/</url>
+    <content><![CDATA[<p>이산수학 관련 게시글을 위한 Mathjax 예시들을 몇개 적어보자.</p>
+<p><span class="math display">\[a^2 + b^2 = c^2\]</span></p>
+<p>기본적으로 <code>\[’원하는 식\]</code> 의 형태이다.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\[a^2 + b^2 = c^2\]</span><br></pre></td></tr></table></figure>
+<p>만약 문장 안쪽에 식을 적고 싶다면 <code>\( 원하는 식) ]\</code> 처럼
+사용한다.</p>
+<p><span class="math display">\[ A = \begin{pmatrix} P &amp; Q \\ R
+&amp; S \end{pmatrix} \]</span></p>
+<p><span class="math display">\[ \text{The function \(f\) is not defined
+at \(a\).} \]</span></p>
+<p><span class="math display">\[ P = \left\{ x \,\vert\, x \text{ is a
+positive real number.} \right\}\]</span></p>
+<p><span class="math display">\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k}
+\mathbf{B}\_{k,p} \]</span></p>
+<p><br></p>
+<p><strong>WIP...</strong></p>
+]]></content>
+      <categories>
+        <category>Mathjax</category>
+      </categories>
+      <tags>
+        <tag>mathjax</tag>
+        <tag>kramdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Discrete Mathmatics] 1. Propositional Logic(명제 논리)</title>
     <url>/2022/03/29/2022/03/discrete-mathmatics-01-propositional-logic/</url>
     <content><![CDATA[<p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
@@ -614,31 +780,24 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
       </tags>
   </entry>
   <entry>
-    <title>Mathjax 작성법</title>
-    <url>/2022/03/27/2022/03/mathjax-test/</url>
-    <content><![CDATA[<p>이산수학 관련 게시글을 위한 Mathjax 예시들을 몇개 적어보자.</p>
-<p><span class="math display">\[a^2 + b^2 = c^2\]</span></p>
-<p>기본적으로 <code>\[’원하는 식\]</code> 의 형태이다.</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\[a^2 + b^2 = c^2\]</span><br></pre></td></tr></table></figure>
-<p>만약 문장 안쪽에 식을 적고 싶다면 <code>\( 원하는 식) ]\</code> 처럼
-사용한다.</p>
-<p><span class="math display">\[ A = \begin{pmatrix} P &amp; Q \\ R
-&amp; S \end{pmatrix} \]</span></p>
-<p><span class="math display">\[ \text{The function \(f\) is not defined
-at \(a\).} \]</span></p>
-<p><span class="math display">\[ P = \left\{ x \,\vert\, x \text{ is a
-positive real number.} \right\}\]</span></p>
-<p><span class="math display">\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k}
-\mathbf{B}\_{k,p} \]</span></p>
-<p><br></p>
-<p><strong>WIP...</strong></p>
+    <title>상대 경로 / 이미지 태그 테스트</title>
+    <url>/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/</url>
+    <content><![CDATA[<p>Post Asset 폴더와 상대 경로 참조를 사용하면서 바뀌게 되는 점을
+비교하기 위한 테스트</p>
+<img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/Nono_SS_SSR5+.png" class="" title="NONO">
+<img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/97128625_p0.png" class="" title="GIRL">
+<p>기존 마크다운 문법을 사용하는 것이 아닌 태그 플러그인을 사용한다.</p>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img Nono_</span>SS<span class="emphasis">_SSR5+.png NONO %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% asset_</span>img &quot;97128625<span class="emphasis">_p0.png&quot; &quot;GIRL&quot; %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>이미지를 태그 플러그인을 통해 그룹으로 묶어둘 수 있다.</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/Nono_SS_SSR5+.png" class="" title="NONO"></div><div class="group-picture-column"><img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/97128625_p0.png" class="" title="GIRL"></div></div></div>
+<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gp [2]-[2] %&#125;</span><br><span class="line">&#123;% asset<span class="emphasis">_img Nono_</span>SS<span class="emphasis">_SSR5+.png NONO %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% asset_</span>img &quot;97128625<span class="emphasis">_p0.png&quot; &quot;GIRL&quot; %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% endgp %&#125;</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>Mathjax</category>
+        <category>Test</category>
       </categories>
       <tags>
-        <tag>mathjax</tag>
-        <tag>kramdown</tag>
+        <tag>image</tag>
+        <tag>path</tag>
       </tags>
   </entry>
   <entry>
@@ -845,27 +1004,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       <tags>
         <tag>kramdown</tag>
         <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>상대 경로 / 이미지 태그 테스트</title>
-    <url>/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/</url>
-    <content><![CDATA[<p>Post Asset 폴더와 상대 경로 참조를 사용하면서 바뀌게 되는 점을
-비교하기 위한 테스트</p>
-<img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/Nono_SS_SSR5+.png" class="" title="NONO">
-<img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/97128625_p0.png" class="" title="GIRL">
-<p>기존 마크다운 문법을 사용하는 것이 아닌 태그 플러그인을 사용한다.</p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img Nono_</span>SS<span class="emphasis">_SSR5+.png NONO %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% asset_</span>img &quot;97128625<span class="emphasis">_p0.png&quot; &quot;GIRL&quot; %&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>이미지를 태그 플러그인을 통해 그룹으로 묶어둘 수 있다.</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/Nono_SS_SSR5+.png" class="" title="NONO"></div><div class="group-picture-column"><img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/97128625_p0.png" class="" title="GIRL"></div></div></div>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gp [2]-[2] %&#125;</span><br><span class="line">&#123;% asset<span class="emphasis">_img Nono_</span>SS<span class="emphasis">_SSR5+.png NONO %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% asset_</span>img &quot;97128625<span class="emphasis">_p0.png&quot; &quot;GIRL&quot; %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% endgp %&#125;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>Test</category>
-      </categories>
-      <tags>
-        <tag>image</tag>
-        <tag>path</tag>
       </tags>
   </entry>
 </search>
