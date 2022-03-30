@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>dB(데시벨)</title>
+    <title>[디지털사운드] dB(데시벨)</title>
     <url>/2022/03/29/2022/03/dB-%EB%8D%B0%EC%8B%9C%EB%B2%A8/</url>
     <content><![CDATA[<h1 id="mathrmdb"><span class="math inline">\(\mathrm{dB}\)</span></h1>
 <p>dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다.</p>
@@ -13,7 +13,7 @@ class="math inline">\(×10^{-1} = ×\frac{1}{10}\)</span>을 표현하는 SI
 약해져서 일정 간격마다 증폭기를 이용해서 손실된 만큼 다시 증폭을 해주는
 방식이였는데 이 기준을 위해 만들어진 것이 dB이다.</p>
 <p>식으로 보면 이렇다. <span class="math display">\[\mathrm{dB} =
-10\log(\frac{P}{Pref})\]</span></p>
+10\log_{10}(\frac{P}{P_{ref}})\]</span></p>
 <p>여기서 <span class="math inline">\(P\)</span>는 전력이나 소리의
 세기의 양이고 <span class="math inline">\(Pref\)</span>는 그
 기준이다.</p>
@@ -77,7 +77,18 @@ class="math inline">\(20\mathrm{dB}\)</span></td>
 소리인 것은 아니다.<br />
 dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는 아니기
 때문이다.</p>
-<p>그 기준이 되는 크기가 <span
+<p>만일 음압을 구하고 싶다면 음압과 세기의 비례는 <span
+class="math inline">\(\mathrm{Pressure}^2 ∝
+\mathrm{Intensity}\)</span>이기 때문에</p>
+<span class="math display">\[\begin{aligned}
+\mathrm{dB} &amp;= 10\log(\frac{P}{P_{ref}}) \\
+  &amp;= 10\log_{10}(\frac{\frac{P^2}{I}}{\frac{P_{ref}^2}{I}}) \\
+  &amp;= 10\log_{10}(\frac{P^2}{P_{ref}^{2}}) \\
+  &amp;= 10\log_{10}(\frac{P}{P_{ref}})^2 \\
+  &amp;= 20\log_{10}(\frac{P}{P_{ref}})
+
+\end{aligned}\]</span>
+<p>그리고 공기 중에서의 기준이 되는 크기가 <span
 class="math inline">\(\mathrm{dB_{spl}}\)</span>이다.</p>
 <hr />
 <h1 id="mathrmdb_spl"><span

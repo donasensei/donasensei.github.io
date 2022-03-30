@@ -22,10 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"donasensei.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="blog">
+    <meta name="description" content="DonaSensei&#39;s Blog">
+<meta property="og:type" content="blog">
 <meta property="og:title" content="The Tale of Shooting Star Woods">
 <meta property="og:url" content="https://donasensei.github.io/index.html">
 <meta property="og:site_name" content="The Tale of Shooting Star Woods">
+<meta property="og:description" content="DonaSensei&#39;s Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="DonaSensei">
 <meta property="article:tag" content="Blog">
@@ -126,7 +128,7 @@
     <img class="site-author-image" itemprop="image" alt="DonaSensei"
       src="/images/avatar.webp">
   <p class="site-author-name" itemprop="name">DonaSensei</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">DonaSensei's Blog</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
@@ -198,7 +200,7 @@
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="DonaSensei's Blog">
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -499,7 +501,7 @@ class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명�
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="DonaSensei's Blog">
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -508,7 +510,7 @@ class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명�
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/29/2022/03/dB-%EB%8D%B0%EC%8B%9C%EB%B2%A8/" class="post-title-link" itemprop="url">dB(데시벨)</a>
+          <a href="/2022/03/29/2022/03/dB-%EB%8D%B0%EC%8B%9C%EB%B2%A8/" class="post-title-link" itemprop="url">[디지털사운드] dB(데시벨)</a>
         </h2>
 
         <div class="post-meta-container">
@@ -518,9 +520,15 @@ class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명�
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-03-29 13:59:21 / Modified: 23:03:44" itemprop="dateCreated datePublished" datetime="2022-03-29T13:59:21+09:00">2022-03-29</time>
+      <time title="Created: 2022-03-29 13:59:21" itemprop="dateCreated datePublished" datetime="2022-03-29T13:59:21+09:00">2022-03-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-03-30 10:53:46" itemprop="dateModified" datetime="2022-03-30T10:53:46+09:00">2022-03-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -552,7 +560,7 @@ class="math inline">\(×10^{-1} = ×\frac{1}{10}\)</span>을 표현하는 SI
 약해져서 일정 간격마다 증폭기를 이용해서 손실된 만큼 다시 증폭을 해주는
 방식이였는데 이 기준을 위해 만들어진 것이 dB이다.</p>
 <p>식으로 보면 이렇다. <span class="math display">\[\mathrm{dB} =
-10\log(\frac{P}{Pref})\]</span></p>
+10\log_{10}(\frac{P}{P_{ref}})\]</span></p>
 <p>여기서 <span class="math inline">\(P\)</span>는 전력이나 소리의
 세기의 양이고 <span class="math inline">\(Pref\)</span>는 그
 기준이다.</p>
@@ -616,7 +624,18 @@ class="math inline">\(20\mathrm{dB}\)</span></td>
 소리인 것은 아니다.<br />
 dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는 아니기
 때문이다.</p>
-<p>그 기준이 되는 크기가 <span
+<p>만일 음압을 구하고 싶다면 음압과 세기의 비례는 <span
+class="math inline">\(\mathrm{Pressure}^2 ∝
+\mathrm{Intensity}\)</span>이기 때문에</p>
+<span class="math display">\[\begin{aligned}
+\mathrm{dB} &amp;= 10\log(\frac{P}{P_{ref}}) \\
+  &amp;= 10\log_{10}(\frac{\frac{P^2}{I}}{\frac{P_{ref}^2}{I}}) \\
+  &amp;= 10\log_{10}(\frac{P^2}{P_{ref}^{2}}) \\
+  &amp;= 10\log_{10}(\frac{P}{P_{ref}})^2 \\
+  &amp;= 20\log_{10}(\frac{P}{P_{ref}})
+
+\end{aligned}\]</span>
+<p>그리고 공기 중에서의 기준이 되는 크기가 <span
 class="math inline">\(\mathrm{dB_{spl}}\)</span>이다.</p>
 <hr />
 <h1 id="mathrmdb_spl"><span
@@ -702,7 +721,7 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="DonaSensei's Blog">
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1379,7 +1398,7 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="DonaSensei's Blog">
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1472,7 +1491,7 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="DonaSensei's Blog">
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1572,7 +1591,7 @@ positive real number.} \right\}\]</span></p>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="DonaSensei's Blog">
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
