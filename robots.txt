@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://donasensei.github.io/sitemap.xml
