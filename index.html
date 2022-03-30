@@ -134,17 +134,17 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -182,6 +182,186 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/30/2022/03/discrete-mathmatics-03-predicates-and-quantifiers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.webp">
+      <meta itemprop="name" content="DonaSensei">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="The Tale of Shooting Star Woods">
+      <meta itemprop="description" content="DonaSensei's Blog">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | The Tale of Shooting Star Woods">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/2022/03/discrete-mathmatics-03-predicates-and-quantifiers/" class="post-title-link" itemprop="url">[Discrete Mathmatics] 3. Predicates and Quantifiers(술어와 한정자)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 22:08:16 / Modified: 23:10:07" itemprop="dateCreated datePublished" datetime="2022-03-30T22:08:16+09:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Discrete-Mathmatics/" itemprop="url" rel="index"><span itemprop="name">Discrete Mathmatics</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
+기준으로 작성.</p>
+<hr />
+<h1 id="propositional-function">Propositional Function</h1>
+<p>예를 들어 "<span class="math inline">\(x\)</span> is greather than
+3"라는 명제가 있다고 하면 이는 True인가 False인가. 이 경우,
+variable(변수)와 predicate(술어)에 관한 정보가 필요하다.</p>
+<p>위 예시를 명제 함수로 표현하면 <span class="math inline">\(P(x)
+=\)</span> "<span class="math inline">\(x\)</span> is greather than 3"
+처럼 표현하고<br />
+<span class="math inline">\(P(x)\)</span>가 명제 함수, <span
+class="math inline">\(x\)</span>가 변수, <span
+class="math inline">\(P\)</span>가 술어가 된다.</p>
+<p>만약 <span class="math inline">\(x=6\)</span>라면 <span
+class="math inline">\(P(x)\)</span>는 True가 되고 <span
+class="math inline">\(x=2\)</span>라면 <span
+class="math inline">\(P(x)\)</span>는 False가 된다.<br />
+즉, <span class="math inline">\(x\)</span>의 domain(정의역)이 '4 이상인
+모든 실수'라면, <span class="math inline">\(P(x)\)</span>는
+True이다.</p>
+<p>여기서 변수 <span class="math inline">\(x\)</span>에 값이 할당되거나
+한정자가 적용되면, <span class="math inline">\(x\)</span>를 bound
+variables(종속 변수)라고 한다.<br />
+<span class="math inline">\(x\)</span>에 값이 할당되지 않았거나 한정자가
+적용되지 않은 경우에는 <span class="math inline">\(x\)</span>를 free
+variables(자유 변수)라고 한다.</p>
+<h1 id="quantifiers한정자">Quantifiers(한정자)</h1>
+<p>한정 기호는 두 종류가 있다.</p>
+<ul>
+<li><strong>Universal Quantifier(<span
+class="math inline">\(∀\)</span>)</strong>
+<ul>
+<li><span class="math inline">\(∀xP(x)\)</span> asserts <span
+class="math inline">\(P(x)\)</span> is true for <strong>every</strong>
+<span class="math inline">\(x\)</span> in the
+<strong>domain</strong>.</li>
+<li>정의역에 속하는 모든 <span class="math inline">\(x\)</span>에 대해
+<span class="math inline">\(P(x)\)</span>는 참이다.</li>
+</ul></li>
+<li><strong>Existential Quantifier(<span
+class="math inline">\(∃\)</span>)</strong>
+<ul>
+<li><span class="math inline">\(∃xP(x)\)</span> asserts <span
+class="math inline">\(P(x)\)</span> is true for <strong>some</strong>
+<span class="math inline">\(x\)</span> in the
+<strong>domain</strong>.</li>
+<li>정의역에 속하는 적어도 하나의 값 <span
+class="math inline">\(x\)</span>에 대해 <span
+class="math inline">\(P(x)\)</span>는 참이다.</li>
+</ul></li>
+</ul>
+<p>한정자가 적용되는 부분을 한정자의 scope(범위)라고 한다.</p>
+<h2 id="universal-quantifier">Universal Quantifier</h2>
+<p>만일 정의역의 모든 값을 <span class="math inline">\(x_1, x_2, x_3,
+..., x_n\)</span>처럼 나열할 수 있을 경우,<br />
+<span class="math inline">\(∀xP(x)\)</span>는 <span
+class="math inline">\(P(x_1)∧P(x_2)∧P(x_3)∧...∧P(x_n)\)</span>와
+동일하다.</p>
+<p><span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span
+class="math inline">\(P(x)\)</span>가 <span
+class="math inline">\(x&gt;0\)</span>이고 <span
+class="math inline">\(U\)</span>가 <span
+class="math inline">\(ℤ\)</span>라면 False이다.<br />
+<span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span
+class="math inline">\(P(x)\)</span>가 <span
+class="math inline">\(x&gt;0\)</span>이고 <span
+class="math inline">\(U\)</span>가 <span
+class="math inline">\(ℤ^+\)</span>라면 True이다.</p>
+<p>ℤ는 정수의 집합이다.</p>
+<h2 id="existential-quantifier">Existential Quantifier</h2>
+<p>만일 정의역의 모든 값을 <span class="math inline">\(x_1, x_2, x_3,
+..., x_n\)</span>처럼 나열할 수 있을 경우,<br />
+<span class="math inline">\(∀xP(x)\)</span>는 <span
+class="math inline">\(P(x_1)∨P(x_2)∨P(x_3)∨...∨P(x_n)\)</span>와
+동일하다.</p>
+<p><span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span
+class="math inline">\(P(x)\)</span>가 <span
+class="math inline">\(x&gt;0\)</span>이고 <span
+class="math inline">\(U\)</span>가 <span
+class="math inline">\(ℤ\)</span>라면 True이다. 이 경우, <span
+class="math inline">\(U\)</span>가 <span
+class="math inline">\(ℤ^+\)</span>라도 True이다.<br />
+그러나 <span class="math inline">\(U\)</span>를 정의역이라 하고 만약
+<span class="math inline">\(P(x)\)</span>가 <span
+class="math inline">\(x&gt;0\)</span>이고 <span
+class="math inline">\(U\)</span>가 <span
+class="math inline">\(ℤ^-\)</span>라면 False이다.</p>
+<h3 id="counterexmaple반례">Counterexmaple(반례)</h3>
+<p>반레란 어떤 명제가 참이 아님을 증명하기 위해서 그 명제가 성립하지
+않는 예를 든 것을 말한다.<br />
+Domain에 속하는 값 중 단 하나의 값이라도 거짓인 예만 있으면 된다.</p>
+<p>예를 들어 <span class="math inline">\(U\)</span>를 정의역이라 하고
+만약 <span class="math inline">\(∀P(x)\)</span>가 <span
+class="math inline">\(x^2&gt;0\)</span>이고 <span
+class="math inline">\(U\)</span>가 <span
+class="math inline">\(ℝ\)</span>일 때,<br />
+<span class="math inline">\(∀P(x)\)</span>의 반례는 if <span
+class="math inline">\(x=0\)</span>, <span
+class="math inline">\(x^2=0\)</span>가 되어 <span
+class="math inline">\(x^2 &gt; 0\)</span>이 된다. 따라서 <span
+class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
+<p>ℝ은 실수의 집합이다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1363,199 +1543,6 @@ p\)</span></th>
 우선순위를 가진다.<br />
 예를 들면, <span class="math inline">\(¬p ∨ q → ¬r\)</span>라면 <span
 class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.webp">
-      <meta itemprop="name" content="DonaSensei">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="DonaSensei's Blog">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/" class="post-title-link" itemprop="url">상대 경로 / 이미지 태그 테스트</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-28 17:12:48" itemprop="dateCreated datePublished" datetime="2022-03-28T17:12:48+09:00">2022-03-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-03-29 01:05:08" itemprop="dateModified" datetime="2022-03-29T01:05:08+09:00">2022-03-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Test/" itemprop="url" rel="index"><span itemprop="name">Test</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Post Asset 폴더와 상대 경로 참조를 사용하면서 바뀌게 되는 점을
-비교하기 위한 테스트</p>
-<img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/Nono_SS_SSR5+.png" class="" title="NONO">
-<img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/97128625_p0.png" class="" title="GIRL">
-<p>기존 마크다운 문법을 사용하는 것이 아닌 태그 플러그인을 사용한다.</p>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img Nono_</span>SS<span class="emphasis">_SSR5+.png NONO %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% asset_</span>img &quot;97128625<span class="emphasis">_p0.png&quot; &quot;GIRL&quot; %&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>이미지를 태그 플러그인을 통해 그룹으로 묶어둘 수 있다.</p>
-<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/Nono_SS_SSR5+.png" class="" title="NONO"></div><div class="group-picture-column"><img data-src="/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/97128625_p0.png" class="" title="GIRL"></div></div></div>
-<p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% gp [2]-[2] %&#125;</span><br><span class="line">&#123;% asset<span class="emphasis">_img Nono_</span>SS<span class="emphasis">_SSR5+.png NONO %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% asset_</span>img &quot;97128625<span class="emphasis">_p0.png&quot; &quot;GIRL&quot; %&#125;</span></span><br><span class="line"><span class="emphasis">&#123;% endgp %&#125;</span></span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/27/2022/03/mathjax-test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.webp">
-      <meta itemprop="name" content="DonaSensei">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="DonaSensei's Blog">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | The Tale of Shooting Star Woods">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/27/2022/03/mathjax-test/" class="post-title-link" itemprop="url">Mathjax 작성법</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-03-27 22:00:00" itemprop="dateCreated datePublished" datetime="2022-03-27T22:00:00+09:00">2022-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-03-29 02:06:09" itemprop="dateModified" datetime="2022-03-29T02:06:09+09:00">2022-03-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Mathjax/" itemprop="url" rel="index"><span itemprop="name">Mathjax</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>이산수학 관련 게시글을 위한 Mathjax 예시들을 몇개 적어보자.</p>
-<p><span class="math display">\[a^2 + b^2 = c^2\]</span></p>
-<p>기본적으로 <code>\[’원하는 식\]</code> 의 형태이다.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\[a^2 + b^2 = c^2\]</span><br></pre></td></tr></table></figure>
-<p>만약 문장 안쪽에 식을 적고 싶다면 <code>\( 원하는 식) ]\</code> 처럼
-사용한다.</p>
-<p><span class="math display">\[ A = \begin{pmatrix} P &amp; Q \\ R
-&amp; S \end{pmatrix} \]</span></p>
-<p><span class="math display">\[ \text{The function \(f\) is not defined
-at \(a\).} \]</span></p>
-<p><span class="math display">\[ P = \left\{ x \,\vert\, x \text{ is a
-positive real number.} \right\}\]</span></p>
-<p><span class="math display">\[ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k}
-\mathbf{B}\_{k,p} \]</span></p>
-<p><br></p>
-<p><strong>WIP...</strong></p>
 
       
     </div>

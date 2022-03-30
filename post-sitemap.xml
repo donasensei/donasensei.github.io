@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://donasensei.github.io/2022/03/30/2022/03/discrete-mathmatics-03-predicates-and-quantifiers/</loc>
+        <lastmod>2022-03-30T14:10:07.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://donasensei.github.io/2022/03/29/2022/03/dB-%EB%8D%B0%EC%8B%9C%EB%B2%A8/</loc>
         <lastmod>2022-03-30T01:53:46.033Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -35,22 +43,6 @@
     <url>
         <loc>https://donasensei.github.io/2022/03/27/2022/03/kramdown-write/</loc>
         <lastmod>2022-03-28T17:06:12.930Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://donasensei.github.io/2022/03/27/2022/03/mathjax-test/</loc>
-        <lastmod>2022-03-28T17:06:09.205Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://donasensei.github.io/2022/03/28/2022/03/%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
-        <lastmod>2022-03-28T16:05:08.738Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
