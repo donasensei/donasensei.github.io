@@ -62,6 +62,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/rss2.xml" title="TEMPLATE" type="application/rss+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -134,8 +135,7 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="DonaSensei"
-      src="/images/avatar.webp">
+    <img class="site-author-image" itemprop="image" alt="DonaSensei" src="/images/avatar.webp">
   <p class="site-author-name" itemprop="name">DonaSensei</p>
   <div class="site-description" itemprop="description">Discrete</div>
 </div>
@@ -160,10 +160,10 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/donasensei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;donasensei" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/donasensei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;donasensei" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:donasu0417@gmail.com" title="E-Mail → mailto:donasu0417@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:donasu0417@gmail.com" title="E-Mail → mailto:donasu0417@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
 
@@ -215,7 +215,7 @@
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="Kramdown 작성법 | TEMPLATE">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -320,8 +320,7 @@
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">| Markdown           | Rendered Output |</span><br><span class="line">| :----------------- | :-------------: |</span><br><span class="line">| <span class="code">`*Be Italic*`</span>      |   <span class="emphasis">*Be Italic*</span>   |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>      |   <span class="emphasis">_Be Italic_</span>   |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>      |   <span class="strong">**Be Bold**</span>   |</span><br><span class="line">| <span class="code">`__Be Bold__`</span>      |   <span class="strong">__Be Bold__</span>   |</span><br><span class="line">| <span class="code">`` `</span>Code Spans<span class="code">` `</span><span class="code">` |  `</span>Code Spans`   |</span><br></pre></td></tr></table></figure></p>
 <h1 id="이미지">이미지</h1>
 <figure>
-<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4"
-alt="DJ_MORIKUBO" />
+<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="DJ_MORIKUBO">
 <figcaption aria-hidden="true">DJ_MORIKUBO</figcaption>
 </figure>
 <p>이미지 첨부는 <code>![대체_텍스트](이미지_경로)</code>처럼 사용한다.
@@ -343,10 +342,8 @@ alt="DJ_MORIKUBO" />
 <summary>
 펼쳐보기
 </summary>
-<p>How to Print in Python<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>.<br />
-How to Print in Rust<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>.</p>
+<p>How to Print in Python<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.<br>
+How to Print in Rust<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <p>내 환경에 작동하지 않는다.</p>
 <strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; How to Print in Python[^1].  </span></span><br><span class="line"><span class="quote">&gt; How to Print in Rust[^2].</span></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">`print(&quot;Hello, world!&quot;)`</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">`fn main() &#123; println!(&quot;Hello, world!&quot;); &#125;`</span></span><br></pre></td></tr></table></figure>
 </details>
@@ -360,7 +357,7 @@ role="doc-noteref"><sup>2</sup></a>.</p>
 <p>Ordered List is... 1. List 2. List 3. List 1. New list 2. New List 4.
 List <br></p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Ordered List is...</span><br><span class="line"><span class="bullet">1.</span> List</span><br><span class="line"><span class="bullet">2.</span> List</span><br><span class="line"><span class="bullet">3.</span> List</span><br><span class="line"><span class="bullet">    1.</span> New list</span><br><span class="line"><span class="bullet">    2.</span> New List</span><br><span class="line"><span class="bullet">4.</span> List</span><br></pre></td></tr></table></figure></p>
-<p>순서가 없는 경우<br />
+<p>순서가 없는 경우<br>
 Unordered List is... * List - List + List * New list - New List + List
 <br></p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Unordered List is...</span><br><span class="line"><span class="bullet">*</span> List</span><br><span class="line"><span class="bullet">-</span> List</span><br><span class="line"><span class="bullet">+</span> List</span><br><span class="line"><span class="bullet">    *</span> New list</span><br><span class="line"><span class="bullet">    -</span> New List</span><br><span class="line"><span class="bullet">+</span> List</span><br></pre></td></tr></table></figure></p>
@@ -368,9 +365,9 @@ Unordered List is... * List - List + List * New list - New List + List
 <div class="overflow-table" data-markdown="block">
 <table>
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 43%" />
-<col style="width: 26%" />
+<col style="width: 29%">
+<col style="width: 43%">
+<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -382,20 +379,17 @@ Unordered List is... * List - List + List * New list - New List + List
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>[Example Link](#link)</code></td>
-<td
-style="text-align: left;"><code>&lt;a href="#link"&gt;Example Link&lt;/a&gt;</code></td>
+<td style="text-align: left;"><code>&lt;a href="#link"&gt;Example Link&lt;/a&gt;</code></td>
 <td style="text-align: center;"><a href="#Link">Example Link</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>_Be Italic_</code></td>
-<td
-style="text-align: left;"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
+<td style="text-align: left;"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
 <td style="text-align: center;"><em>Be Italic</em></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>**Be Bold**</code></td>
-<td
-style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
+<td style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
 <td style="text-align: center;"><strong>Be Bold</strong></td>
 </tr>
 </tbody>
@@ -405,22 +399,18 @@ style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></t
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;overflow-table&quot;</span> <span class="attr">markdown</span>=<span class="string">&quot;block&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">| Markdown                | HTML                               |    Rendered Output    |</span><br><span class="line">| :---------------------- | :--------------------------------- | :-------------------: |</span><br><span class="line">| <span class="code">`[Example Link](#link)`</span> | <span class="code">`&lt;a href=&quot;#link&quot;&gt;Example Link&lt;/a&gt;`</span> | [<span class="string">Example Link</span>](<span class="link">#Link</span>) |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>           | <span class="code">`&lt;em&gt;Be Italic&lt;em/&gt;`</span>               |      <span class="emphasis">_Be Italic_</span>      |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>           | <span class="code">`&lt;strong&gt;Be Italic&lt;strong/&gt;`</span>       |      <span class="strong">**Be Bold**</span>      |</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 <h1 id="링크">링크</h1>
 <ul>
-<li>Basic Link : <a target="_blank" rel="noopener" href="https://github.com/donasensei">Github</a></li>
-<li>Open New Tab : <a
-target="_blank" rel="noopener" href="https://github.com/donasensei">Github</a>{:target="_blank"}
+<li>Basic Link : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/donasensei">Github</a></li>
+<li>Open New Tab : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/donasensei">Github</a>{:target="_blank"}
 <br></li>
 </ul>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> Basic Link : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)</span><br><span class="line"><span class="bullet">-</span> Open New Tab : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)&#123;:target=&quot;<span class="emphasis">_blank&quot;&#125;</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="유튜브">유튜브</h1>
-<p><a target="_blank" rel="noopener" href="https://youtu.be/RBmWaW-3Cug"
-title="HIMEHINA『3分ガール』MV"><img
-src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg"
-alt="HIMEHINA『3分ガール』MV" /></a> <br></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/RBmWaW-3Cug" title="HIMEHINA『3分ガール』MV"><img src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg" alt="HIMEHINA『3分ガール』MV"></a> <br></p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![HIMEHINA『3分ガール』MV</span>](<span class="link">https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg</span>)](<span class="link">https://youtu.be/RBmWaW-3Cug &quot;HIMEHINA『3分ガール』MV&quot;</span>)</span><br></pre></td></tr></table></figure> 사실상 이미지에 링크를 걸어주는
 방식이라 이런 방법도 가능하다.</p>
 <!-- Stellar Stellar / 星街すいせい(official) -->
 <p align="center">
-<a href="https://youtu.be/a51VH9BYzZA" target="_blank">
+<a href="https://youtu.be/a51VH9BYzZA" target="_blank" rel="external nofollow noopener noreferrer">
 <img data-src="https://img.youtube.com/vi/a51VH9BYzZA/0.jpg" alt="Stellar Stellar / 星街すいせい(official)" width="100%" height="auto">
 </a>
 </p>
@@ -433,24 +423,20 @@ alt="HIMEHINA『3分ガール』MV" /></a> <br></p>
 <p><strong>코드</strong> <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 『眩しいDNAだけ』 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;560&quot;</span> <span class="attr">height</span>=<span class="string">&quot;315&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/VJy8qZ77bpE&quot;</span> <span class="attr">title</span>=<span class="string">&quot;YouTube video player&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allow</span>=<span class="string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="체크박스">체크박스</h1>
 <ul class="task-list">
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled>
 CheckBox(False)</li>
-<li><input type="checkbox" disabled="" checked="" />
+<li><input type="checkbox" disabled checked>
 CheckBox(True)</li>
 </ul>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] CheckBox(False)</span><br><span class="line"><span class="bullet">-</span> [x] CheckBox(True)</span><br></pre></td></tr></table></figure></p>
 <p><br></p>
 <p><strong><em>여기서부터 각주</em></strong></p>
-<section class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p><code>print("Hello, world!")</code><a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"
-role="doc-endnote"><p><code>fn main() &#123; println!("Hello, world!"); &#125;</code>
-내용 설명은 문서 최하단에 위치한다. <br><a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p><code>print("Hello, world!")</code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><code>fn main() &#123; println!("Hello, world!"); &#125;</code>
+내용 설명은 문서 최하단에 위치한다. <br><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

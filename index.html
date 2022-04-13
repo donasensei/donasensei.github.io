@@ -54,6 +54,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/rss2.xml" title="TEMPLATE" type="application/rss+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -125,8 +126,7 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="DonaSensei"
-      src="/images/avatar.webp">
+    <img class="site-author-image" itemprop="image" alt="DonaSensei" src="/images/avatar.webp">
   <p class="site-author-name" itemprop="name">DonaSensei</p>
   <div class="site-description" itemprop="description">Discrete</div>
 </div>
@@ -151,10 +151,10 @@
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/donasensei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;donasensei" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/donasensei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;donasensei" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:donasu0417@gmail.com" title="E-Mail → mailto:donasu0417@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:donasu0417@gmail.com" title="E-Mail → mailto:donasu0417@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
 
@@ -190,7 +190,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang>
     <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/30/2022/03/discrete-mathmatics-03-predicates-and-quantifiers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -205,7 +205,7 @@
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="undefined | TEMPLATE">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -245,105 +245,68 @@
     <div class="post-body" itemprop="articleBody">
           <p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
 기준으로 작성.</p>
-<hr />
+<hr>
 <h1 id="propositional-function">Propositional Function</h1>
 <p>예를 들어 "<span class="math inline">\(x\)</span> is greather than
 3"라는 명제가 있다고 하면 이는 True인가 False인가. 이 경우,
 variable(변수)와 predicate(술어)에 관한 정보가 필요하다.</p>
 <p>위 예시를 명제 함수로 표현하면 <span class="math inline">\(P(x)
 =\)</span> "<span class="math inline">\(x\)</span> is greather than 3"
-처럼 표현하고<br />
-<span class="math inline">\(P(x)\)</span>가 명제 함수, <span
-class="math inline">\(x\)</span>가 변수, <span
-class="math inline">\(P\)</span>가 술어가 된다.</p>
-<p>만약 <span class="math inline">\(x=6\)</span>라면 <span
-class="math inline">\(P(x)\)</span>는 True가 되고 <span
-class="math inline">\(x=2\)</span>라면 <span
-class="math inline">\(P(x)\)</span>는 False가 된다.<br />
+처럼 표현하고<br>
+<span class="math inline">\(P(x)\)</span>가 명제 함수, <span class="math inline">\(x\)</span>가 변수, <span class="math inline">\(P\)</span>가 술어가 된다.</p>
+<p>만약 <span class="math inline">\(x=6\)</span>라면 <span class="math inline">\(P(x)\)</span>는 True가 되고 <span class="math inline">\(x=2\)</span>라면 <span class="math inline">\(P(x)\)</span>는 False가 된다.<br>
 즉, <span class="math inline">\(x\)</span>의 domain(정의역)이 '4 이상인
 모든 실수'라면, <span class="math inline">\(P(x)\)</span>는
 True이다.</p>
 <p>여기서 변수 <span class="math inline">\(x\)</span>에 값이 할당되거나
 한정자가 적용되면, <span class="math inline">\(x\)</span>를 bound
-variables(종속 변수)라고 한다.<br />
+variables(종속 변수)라고 한다.<br>
 <span class="math inline">\(x\)</span>에 값이 할당되지 않았거나 한정자가
 적용되지 않은 경우에는 <span class="math inline">\(x\)</span>를 free
 variables(자유 변수)라고 한다.</p>
 <h1 id="quantifiers한정자">Quantifiers(한정자)</h1>
 <p>한정 기호는 두 종류가 있다.</p>
 <ul>
-<li><strong>Universal Quantifier(<span
-class="math inline">\(∀\)</span>)</strong>
+<li><strong>Universal Quantifier(<span class="math inline">\(∀\)</span>)</strong>
 <ul>
-<li><span class="math inline">\(∀xP(x)\)</span> asserts <span
-class="math inline">\(P(x)\)</span> is true for <strong>every</strong>
+<li><span class="math inline">\(∀xP(x)\)</span> asserts <span class="math inline">\(P(x)\)</span> is true for <strong>every</strong>
 <span class="math inline">\(x\)</span> in the
 <strong>domain</strong>.</li>
 <li>정의역에 속하는 모든 <span class="math inline">\(x\)</span>에 대해
 <span class="math inline">\(P(x)\)</span>는 참이다.</li>
 </ul></li>
-<li><strong>Existential Quantifier(<span
-class="math inline">\(∃\)</span>)</strong>
+<li><strong>Existential Quantifier(<span class="math inline">\(∃\)</span>)</strong>
 <ul>
-<li><span class="math inline">\(∃xP(x)\)</span> asserts <span
-class="math inline">\(P(x)\)</span> is true for <strong>some</strong>
+<li><span class="math inline">\(∃xP(x)\)</span> asserts <span class="math inline">\(P(x)\)</span> is true for <strong>some</strong>
 <span class="math inline">\(x\)</span> in the
 <strong>domain</strong>.</li>
-<li>정의역에 속하는 적어도 하나의 값 <span
-class="math inline">\(x\)</span>에 대해 <span
-class="math inline">\(P(x)\)</span>는 참이다.</li>
+<li>정의역에 속하는 적어도 하나의 값 <span class="math inline">\(x\)</span>에 대해 <span class="math inline">\(P(x)\)</span>는 참이다.</li>
 </ul></li>
 </ul>
 <p>한정자가 적용되는 부분을 한정자의 scope(범위)라고 한다.</p>
 <h2 id="universal-quantifier">Universal Quantifier</h2>
 <p>만일 정의역의 모든 값을 <span class="math inline">\(x_1, x_2, x_3,
-..., x_n\)</span>처럼 나열할 수 있을 경우,<br />
-<span class="math inline">\(∀xP(x)\)</span>는 <span
-class="math inline">\(P(x_1)∧P(x_2)∧P(x_3)∧...∧P(x_n)\)</span>와
+..., x_n\)</span>처럼 나열할 수 있을 경우,<br>
+<span class="math inline">\(∀xP(x)\)</span>는 <span class="math inline">\(P(x_1)∧P(x_2)∧P(x_3)∧...∧P(x_n)\)</span>와
 동일하다.</p>
-<p><span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span
-class="math inline">\(P(x)\)</span>가 <span
-class="math inline">\(x&gt;0\)</span>이고 <span
-class="math inline">\(U\)</span>가 <span
-class="math inline">\(ℤ\)</span>라면 False이다.<br />
-<span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span
-class="math inline">\(P(x)\)</span>가 <span
-class="math inline">\(x&gt;0\)</span>이고 <span
-class="math inline">\(U\)</span>가 <span
-class="math inline">\(ℤ^+\)</span>라면 True이다.</p>
+<p><span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span class="math inline">\(P(x)\)</span>가 <span class="math inline">\(x&gt;0\)</span>이고 <span class="math inline">\(U\)</span>가 <span class="math inline">\(ℤ\)</span>라면 False이다.<br>
+<span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span class="math inline">\(P(x)\)</span>가 <span class="math inline">\(x&gt;0\)</span>이고 <span class="math inline">\(U\)</span>가 <span class="math inline">\(ℤ^+\)</span>라면 True이다.</p>
 <p>ℤ는 정수의 집합이다.</p>
 <h2 id="existential-quantifier">Existential Quantifier</h2>
 <p>만일 정의역의 모든 값을 <span class="math inline">\(x_1, x_2, x_3,
-..., x_n\)</span>처럼 나열할 수 있을 경우,<br />
-<span class="math inline">\(∀xP(x)\)</span>는 <span
-class="math inline">\(P(x_1)∨P(x_2)∨P(x_3)∨...∨P(x_n)\)</span>와
+..., x_n\)</span>처럼 나열할 수 있을 경우,<br>
+<span class="math inline">\(∀xP(x)\)</span>는 <span class="math inline">\(P(x_1)∨P(x_2)∨P(x_3)∨...∨P(x_n)\)</span>와
 동일하다.</p>
-<p><span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span
-class="math inline">\(P(x)\)</span>가 <span
-class="math inline">\(x&gt;0\)</span>이고 <span
-class="math inline">\(U\)</span>가 <span
-class="math inline">\(ℤ\)</span>라면 True이다. 이 경우, <span
-class="math inline">\(U\)</span>가 <span
-class="math inline">\(ℤ^+\)</span>라도 True이다.<br />
+<p><span class="math inline">\(U\)</span>를 정의역이라 하고 만약 <span class="math inline">\(P(x)\)</span>가 <span class="math inline">\(x&gt;0\)</span>이고 <span class="math inline">\(U\)</span>가 <span class="math inline">\(ℤ\)</span>라면 True이다. 이 경우, <span class="math inline">\(U\)</span>가 <span class="math inline">\(ℤ^+\)</span>라도 True이다.<br>
 그러나 <span class="math inline">\(U\)</span>를 정의역이라 하고 만약
-<span class="math inline">\(P(x)\)</span>가 <span
-class="math inline">\(x&gt;0\)</span>이고 <span
-class="math inline">\(U\)</span>가 <span
-class="math inline">\(ℤ^-\)</span>라면 False이다.</p>
+<span class="math inline">\(P(x)\)</span>가 <span class="math inline">\(x&gt;0\)</span>이고 <span class="math inline">\(U\)</span>가 <span class="math inline">\(ℤ^-\)</span>라면 False이다.</p>
 <h3 id="counterexmaple반례">Counterexmaple(반례)</h3>
 <p>반레란 어떤 명제가 참이 아님을 증명하기 위해서 그 명제가 성립하지
-않는 예를 든 것을 말한다.<br />
+않는 예를 든 것을 말한다.<br>
 Domain에 속하는 값 중 단 하나의 값이라도 거짓인 예만 있으면 된다.</p>
 <p>예를 들어 <span class="math inline">\(U\)</span>를 정의역이라 하고
-만약 <span class="math inline">\(∀P(x)\)</span>가 <span
-class="math inline">\(x^2&gt;0\)</span>이고 <span
-class="math inline">\(U\)</span>가 <span
-class="math inline">\(ℝ\)</span>일 때,<br />
-<span class="math inline">\(∀P(x)\)</span>의 반례는 if <span
-class="math inline">\(x=0\)</span>, <span
-class="math inline">\(x^2=0\)</span>가 되어 <span
-class="math inline">\(x^2 &gt; 0\)</span>이 된다. 따라서 <span
-class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
+만약 <span class="math inline">\(∀P(x)\)</span>가 <span class="math inline">\(x^2&gt;0\)</span>이고 <span class="math inline">\(U\)</span>가 <span class="math inline">\(ℝ\)</span>일 때,<br>
+<span class="math inline">\(∀P(x)\)</span>의 반례는 if <span class="math inline">\(x=0\)</span>, <span class="math inline">\(x^2=0\)</span>가 되어 <span class="math inline">\(x^2 &gt; 0\)</span>이 된다. 따라서 <span class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
 <p>ℝ은 실수의 집합이다.</p>
 
       
@@ -370,7 +333,7 @@ class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang>
     <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/29/2022/03/discrete-mathmatics-02-propositional-equivalences/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -385,7 +348,7 @@ class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="undefined | TEMPLATE">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -431,7 +394,7 @@ class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
     <div class="post-body" itemprop="articleBody">
           <p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
 기준으로 작성.</p>
-<hr />
+<hr>
 <h1 id="compound합성-명제">Compound(합성 명제)</h1>
 <p>합성 명제는 truth value에 따라 세 종류로 나눌 수 있다.</p>
 <ul>
@@ -439,55 +402,41 @@ class="math inline">\(∀P(x)\)</span>는 거짓이 된다.</p>
 <li>Contradiction(모순명제)</li>
 <li>Contingency(사건명제)</li>
 </ul>
-<hr />
+<hr>
 <h2 id="tautology항진명제">Tautology(항진명제)</h2>
 <blockquote>
 <p>A <strong>tautology</strong> is a proposition which is <strong>always
 true</strong>.</p>
 </blockquote>
-<p>항상 True값을 가지는 명제를 항진명제라고 한다. <span
-class="math inline">\(p∨¬p\)</span>의 경우 <span
-class="math inline">\(p\)</span>가 <span
-class="math inline">\(T\)</span>일 때 <span
-class="math inline">\(¬p\)</span>는 <span
-class="math inline">\(F\)</span>가 되어 <span
-class="math inline">\(T∨F\)</span>이기 때문에 항상 참이 된다.</p>
-<hr />
+<p>항상 True값을 가지는 명제를 항진명제라고 한다. <span class="math inline">\(p∨¬p\)</span>의 경우 <span class="math inline">\(p\)</span>가 <span class="math inline">\(T\)</span>일 때 <span class="math inline">\(¬p\)</span>는 <span class="math inline">\(F\)</span>가 되어 <span class="math inline">\(T∨F\)</span>이기 때문에 항상 참이 된다.</p>
+<hr>
 <h2 id="contradiction모순명제">Contradiction(모순명제)</h2>
 <blockquote>
 <p>A <strong>contradiction</strong> is a proposition which is
 <strong>always false</strong>.</p>
 </blockquote>
 <p>항진명제와 반대로 항상 False값을 가지는 명제를 모순명제라고 한다.
-<span class="math inline">\(p∧¬p\)</span>은 <span
-class="math inline">\(T∧F\)</span>이기 때문에 항상 거짓이다.</p>
-<hr />
+<span class="math inline">\(p∧¬p\)</span>은 <span class="math inline">\(T∧F\)</span>이기 때문에 항상 거짓이다.</p>
+<hr>
 <h2 id="contingency사건명제">Contingency(사건명제)</h2>
 <blockquote>
 <p>A <strong>contingency</strong> is a proposition which is
 <strong>neither</strong> a tautology nor a contradiction, such as p</p>
 </blockquote>
 <p>항진명제도, 모순명제도 아닌 명제를 사건명제라고 한다. 정의의 예시처럼
-<span class="math inline">\(p\)</span>의 경우 <span
-class="math inline">\(T\)</span>도 가능하고 <span
-class="math inline">\(F\)</span>도 가능하기 때문에 사건명제다.</p>
-<hr />
+<span class="math inline">\(p\)</span>의 경우 <span class="math inline">\(T\)</span>도 가능하고 <span class="math inline">\(F\)</span>도 가능하기 때문에 사건명제다.</p>
+<hr>
 <h1 id="logically-equivalent동치">Logically Equivalent(동치)</h1>
 <p>그래서 만일 <span class="math inline">\(p↔q\)</span>가 항진명제면 p와
-q는 논리적으로 동치이고 <span class="math inline">\(p≡q\)</span>, <span
-class="math inline">\(p⇔q\)</span>로 나타낸다.<br />
+q는 논리적으로 동치이고 <span class="math inline">\(p≡q\)</span>, <span class="math inline">\(p⇔q\)</span>로 나타낸다.<br>
 그리고 진리표에서 열의 값이 동일하면 동치이다. 예를 들면,</p>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p →
 q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(¬q →
@@ -529,15 +478,13 @@ q\)</span></th>
 </tr>
 </tbody>
 </table>
-<p>이 진리표에서 <span class="math inline">\(p → q\)</span>와 <span
-class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 때문에 <span
-class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q →
+<p>이 진리표에서 <span class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 때문에 <span class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q →
 ¬p\)</span>는 동치이다.</p>
 <h2 id="논리적-동치법칙">논리적 동치법칙</h2>
 <table>
 <colgroup>
-<col style="width: 52%" />
-<col style="width: 47%" />
+<col style="width: 52%">
+<col style="width: 47%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -547,67 +494,47 @@ class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q →
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p∧T≡p\)</span><br><span
-class="math inline">\(p∨F≡p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p∧T≡p\)</span><br><span class="math inline">\(p∨F≡p\)</span></td>
 <td style="text-align: center;">Identity Law(항등법칙)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(p∧F≡F\)</span><br><span
-class="math inline">\(p∨T≡T\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p∧F≡F\)</span><br><span class="math inline">\(p∨T≡T\)</span></td>
 <td style="text-align: center;">Domination Law(지배법칙)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p∧¬p=F\)</span><br><span
-class="math inline">\(p∨¬p=T\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p∧¬p=F\)</span><br><span class="math inline">\(p∨¬p=T\)</span></td>
 <td style="text-align: center;">Negation Law(부정법칙)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(¬(¬p)≡p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(¬(¬p)≡p\)</span></td>
 <td style="text-align: center;">Double Negation Law(이중 부정법칙)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p∧p≡p\)</span><br><span
-class="math inline">\(p∨p≡p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p∧p≡p\)</span><br><span class="math inline">\(p∨p≡p\)</span></td>
 <td style="text-align: center;">Idempotent Law(멱등법칙)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(p∧q≡q∧p\)</span><br><span
-class="math inline">\(p∨q≡q∨p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p∧q≡q∧p\)</span><br><span class="math inline">\(p∨q≡q∨p\)</span></td>
 <td style="text-align: center;">Commutative Law(교환법칙)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
-class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
 <td style="text-align: center;">Associative Law(결합법칙)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
-class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
 <td style="text-align: center;">Distributive Law(분배법칙)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span><br><span
-class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span><br><span class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span></td>
 <td style="text-align: center;">De Morgan's Law(드 모르간 법칙)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(p∧(p∨q)≡p\)</span><br><span
-class="math inline">\(p∨(p∧q)≡p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p∧(p∨q)≡p\)</span><br><span class="math inline">\(p∨(p∧q)≡p\)</span></td>
 <td style="text-align: center;">Absorption Law(흡수법칙)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p→q≡¬p∨q\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p→q≡¬p∨q\)</span></td>
 <td style="text-align: center;">Implication Law(함축법칙)</td>
 </tr>
 </tbody>
@@ -623,28 +550,23 @@ class="math inline">\(p→q≡¬p∨q\)</span></td>
   &amp;≡ (¬p∧¬q)∨F \\
   &amp;≡ ¬p∧¬q
 \end{aligned}\]</span>
-<p>한줄씩 따라가보면,<br />
+<p>한줄씩 따라가보면,<br>
 <span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
 2법칙으로 <span class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span>를 적용해
-<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>가 된다.<br>
 <span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
 1법칙으로 <span class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span>를 적용해
-<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>가 된다.<br>
 <span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>은 이중 부정법칙으로
-<span class="math inline">\(¬(¬p)≡p\)</span>가 되어 <span
-class="math inline">\(¬p∧(p∨¬q)\)</span>가 된다.<br />
+<span class="math inline">\(¬(¬p)≡p\)</span>가 되어 <span class="math inline">\(¬p∧(p∨¬q)\)</span>가 된다.<br>
 <span class="math inline">\(¬p∧(p∨¬q)\)</span>은 분배법칙으로 괄호 밖에
-있는 <span class="math inline">\(¬p∧\)</span>를 분배해 <span
-class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>가 된다.<br />
-<span class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>에서 <span
-class="math inline">\((¬p∧p)\)</span>는 항상 거짓이기 때문에(모순명제)
-<span class="math inline">\(F∨(¬p∧¬q)\)</span>가 된다.<br />
+있는 <span class="math inline">\(¬p∧\)</span>를 분배해 <span class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>가 된다.<br>
+<span class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>에서 <span class="math inline">\((¬p∧p)\)</span>는 항상 거짓이기 때문에(모순명제)
+<span class="math inline">\(F∨(¬p∧¬q)\)</span>가 된다.<br>
 <span class="math inline">\(F∨(¬p∧¬q)\)</span>은 논리합에서의 교환법칙에
 따라 <span class="math inline">\((¬p∧¬q)∨F\)</span>처럼 바꿔 쓸 수
-있다.<br />
-<span class="math inline">\((¬p∧¬q)∨F\)</span>은 항등법칙에 의해 <span
-class="math inline">\(p∨F≡p\)</span>, <span
-class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명이
+있다.<br>
+<span class="math inline">\((¬p∧¬q)∨F\)</span>은 항등법칙에 의해 <span class="math inline">\(p∨F≡p\)</span>, <span class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명이
 완료된다.</p>
 
       
@@ -671,7 +593,7 @@ class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명�
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang>
     <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/29/2022/03/dB-%EB%8D%B0%EC%8B%9C%EB%B2%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -686,7 +608,7 @@ class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명�
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="undefined | TEMPLATE">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -732,8 +654,7 @@ class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명�
     <div class="post-body" itemprop="articleBody">
           <h1 id="mathrmdb"><span class="math inline">\(\mathrm{dB}\)</span></h1>
 <p>dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다.</p>
-<p>dB에서 <strong>d</strong>는 deci는 <span
-class="math inline">\(×10^{-1} = ×\frac{1}{10}\)</span>을 표현하는 SI
+<p>dB에서 <strong>d</strong>는 deci는 <span class="math inline">\(×10^{-1} = ×\frac{1}{10}\)</span>을 표현하는 SI
 접두어고 <strong>B</strong>는 Alexander Graham Bell의 이름에서
 가져왔다.</p>
 <p>과거 전화는 전선의 저항 때문에 거리가 멀어지면 멀어질수록 신호가
@@ -757,42 +678,34 @@ class="math inline">\(×10^{-1} = ×\frac{1}{10}\)</span>을 표현하는 SI
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(\mathrm{dB}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\mathrm{dB}\)</span></th>
 <th style="text-align: center;">소리의 세기</th>
 <th style="text-align: center;">Loudness</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(-6\mathrm{dB}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\frac{1}{4}\)</span>배</td>
+<td style="text-align: center;"><span class="math inline">\(-6\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{4}\)</span>배</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(-3\mathrm{dB}\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\frac{1}{2}\)</span>배</td>
+<td style="text-align: center;"><span class="math inline">\(-3\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span>배</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(0\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\mathrm{dB}\)</span></td>
 <td style="text-align: center;">1배</td>
 <td style="text-align: center;"><strong>1배</strong></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(10\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10\mathrm{dB}\)</span></td>
 <td style="text-align: center;">10배</td>
 <td style="text-align: center;"><strong>2배</strong></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(20\mathrm{dB}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(20\mathrm{dB}\)</span></td>
 <td style="text-align: center;">20배</td>
 <td style="text-align: center;"><strong>4배</strong></td>
 </tr>
@@ -801,11 +714,10 @@ class="math inline">\(20\mathrm{dB}\)</span></td>
 <p>여기서 Loudness는 인간이 느끼는 음량의 정도를 말한다. 즉 10dB만큼
 높아지면 2배 크게 들리는 것이다.</p>
 <p>그렇다고 A라는 소리가 소리 B와 -3dB의 차이가 날 때, A가 B보다 작은
-소리인 것은 아니다.<br />
+소리인 것은 아니다.<br>
 dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는 아니기
 때문이다.</p>
-<p>만일 음압을 구하고 싶다면 음압과 세기의 비례는 <span
-class="math inline">\(\mathrm{Pressure}^2 ∝
+<p>만일 음압을 구하고 싶다면 음압과 세기의 비례는 <span class="math inline">\(\mathrm{Pressure}^2 ∝
 \mathrm{Intensity}\)</span>이기 때문에</p>
 <span class="math display">\[\begin{aligned}
 \mathrm{dB} &amp;= 10\log(\frac{P}{P_{ref}}) \\
@@ -815,55 +727,44 @@ class="math inline">\(\mathrm{Pressure}^2 ∝
   &amp;= 20\log_{10}(\frac{P}{P_{ref}})
 
 \end{aligned}\]</span>
-<p>그리고 공기 중에서의 기준이 되는 크기가 <span
-class="math inline">\(\mathrm{dB_{spl}}\)</span>이다.</p>
-<hr />
-<h1 id="mathrmdb_spl"><span
-class="math inline">\(\mathrm{dB_{spl}}\)</span></h1>
+<p>그리고 공기 중에서의 기준이 되는 크기가 <span class="math inline">\(\mathrm{dB_{spl}}\)</span>이다.</p>
+<hr>
+<h1 id="mathrmdb_spl"><span class="math inline">\(\mathrm{dB_{spl}}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dB_{spl}}\)</span>은 Sound
 Pressure Level(음압 레벨)을 뜻하고 사람이 들을 수 있는 가장 작은 소리의
 음압을 기준으로 <span class="math inline">\(0.00020 \mathrm{dyn/cm^2} =
 20μPa\)</span>을 절대값으로 한다.</p>
-<p>이를 식으로 표현한 것이 아래의 식이다. <span
-class="math display">\[L_{\mathrm{dB_{spl}}}/\mathrm{dB_{spl}} =
+<p>이를 식으로 표현한 것이 아래의 식이다. <span class="math display">\[L_{\mathrm{dB_{spl}}}/\mathrm{dB_{spl}} =
 20\log_{10}(\frac{P}{20μPa})\]</span></p>
 <p>이 <span class="math inline">\(\mathrm{dB_{spl}}\)</span>이 보통 소음
 측정등에서 말하는 데시벨 측정이다. 통상 spl을 생략하여 말하기 때문에
 dB와 혼동하는 경우가 많다.</p>
-<hr />
-<h1 id="mathrmdbm"><span
-class="math inline">\(\mathrm{dBm}\)</span></h1>
+<hr>
+<h1 id="mathrmdbm"><span class="math inline">\(\mathrm{dBm}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dBm}\)</span>은 1mW을 기준으로
 하는 dB scale이다. 1mW를 기준으로 하긴 하지만 임피던스에 따라 바뀔 수도
 있다. 통상, 50Ω이나 75Ω에서 1mW를 0dBm이라고 한다.</p>
-<hr />
-<h1 id="mathrmdbu"><span
-class="math inline">\(\mathrm{dBu}\)</span></h1>
-<p><span class="math inline">\(\mathrm{dBu}\)</span>는 <span
-class="math inline">\(\mathrm{dBm}\)</span>에서 600Ω에서의 1mW를
+<hr>
+<h1 id="mathrmdbu"><span class="math inline">\(\mathrm{dBu}\)</span></h1>
+<p><span class="math inline">\(\mathrm{dBu}\)</span>는 <span class="math inline">\(\mathrm{dBm}\)</span>에서 600Ω에서의 1mW를
 기준으로 잡는 방식이다. 계산하면, <span class="math display">\[V_{ref} =
 √(1mW × 600Ω) ≈ 0.775V_{rms}\]</span> 0.775Vrms를 기준점으로 한다.</p>
-<hr />
-<h1 id="mathrmdbv"><span
-class="math inline">\(\mathrm{dBV}\)</span></h1>
+<hr>
+<h1 id="mathrmdbv"><span class="math inline">\(\mathrm{dBV}\)</span></h1>
 <p><span class="math inline">\(\mathrm{dBV}\)</span>는 dBu와 달리 전압이
-아닌 절대값인 1V를 Vref로 잡는 방식이다. 식으로 표현하면, <span
-class="math display">\[L\mathrm{_{dBV}} =
+아닌 절대값인 1V를 Vref로 잡는 방식이다. 식으로 표현하면, <span class="math display">\[L\mathrm{_{dBV}} =
 20\log_{10}(\frac{V_1}{V_{ref}})\]</span></p>
 <p>사실상 식은 크게 바뀌지 않고 기준만 바뀔 뿐이다.</p>
-<hr />
-<h1 id="mathrmdbfs"><span
-class="math inline">\(\mathrm{dBFS}\)</span></h1>
+<hr>
+<h1 id="mathrmdbfs"><span class="math inline">\(\mathrm{dBFS}\)</span></h1>
 <p>디지털에서의 0dB는 아날로그와 달리 Max Level을 의미한다. 아날로그의
 Dynamic Range가 0dB이상으로 Head Room이 존재하는 것과 다르게
 디지털에서의 DR은 전체에서의 최고점과 최저점이다. 결국 ADC에서 1로
 변환되는 경우가 0dBFS이다.</p>
 <p>이를 통해 bit에 따른 디지털에서의 DR을 알 수 있는데 식으로 표현하면,
 <span class="math display">\[\mathrm{dBFS} =
-20\log_{10}(\frac{2^n}{1})\]</span> 여기서의 <span
-class="math inline">\(n\)</span>은 bit, 디지털에서의 진폭이다.</p>
-<p>예를 들어 24-bit 환경에서의 DR을 계산한다면, <span
-class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
+20\log_{10}(\frac{2^n}{1})\]</span> 여기서의 <span class="math inline">\(n\)</span>은 bit, 디지털에서의 진폭이다.</p>
+<p>예를 들어 24-bit 환경에서의 DR을 계산한다면, <span class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
 144\]</span> 즉, 24-bit 환경에서의 다이나믹 레인지는 144dBFS를 가질 수
 있다.</p>
 
@@ -891,7 +792,7 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang>
     <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/29/2022/03/discrete-mathmatics-01-propositional-logic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -906,7 +807,7 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="undefined | TEMPLATE">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -952,7 +853,7 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
     <div class="post-body" itemprop="articleBody">
           <p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
 기준으로 작성.</p>
-<hr />
+<hr>
 <h1 id="propositions명제">Propositions(명제)</h1>
 <p>우선 명제의 정의는 이렇다.</p>
 <blockquote>
@@ -979,11 +880,11 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
 변수)</strong>를 사용한다. 통상 <span class="math inline">\(p, q, r, s,
 ...\)</span> 등이 있다.</p>
 <p>하나 또는 여러 명제를 조합하여 새로운 수학적 명제를 만들 수
-있으며,<br />
+있으며,<br>
 이를 <strong>복합명제(Compound Proposition)</strong>라 한다.</p>
 <p>이를 만들 때 쓰이는 연산자를 <strong>논리 연산자(Logical
 Operator)</strong>라고 한다. (접속사)</p>
-<hr />
+<hr>
 <h1 id="논리-연산자logical-operator">논리 연산자(Logical Operator)</h1>
 <table>
 <thead>
@@ -997,51 +898,42 @@ Operator)</strong>라고 한다. (접속사)</p>
 <tr class="odd">
 <td style="text-align: center;">Negation</td>
 <td style="text-align: center;">부정</td>
-<td style="text-align: center;"><span
-class="math inline">\(¬\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(¬\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Conjunction</td>
 <td style="text-align: center;">논리곱</td>
-<td style="text-align: center;"><span
-class="math inline">\(∧\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(∧\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Disjunction</td>
 <td style="text-align: center;">논리합</td>
-<td style="text-align: center;"><span
-class="math inline">\(∨\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(∨\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Implication</td>
 <td style="text-align: center;">조건명제</td>
-<td style="text-align: center;"><span
-class="math inline">\(→\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(→\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Biconditional</td>
 <td style="text-align: center;">쌍조건문</td>
-<td style="text-align: center;"><span
-class="math inline">\(↔\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(↔\)</span></td>
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <h2 id="negation부정">Negation(부정)</h2>
 <p>부정의 정의는 이렇다.</p>
 <blockquote>
-<p>The <strong>negation</strong> of a proposition <span
-class="math inline">\(p\)</span> is denoted by <span
-class="math inline">\(¬p\)</span> and has this <strong>truth
+<p>The <strong>negation</strong> of a proposition <span class="math inline">\(p\)</span> is denoted by <span class="math inline">\(¬p\)</span> and has this <strong>truth
 table</strong>:</p>
 </blockquote>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬p\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1056,23 +948,18 @@ class="math inline">\(¬p\)</span></th>
 </tbody>
 </table>
 <p>즉, 참이면 거짓이고, 거짓이면 참이다.</p>
-<hr />
+<hr>
 <h2 id="conjunction논리곱">Conjunction(논리곱)</h2>
 <p>논리곱의 정의는 이렇다.</p>
 <blockquote>
-<p>The <strong>conjunction</strong> of propositions <span
-class="math inline">\(p\)</span> and <span
-class="math inline">\(q\)</span> is denoted by <span
-class="math inline">\(p ∧ q\)</span> and has this <strong>truth
+<p>The <strong>conjunction</strong> of propositions <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> is denoted by <span class="math inline">\(p ∧ q\)</span> and has this <strong>truth
 table</strong>:</p>
 </blockquote>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p ∧
 q\)</span></th>
 </tr>
@@ -1101,27 +988,21 @@ q\)</span></th>
 </tbody>
 </table>
 <p>통상 AND로 잘 알려져 있다. 즉, <span class="math inline">\(p ∧
-q\)</span>는 <span class="math inline">\(p\)</span>와 <span
-class="math inline">\(q\)</span>, 모두 참일 경우만 참이다.<br />
+q\)</span>는 <span class="math inline">\(p\)</span>와 <span class="math inline">\(q\)</span>, 모두 참일 경우만 참이다.<br>
 예를 들면, 나랑 내가 짠 코드는 버그가 없다. 라고 했을 때, '나'와 '내가
 짠 코드'가 전부 버그가 없어야 참이다.</p>
-<hr />
+<hr>
 <h2 id="disjunction논리합">Disjunction(논리합)</h2>
 <p>논리합의 정의는 이렇다.</p>
 <blockquote>
-<p>The <strong>disjunction</strong> of propositions <span
-class="math inline">\(p\)</span> and <span
-class="math inline">\(q\)</span> is denoted by <span
-class="math inline">\(p ∨ q\)</span> and has this <strong>truth
+<p>The <strong>disjunction</strong> of propositions <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> is denoted by <span class="math inline">\(p ∨ q\)</span> and has this <strong>truth
 table</strong>:</p>
 </blockquote>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p ∨
 q\)</span></th>
 </tr>
@@ -1151,27 +1032,23 @@ q\)</span></th>
 </table>
 <p>통상 OR로 잘 알려져 있다. 즉, <span class="math inline">\(p ∨
 q\)</span>일 경우, 적어도 하나가 True일 때 성립한다. 양쪽 다 True여도
-성립한다.<br />
+성립한다.<br>
 한국어로 해석하면 "또는" 정도로 해석되는데 보통 "또는"을 배타적으로
 인식하는 경향이 있다. 아래쪽에서 설명한다.</p>
-<hr />
+<hr>
 <h3 id="inclusive-or-exclusive-or">Inclusive Or / Exclusive Or</h3>
 <p>Or의 경우 두 개의 의미가 존재하는데, <strong>Inclusive
 Or(논리합)</strong> 와 <strong>Exclusive Or(배타적 논리합)</strong>
 이다.</p>
 <p><strong>Inclusive Or</strong>가 위에서 설명한 논리합이다. 예를 들어,
 "Java 아니면 Python을 알아야 수강이 가능하다." 일 때, Java나 Python 둘
-중 하나를 알고 있거나 둘 다 알고 있을 경우에 True이기 때문에 <span
-class="math inline">\(p ∨ q\)</span>가 성립하며
+중 하나를 알고 있거나 둘 다 알고 있을 경우에 True이기 때문에 <span class="math inline">\(p ∨ q\)</span>가 성립하며
 <strong>disjunction</strong>이다.</p>
 <p>그러나 <strong>Exclusive Or(배타적 논리합)</strong>의 경우 조금
 차이가 있다. 배타적 논리합의 정의는 이렇다.</p>
 <blockquote>
-<p>In <span class="math inline">\(p ⊕ q\)</span> , <strong>one of <span
-class="math inline">\(p\)</span> and <span
-class="math inline">\(q\)</span> must be true</strong>, but not both.
-The <strong>truth table</strong> for <span
-class="math inline">\(⊕\)</span> is:</p>
+<p>In <span class="math inline">\(p ⊕ q\)</span> , <strong>one of <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> must be true</strong>, but not both.
+The <strong>truth table</strong> for <span class="math inline">\(⊕\)</span> is:</p>
 </blockquote>
 <table>
 <thead>
@@ -1205,28 +1082,24 @@ q\)</span></th>
 </tr>
 </tbody>
 </table>
-<p>즉 <span class="math inline">\(p\)</span>나 <span
-class="math inline">\(q\)</span>, 중 하나는 True여야 하지만 둘 다 True일
+<p>즉 <span class="math inline">\(p\)</span>나 <span class="math inline">\(q\)</span>, 중 하나는 True여야 하지만 둘 다 True일
 수는 없다. 예를 들어, 게임 점검 보상으로 유료 재화 아니면 인게임
 아이템으로 보상한다고 했을 때, 유료 재화나 인게임 아이템으로 보상을 받을
 수는 있으나 둘 다 받을 수 있는 경우는 없다.</p>
-<hr />
+<hr>
 <h2 id="implication조건명제">Implication(조건명제)</h2>
 <p>조건명제의 정의는 이렇다.</p>
 <blockquote>
 <p>If p and q are propositions, then <span class="math inline">\(p →
 q\)</span> is a conditional statement or <strong>implication</strong>
-which is read as “if <span class="math inline">\(p\)</span>, then <span
-class="math inline">\(q\)</span>” and has this <strong>truth
+which is read as “if <span class="math inline">\(p\)</span>, then <span class="math inline">\(q\)</span>” and has this <strong>truth
 table</strong>:</p>
 </blockquote>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p →
 q\)</span></th>
 </tr>
@@ -1255,26 +1128,14 @@ q\)</span></th>
 </tbody>
 </table>
 <ul>
-<li>'if <span class="math inline">\(p\)</span>, then <span
-class="math inline">\(q\)</span>(<span
-class="math inline">\(p\)</span>이면 <span
-class="math inline">\(q\)</span>이다.)'</li>
-<li>'<span class="math inline">\(p\)</span> implies <span
-class="math inline">\(q\)</span>(<span
-class="math inline">\(p\)</span>는 <span
-class="math inline">\(q\)</span>를 함의한다.)'</li>
-<li>'<span class="math inline">\(p\)</span> is sufficient for <span
-class="math inline">\(q\)</span>(<span
-class="math inline">\(p\)</span>는 <span
-class="math inline">\(q\)</span>의 충분조건이다.)'</li>
-<li>'<span class="math inline">\(q\)</span> is necessary for <span
-class="math inline">\(p\)</span>(<span
-class="math inline">\(q\)</span>는 <span
-class="math inline">\(p\)</span>의 필요조건이다.)'</li>
+<li>'if <span class="math inline">\(p\)</span>, then <span class="math inline">\(q\)</span>(<span class="math inline">\(p\)</span>이면 <span class="math inline">\(q\)</span>이다.)'</li>
+<li>'<span class="math inline">\(p\)</span> implies <span class="math inline">\(q\)</span>(<span class="math inline">\(p\)</span>는 <span class="math inline">\(q\)</span>를 함의한다.)'</li>
+<li>'<span class="math inline">\(p\)</span> is sufficient for <span class="math inline">\(q\)</span>(<span class="math inline">\(p\)</span>는 <span class="math inline">\(q\)</span>의 충분조건이다.)'</li>
+<li>'<span class="math inline">\(q\)</span> is necessary for <span class="math inline">\(p\)</span>(<span class="math inline">\(q\)</span>는 <span class="math inline">\(p\)</span>의 필요조건이다.)'</li>
 </ul>
 <p>모두가 <span class="math inline">\(p → q\)</span>로 표시될 수
 있다.</p>
-<hr />
+<hr>
 <h3 id="converse-contrapositive-and-inverse역-대우-이">Converse,
 Contrapositive, and Inverse(역, 대우, 이)</h3>
 <table>
@@ -1320,19 +1181,16 @@ it is raining일 경우의 역은 If I do not go to town, then it is raining이
 된다.</p>
 <p><strong>대우</strong>의 경우, 본래 명제와 논리 값이 같은,
 근본적으로는 같은 명제라고 할 수 있다.</p>
-<p>만약 <span class="math inline">\(p → q\)</span>가 참이면 <span
-class="math inline">\(P ⊂ Q\)</span>인 Truth Set(진리집합)이고 그 경우
-<span class="math inline">\(Q^c ⊂ P^c\)</span>가 되어 <span
-class="math inline">\(¬q → ¬p\)</span>는 참이 된다.</p>
+<p>만약 <span class="math inline">\(p → q\)</span>가 참이면 <span class="math inline">\(P ⊂ Q\)</span>인 Truth Set(진리집합)이고 그 경우
+<span class="math inline">\(Q^c ⊂ P^c\)</span>가 되어 <span class="math inline">\(¬q → ¬p\)</span>는 참이 된다.</p>
 <p><strong>이</strong>의 경우, <span class="math inline">\(p →
 q\)</span>가 <span class="math inline">\(¬p → ¬q\)</span>가 된 것으로
 기존 명제의 부정인 명제이다.</p>
-<hr />
+<hr>
 <h2 id="biconditional쌍조건문">Biconditional(쌍조건문)</h2>
 <p>쌍조건문의 정의는 이렇다.</p>
 <blockquote>
-<p>If <span class="math inline">\(p\)</span> and <span
-class="math inline">\(q\)</span> are propositions, then we can form the
+<p>If <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are propositions, then we can form the
 <strong>biconditional proposition</strong> <span class="math inline">\(p
 ↔ q\)</span> , read as “<span class="math inline">\(p\)</span>
 <strong>if and only if</strong> <span class="math inline">\(q\)</span>.”
@@ -1342,10 +1200,8 @@ proposition with this truth table:</p>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p ↔
 q\)</span></th>
 </tr>
@@ -1374,19 +1230,13 @@ q\)</span></th>
 </tbody>
 </table>
 <p>통상 영어로 “<span class="math inline">\(p\)</span> if and only if
-<span class="math inline">\(q\)</span>.”라고 쓰고 <span
-class="math inline">\(p\)</span> iff <span
-class="math inline">\(q\)</span>처럼 쓰기도 한다. 해석하면 "오직 <span
-class="math inline">\(p\)</span>인 경우에만(iff) <span
-class="math inline">\(q\)</span>이다." 이고, <span
-class="math inline">\(p\)</span>랑 <span
-class="math inline">\(q\)</span>는 <strong>Equivalent
+<span class="math inline">\(q\)</span>.”라고 쓰고 <span class="math inline">\(p\)</span> iff <span class="math inline">\(q\)</span>처럼 쓰기도 한다. 해석하면 "오직 <span class="math inline">\(p\)</span>인 경우에만(iff) <span class="math inline">\(q\)</span>이다." 이고, <span class="math inline">\(p\)</span>랑 <span class="math inline">\(q\)</span>는 <strong>Equivalent
 Propositions(동치)</strong>라고 하기도 한다.</p>
 <p>이를 다시 정리하면 <span class="math inline">\((p → q) ∧ (q →
 p)\)</span>라고 쓸 수 있다. 즉, <span class="math inline">\(p\)</span>와
 <span class="math inline">\(q\)</span>의 <strong>Truth
 Value(진리값)</strong>이 같아야 True이다.</p>
-<hr />
+<hr>
 <h1 id="equivalent-propositions동등-명제">Equivalent Propositions(동등
 명제)</h1>
 <h2 id="equivalent동치">Equivalent(동치)</h2>
@@ -1400,14 +1250,10 @@ the same <strong>truth value</strong>.</p>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p →
 q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(¬q →
@@ -1449,21 +1295,16 @@ q\)</span></th>
 </tr>
 </tbody>
 </table>
-<p>진리표를 보면 <span class="math inline">\(p → q\)</span>와 <span
-class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 떄문에 둘은
+<p>진리표를 보면 <span class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 떄문에 둘은
 동치이고 대우이다.</p>
 <p>그리고 조건명제의 이와 역은 동치가 아닌데 이를 진리표로 나타내면,</p>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(p →
 q\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(¬p →
@@ -1513,7 +1354,7 @@ p\)</span></th>
 </table>
 <p>위와 같이 진리값이 다름을 볼 수 있다. 그렇기에 이나 역은 조견명제와
 동치가 아니다. 그러나 조건명제의 역은 그 명제의 이와 동치이다.</p>
-<hr />
+<hr>
 <h1 id="논리-연산자의-우선순위">논리 연산자의 우선순위</h1>
 <table>
 <thead>
@@ -1546,9 +1387,8 @@ p\)</span></th>
 </tbody>
 </table>
 <p>논리연산자는 순서대로 NOT, AND, OR, Implication, Biconditional
-우선순위를 가진다.<br />
-예를 들면, <span class="math inline">\(¬p ∨ q → ¬r\)</span>라면 <span
-class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
+우선순위를 가진다.<br>
+예를 들면, <span class="math inline">\(¬p ∨ q → ¬r\)</span>라면 <span class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
 
       
     </div>
@@ -1574,7 +1414,7 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang>
     <link itemprop="mainEntityOfPage" href="https://donasensei.github.io/2022/03/27/2022/03/kramdown-write/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1589,7 +1429,7 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="undefined | TEMPLATE">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1694,8 +1534,7 @@ class="math inline">\(((¬p) ∨ q) → ¬r\)</span>이다.</p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">| Markdown           | Rendered Output |</span><br><span class="line">| :----------------- | :-------------: |</span><br><span class="line">| <span class="code">`*Be Italic*`</span>      |   <span class="emphasis">*Be Italic*</span>   |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>      |   <span class="emphasis">_Be Italic_</span>   |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>      |   <span class="strong">**Be Bold**</span>   |</span><br><span class="line">| <span class="code">`__Be Bold__`</span>      |   <span class="strong">__Be Bold__</span>   |</span><br><span class="line">| <span class="code">`` `</span>Code Spans<span class="code">` `</span><span class="code">` |  `</span>Code Spans`   |</span><br></pre></td></tr></table></figure></p>
 <h1 id="이미지">이미지</h1>
 <figure>
-<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4"
-alt="DJ_MORIKUBO" />
+<img data-src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="DJ_MORIKUBO">
 <figcaption aria-hidden="true">DJ_MORIKUBO</figcaption>
 </figure>
 <p>이미지 첨부는 <code>![대체_텍스트](이미지_경로)</code>처럼 사용한다.
@@ -1717,10 +1556,8 @@ alt="DJ_MORIKUBO" />
 <summary>
 펼쳐보기
 </summary>
-<p>How to Print in Python<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a>.<br />
-How to Print in Rust<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a>.</p>
+<p>How to Print in Python<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.<br>
+How to Print in Rust<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <p>내 환경에 작동하지 않는다.</p>
 <strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; How to Print in Python[^1].  </span></span><br><span class="line"><span class="quote">&gt; How to Print in Rust[^2].</span></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">`print(&quot;Hello, world!&quot;)`</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">`fn main() &#123; println!(&quot;Hello, world!&quot;); &#125;`</span></span><br></pre></td></tr></table></figure>
 </details>
@@ -1734,7 +1571,7 @@ role="doc-noteref"><sup>2</sup></a>.</p>
 <p>Ordered List is... 1. List 2. List 3. List 1. New list 2. New List 4.
 List <br></p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Ordered List is...</span><br><span class="line"><span class="bullet">1.</span> List</span><br><span class="line"><span class="bullet">2.</span> List</span><br><span class="line"><span class="bullet">3.</span> List</span><br><span class="line"><span class="bullet">    1.</span> New list</span><br><span class="line"><span class="bullet">    2.</span> New List</span><br><span class="line"><span class="bullet">4.</span> List</span><br></pre></td></tr></table></figure></p>
-<p>순서가 없는 경우<br />
+<p>순서가 없는 경우<br>
 Unordered List is... * List - List + List * New list - New List + List
 <br></p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Unordered List is...</span><br><span class="line"><span class="bullet">*</span> List</span><br><span class="line"><span class="bullet">-</span> List</span><br><span class="line"><span class="bullet">+</span> List</span><br><span class="line"><span class="bullet">    *</span> New list</span><br><span class="line"><span class="bullet">    -</span> New List</span><br><span class="line"><span class="bullet">+</span> List</span><br></pre></td></tr></table></figure></p>
@@ -1742,9 +1579,9 @@ Unordered List is... * List - List + List * New list - New List + List
 <div class="overflow-table" data-markdown="block">
 <table>
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 43%" />
-<col style="width: 26%" />
+<col style="width: 29%">
+<col style="width: 43%">
+<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1756,20 +1593,17 @@ Unordered List is... * List - List + List * New list - New List + List
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>[Example Link](#link)</code></td>
-<td
-style="text-align: left;"><code>&lt;a href="#link"&gt;Example Link&lt;/a&gt;</code></td>
+<td style="text-align: left;"><code>&lt;a href="#link"&gt;Example Link&lt;/a&gt;</code></td>
 <td style="text-align: center;"><a href="#Link">Example Link</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>_Be Italic_</code></td>
-<td
-style="text-align: left;"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
+<td style="text-align: left;"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
 <td style="text-align: center;"><em>Be Italic</em></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>**Be Bold**</code></td>
-<td
-style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
+<td style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
 <td style="text-align: center;"><strong>Be Bold</strong></td>
 </tr>
 </tbody>
@@ -1779,22 +1613,18 @@ style="text-align: left;"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></t
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;overflow-table&quot;</span> <span class="attr">markdown</span>=<span class="string">&quot;block&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">| Markdown                | HTML                               |    Rendered Output    |</span><br><span class="line">| :---------------------- | :--------------------------------- | :-------------------: |</span><br><span class="line">| <span class="code">`[Example Link](#link)`</span> | <span class="code">`&lt;a href=&quot;#link&quot;&gt;Example Link&lt;/a&gt;`</span> | [<span class="string">Example Link</span>](<span class="link">#Link</span>) |</span><br><span class="line">| <span class="code">`_Be Italic_`</span>           | <span class="code">`&lt;em&gt;Be Italic&lt;em/&gt;`</span>               |      <span class="emphasis">_Be Italic_</span>      |</span><br><span class="line">| <span class="code">`**Be Bold**`</span>           | <span class="code">`&lt;strong&gt;Be Italic&lt;strong/&gt;`</span>       |      <span class="strong">**Be Bold**</span>      |</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 <h1 id="링크">링크</h1>
 <ul>
-<li>Basic Link : <a target="_blank" rel="noopener" href="https://github.com/donasensei">Github</a></li>
-<li>Open New Tab : <a
-target="_blank" rel="noopener" href="https://github.com/donasensei">Github</a>{:target="_blank"}
+<li>Basic Link : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/donasensei">Github</a></li>
+<li>Open New Tab : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/donasensei">Github</a>{:target="_blank"}
 <br></li>
 </ul>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> Basic Link : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)</span><br><span class="line"><span class="bullet">-</span> Open New Tab : [<span class="string">Github</span>](<span class="link">https://github.com/donasensei</span>)&#123;:target=&quot;<span class="emphasis">_blank&quot;&#125;</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="유튜브">유튜브</h1>
-<p><a target="_blank" rel="noopener" href="https://youtu.be/RBmWaW-3Cug"
-title="HIMEHINA『3分ガール』MV"><img
-src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg"
-alt="HIMEHINA『3分ガール』MV" /></a> <br></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/RBmWaW-3Cug" title="HIMEHINA『3分ガール』MV"><img src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg" alt="HIMEHINA『3分ガール』MV"></a> <br></p>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![HIMEHINA『3分ガール』MV</span>](<span class="link">https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg</span>)](<span class="link">https://youtu.be/RBmWaW-3Cug &quot;HIMEHINA『3分ガール』MV&quot;</span>)</span><br></pre></td></tr></table></figure> 사실상 이미지에 링크를 걸어주는
 방식이라 이런 방법도 가능하다.</p>
 <!-- Stellar Stellar / 星街すいせい(official) -->
 <p align="center">
-<a href="https://youtu.be/a51VH9BYzZA" target="_blank">
+<a href="https://youtu.be/a51VH9BYzZA" target="_blank" rel="external nofollow noopener noreferrer">
 <img data-src="https://img.youtube.com/vi/a51VH9BYzZA/0.jpg" alt="Stellar Stellar / 星街すいせい(official)" width="100%" height="auto">
 </a>
 </p>
@@ -1807,24 +1637,20 @@ alt="HIMEHINA『3分ガール』MV" /></a> <br></p>
 <p><strong>코드</strong> <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 『眩しいDNAだけ』 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;560&quot;</span> <span class="attr">height</span>=<span class="string">&quot;315&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://www.youtube.com/embed/VJy8qZ77bpE&quot;</span> <span class="attr">title</span>=<span class="string">&quot;YouTube video player&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">allow</span>=<span class="string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="체크박스">체크박스</h1>
 <ul class="task-list">
-<li><input type="checkbox" disabled="" />
+<li><input type="checkbox" disabled>
 CheckBox(False)</li>
-<li><input type="checkbox" disabled="" checked="" />
+<li><input type="checkbox" disabled checked>
 CheckBox(True)</li>
 </ul>
 <p><strong>코드</strong> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] CheckBox(False)</span><br><span class="line"><span class="bullet">-</span> [x] CheckBox(True)</span><br></pre></td></tr></table></figure></p>
 <p><br></p>
 <p><strong><em>여기서부터 각주</em></strong></p>
-<section class="footnotes footnotes-end-of-document"
-role="doc-endnotes">
-<hr />
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p><code>print("Hello, world!")</code><a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"
-role="doc-endnote"><p><code>fn main() &#123; println!("Hello, world!"); &#125;</code>
-내용 설명은 문서 최하단에 위치한다. <br><a href="#fnref2"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p><code>print("Hello, world!")</code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><code>fn main() &#123; println!("Hello, world!"); &#125;</code>
+내용 설명은 문서 최하단에 위치한다. <br><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
