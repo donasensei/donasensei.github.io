@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='목차 목차 헤더 텍스트 스타일 이미지 각주 블록 인용구 리스트 테이블 링크 유튜브 체크박스 코드 1 2 3 4 5 6 7 8 9 10 11 - [목차](#목차) - [헤더](#헤더)'><title>Kramdown 작성법</title>
+
+<link rel='canonical' href='https://donasensei.github.io/p/kramdown-%EC%9E%91%EC%84%B1%EB%B2%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.d9e0562edde3d2bdf9d3d81365095a29d062ddaaa5d671f22168e57dfdb18b4f.css"><meta property='og:title' content='Kramdown 작성법'>
+<meta property='og:description' content='목차 목차 헤더 텍스트 스타일 이미지 각주 블록 인용구 리스트 테이블 링크 유튜브 체크박스 코드 1 2 3 4 5 6 7 8 9 10 11 - [목차](#목차) - [헤더](#헤더)'>
+<meta property='og:url' content='https://donasensei.github.io/p/kramdown-%EC%9E%91%EC%84%B1%EB%B2%95/'>
+<meta property='og:site_name' content='TEMPLATE'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='kramdown' /><meta property='article:tag' content='markdown' /><meta property='article:published_time' content='2022-03-27T02:10:00&#43;09:00'/><meta property='article:modified_time' content='2022-03-27T02:10:00&#43;09:00'/>
+<meta name="twitter:title" content="Kramdown 작성법">
+<meta name="twitter:description" content="목차 목차 헤더 텍스트 스타일 이미지 각주 블록 인용구 리스트 테이블 링크 유튜브 체크박스 코드 1 2 3 4 5 6 7 8 9 10 11 - [목차](#목차) - [헤더](#헤더)">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu7575788f610c2f928d59f776ea5d63e3_45713_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">TEMPLATE</a></h1>
+            <h2 class="site-description">DonaSensei</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/donasensei'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/guide/" >
+                Guide
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/kramdown-%EC%9E%91%EC%84%B1%EB%B2%95/">Kramdown 작성법</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 27, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="목차">목차</h1>
+<ul>
+<li><a class="link" href="#%eb%aa%a9%ec%b0%a8" >목차</a></li>
+<li><a class="link" href="#%ed%97%a4%eb%8d%94" >헤더</a></li>
+<li><a class="link" href="#%ed%85%8d%ec%8a%a4%ed%8a%b8-%ec%8a%a4%ed%83%80%ec%9d%bc" >텍스트 스타일</a></li>
+<li><a class="link" href="#%ec%9d%b4%eb%af%b8%ec%a7%80" >이미지</a></li>
+<li><a class="link" href="#%ea%b0%81%ec%a3%bc" >각주</a></li>
+<li><a class="link" href="#%eb%b8%94%eb%a1%9d-%ec%9d%b8%ec%9a%a9%ea%b5%ac" >블록 인용구</a></li>
+<li><a class="link" href="#%eb%a6%ac%ec%8a%a4%ed%8a%b8" >리스트</a></li>
+<li><a class="link" href="#%ed%85%8c%ec%9d%b4%eb%b8%94" >테이블</a></li>
+<li><a class="link" href="#%eb%a7%81%ed%81%ac" >링크</a></li>
+<li><a class="link" href="#%ec%9c%a0%ed%8a%9c%eb%b8%8c" >유튜브</a></li>
+<li><a class="link" href="#%ec%b2%b4%ed%81%ac%eb%b0%95%ec%8a%a4" >체크박스</a></li>
+</ul>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">목차</span>](<span class="na">#목차</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">헤더</span>](<span class="na">#헤더</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">텍스트 스타일</span>](<span class="na">#텍스트-스타일</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">이미지</span>](<span class="na">#이미지</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">각주</span>](<span class="na">#각주</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">블록 인용구</span>](<span class="na">#블록-인용구</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">리스트</span>](<span class="na">#리스트</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">테이블</span>](<span class="na">#테이블</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">링크</span>](<span class="na">#링크</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">유튜브</span>](<span class="na">#유튜브</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> [<span class="nt">체크박스</span>](<span class="na">#체크박스</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="헤더">헤더</h1>
+<p><code>This is Header1</code>
+<code>===============</code>
+<code>This is Header2</code>
+<code>---------------</code>
+<br></p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">This is Header1
+</span></span><span class="line"><span class="cl">===============
+</span></span><span class="line"><span class="cl">This is Header2
+</span></span><span class="line"><span class="cl">---------------
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>다른 방법으로는 H1, H2, &hellip;, H6에 #을 붙이는 방법이 있다.</p>
+<p><code># Header1</code>
+<code>## Header2</code>
+<code>### Header3</code>
+<code>#### Header4</code>
+<code>##### Header5</code>
+<code>###### Header6</code>
+<br></p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="gh"># Header1
+</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gu">## Header2
+</span></span></span><span class="line"><span class="cl"><span class="gu">### Header3
+</span></span></span><span class="line"><span class="cl"><span class="gu">#### Header4
+</span></span></span><span class="line"><span class="cl"><span class="gu">##### Header5
+</span></span></span><span class="line"><span class="cl"><span class="gu">###### Header6
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="텍스트-스타일">텍스트 스타일</h1>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left">Markdown</th>
+<th style="text-align:center">Rendered Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>*Be Italic*</code></td>
+<td style="text-align:center"><em>Be Italic</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>_Be Italic_</code></td>
+<td style="text-align:center"><em>Be Italic</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>**Be Bold**</code></td>
+<td style="text-align:center"><strong>Be Bold</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__Be Bold__</code></td>
+<td style="text-align:center"><strong>Be Bold</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>`Code Spans`</code></td>
+<td style="text-align:center"><code>Code Spans</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">| Markdown           | Rendered Output |
+</span></span><span class="line"><span class="cl">| :----------------- | :-------------: |
+</span></span><span class="line"><span class="cl">| <span class="sb">`*Be Italic*`</span>      |   <span class="ge">*Be Italic*</span>   |
+</span></span><span class="line"><span class="cl">| <span class="sb">`_Be Italic_`</span>      |   <span class="ge">_Be Italic_</span>   |
+</span></span><span class="line"><span class="cl">| <span class="sb">`**Be Bold**`</span>      |   <span class="gs">**Be Bold**</span>   |
+</span></span><span class="line"><span class="cl">| <span class="sb">`__Be Bold__`</span>      |   <span class="gs">__Be Bold__</span>   |
+</span></span><span class="line"><span class="cl">| `` <span class="sb">`Code Spans`</span> `` |  <span class="sb">`Code Spans`</span>   |
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="이미지">이미지</h1>
+<p><img src="https://avatars.githubusercontent.com/u/99321942?v=4"
+	
+	
+	
+	loading="lazy"
+	
+		alt="DJ_MORIKUBO"
+	
+	
+></p>
+<p>이미지 첨부는 <code>![대체_텍스트](이미지_경로)</code>처럼 사용한다.
+<br></p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">DJ_MORIKUBO</span>](<span class="na">https://avatars.githubusercontent.com/u/99321942?v=4</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<img src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="A" width="100%" height="auto">
+<p>이미지 크기 조절이 필요할 경우, <code>&lt;img&gt;</code>태그를 사용한다. 
+<br></p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://avatars.githubusercontent.com/u/99321942?v=4&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;DJ_MORIKUBO&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;auto&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p align="center"><img src="https://avatars.githubusercontent.com/u/99321942?v=4" alt="DJ_MORIKUBO"></p>
+<p>가운데 정렬은 <code>&lt;img&gt;</code>태그를 <code>&lt;p&gt;</code>태그로 감싸고 <code>align=&quot;center&quot;</code> 속성을 주는 방식으로 사용한다.
+<br></p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">align</span><span class="o">=</span><span class="s">&#34;center&#34;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://avatars.githubusercontent.com/u/99321942?v=4&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;DJ_MORIKUBO&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<h1 id="각주">각주</h1>
+<details><summary>펼쳐보기</summary>
+How to Print in Python[^1].  
+How to Print in Rust[^2].
+<p>내 환경에 작동하지 않는다.</p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">&gt; </span><span class="ge">How to Print in Python[^1].  
+</span></span></span><span class="line"><span class="cl"><span class="ge"></span><span class="k">&gt; </span><span class="ge">How to Print in Rust[^2].
+</span></span></span><span class="line"><span class="cl"><span class="ge"></span>[^1]: <span class="sb">`print(&#34;Hello, world!&#34;)`</span>
+</span></span><span class="line"><span class="cl">[^2]: <span class="sb">`fn main() { println!(&#34;Hello, world!&#34;); }`</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></details>    
+<h1 id="블록-인용구">블록 인용구</h1>
+<blockquote>
+<p>Main Blockquote</p>
+<blockquote>
+<p>Sub Blockquote</p>
+<blockquote>
+<p>SubSub Blockquote</p>
+<blockquote>
+<p>And so on&hellip;
+<br></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">&gt; </span><span class="ge">Main Blockquote
+</span></span></span><span class="line"><span class="cl"><span class="ge"></span>&gt;&gt; Sub Blockquote
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; SubSub Blockquote
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt;&gt; And so on...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="리스트">리스트</h1>
+<p>Ordered List is&hellip;</p>
+<ol>
+<li>List</li>
+<li>List</li>
+<li>List
+<ol>
+<li>New list</li>
+<li>New List</li>
+</ol>
+</li>
+<li>List
+<br></li>
+</ol>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">Ordered List is...
+</span></span><span class="line"><span class="cl"><span class="k">1.</span> List
+</span></span><span class="line"><span class="cl"><span class="k">2.</span> List
+</span></span><span class="line"><span class="cl"><span class="k">3.</span> List
+</span></span><span class="line"><span class="cl">    <span class="k">1.</span> New list
+</span></span><span class="line"><span class="cl">    <span class="k">2.</span> New List
+</span></span><span class="line"><span class="cl"><span class="k">4.</span> List
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>순서가 없는 경우<br>
+Unordered List is&hellip;</p>
+<ul>
+<li>List</li>
+</ul>
+<ul>
+<li>List</li>
+</ul>
+<ul>
+<li>List
+<ul>
+<li>New list</li>
+</ul>
+<ul>
+<li>New List</li>
+</ul>
+</li>
+<li>List
+<br></li>
+</ul>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">Unordered List is...
+</span></span><span class="line"><span class="cl"><span class="k">*</span> List
+</span></span><span class="line"><span class="cl"><span class="k">-</span> List
+</span></span><span class="line"><span class="cl">+ List
+</span></span><span class="line"><span class="cl">    <span class="k">*</span> New list
+</span></span><span class="line"><span class="cl">    <span class="k">-</span> New List
+</span></span><span class="line"><span class="cl">+ List
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="테이블">테이블</h1>
+<div class="overflow-table" markdown="block">
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left">Markdown</th>
+<th style="text-align:left">HTML</th>
+<th style="text-align:center">Rendered Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>[Example Link](#link)</code></td>
+<td style="text-align:left"><code>&lt;a href=&quot;#link&quot;&gt;Example Link&lt;/a&gt;</code></td>
+<td style="text-align:center"><a class="link" href="#Link" >Example Link</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>_Be Italic_</code></td>
+<td style="text-align:left"><code>&lt;em&gt;Be Italic&lt;em/&gt;</code></td>
+<td style="text-align:center"><em>Be Italic</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>**Be Bold**</code></td>
+<td style="text-align:left"><code>&lt;strong&gt;Be Italic&lt;strong/&gt;</code></td>
+<td style="text-align:center"><strong>Be Bold</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>테이블의 경우 개인 설정에 따라 다를 수 있다.</p>
+</div>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;overflow-table&#34;</span> <span class="na">markdown</span><span class="o">=</span><span class="s">&#34;block&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">| Markdown                | HTML                               |    Rendered Output    |
+</span></span><span class="line"><span class="cl">| :---------------------- | :--------------------------------- | :-------------------: |
+</span></span><span class="line"><span class="cl">| <span class="sb">`[Example Link](#link)`</span> | <span class="sb">`&lt;a href=&#34;#link&#34;&gt;Example Link&lt;/a&gt;`</span> | [<span class="nt">Example Link</span>](<span class="na">#Link</span>) |
+</span></span><span class="line"><span class="cl">| <span class="sb">`_Be Italic_`</span>           | <span class="sb">`&lt;em&gt;Be Italic&lt;em/&gt;`</span>               |      <span class="ge">_Be Italic_</span>      |
+</span></span><span class="line"><span class="cl">| <span class="sb">`**Be Bold**`</span>           | <span class="sb">`&lt;strong&gt;Be Italic&lt;strong/&gt;`</span>       |      <span class="gs">**Be Bold**</span>      |
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="링크">링크</h1>
+<ul>
+<li>Basic Link : <a class="link" href="https://github.com/donasensei"  target="_blank" rel="noopener"
+    >Github</a></li>
+<li>Open New Tab : <a class="link" href="https://github.com/donasensei"  target="_blank" rel="noopener"
+    >Github</a>{:target=&quot;_blank&quot;}
+<br></li>
+</ul>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">-</span> Basic Link : [<span class="nt">Github</span>](<span class="na">https://github.com/donasensei</span>)
+</span></span><span class="line"><span class="cl"><span class="k">-</span> Open New Tab : [<span class="nt">Github</span>](<span class="na">https://github.com/donasensei</span>){:target=&#34;_blank&#34;}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="유튜브">유튜브</h1>
+<p><a class="link" href="https://youtu.be/RBmWaW-3Cug"  title="HIMEHINA『3分ガール』MV"
+     target="_blank" rel="noopener"
+    ><img src="https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="HIMEHINA『3分ガール』MV"
+	
+	
+></a>
+<br></p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">[<span class="nt">![HIMEHINA『3分ガール』MV</span>](<span class="na">https://img.youtube.com/vi/RBmWaW-3Cug/0.jpg</span>)](https://youtu.be/RBmWaW-3Cug &#34;HIMEHINA『3分ガール』MV&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>사실상 이미지에 링크를 걸어주는 방식이라 이런 방법도 가능하다.</p>
+<!-- Stellar Stellar / 星街すいせい(official) -->
+<p align="center">
+  <a href="https://youtu.be/a51VH9BYzZA" target="_blank">
+    <img src="https://img.youtube.com/vi/a51VH9BYzZA/0.jpg" alt="Stellar Stellar / 星街すいせい(official)" width="100%" height="auto">
+  </a>
+</p>
+<br>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Stellar Stellar / 星街すいせい(official) --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">align</span><span class="o">=</span><span class="s">&#34;center&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://youtu.be/a51VH9BYzZA&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://img.youtube.com/vi/a51VH9BYzZA/0.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Stellar Stellar / 星街すいせい(official)&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;auto&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<!-- 『眩しいDNAだけ』 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VJy8qZ77bpE" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+<p>그럼에도 iframe이 제일 편하고 좋다.</p>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 『眩しいDNAだけ』 --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;560&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;315&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/VJy8qZ77bpE&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;YouTube video player&#34;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="체크박스">체크박스</h1>
+<ul>
+<li><input disabled="" type="checkbox"> CheckBox(False)</li>
+<li><input checked="" disabled="" type="checkbox"> CheckBox(True)</li>
+</ul>
+<p><strong>코드</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"><span class="k">- [ ]</span> CheckBox(False)
+</span></span><span class="line"><span class="cl"><span class="k">- [x]</span> CheckBox(True)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><br>
+<p><strong><em>여기서부터 각주</em></strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kramdown/">kramdown</a>
+        
+            <a href="/tags/markdown/">markdown</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="donasensei/blog-comments"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 TEMPLATE
+    </section>
+    
+    <section class="powerby">
+        
+            あの一等星の輝きにも <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

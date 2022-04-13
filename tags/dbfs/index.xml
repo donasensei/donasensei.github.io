@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>dBFS on TEMPLATE</title>
+        <link>https://donasensei.github.io/tags/dbfs/</link>
+        <description>Recent content in dBFS on TEMPLATE</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 29 Mar 2022 13:59:21 +0000</lastBuildDate><atom:link href="https://donasensei.github.io/tags/dbfs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[디지털사운드] dB(데시벨)</title>
+        <link>https://donasensei.github.io/p/%EB%94%94%EC%A7%80%ED%84%B8%EC%82%AC%EC%9A%B4%EB%93%9C-db%EB%8D%B0%EC%8B%9C%EB%B2%A8/</link>
+        <pubDate>Tue, 29 Mar 2022 13:59:21 +0000</pubDate>
+        
+        <guid>https://donasensei.github.io/p/%EB%94%94%EC%A7%80%ED%84%B8%EC%82%AC%EC%9A%B4%EB%93%9C-db%EB%8D%B0%EC%8B%9C%EB%B2%A8/</guid>
+        <description>&lt;h1 id=&#34;mathrmdb&#34;&gt;$\mathrm{dB}$&lt;/h1&gt;
+&lt;p&gt;dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다.&lt;/p&gt;
+&lt;p&gt;dB에서 &lt;strong&gt;d&lt;/strong&gt;는 deci는 $×10^{-1} = ×\frac{1}{10}$을 표현하는 SI 접두어고 &lt;strong&gt;B&lt;/strong&gt;는 Alexander Graham Bell의 이름에서 가져왔다.&lt;/p&gt;
+&lt;p&gt;과거 전화는 전선의 저항 때문에 거리가 멀어지면 멀어질수록 신호가 약해져서 일정 간격마다 증폭기를 이용해서 손실된 만큼 다시 증폭을 해주는 방식이였는데 이 기준을 위해 만들어진 것이 dB이다.&lt;/p&gt;
+&lt;p&gt;식으로 보면 이렇다.
+$$\mathrm{dB} = 10\log_{10}(\frac{P}{P_{ref}})$$&lt;/p&gt;
+&lt;p&gt;여기서 $P$는 전력이나 소리의 세기의 양이고 $Pref$는 그 기준이다.&lt;/p&gt;
+&lt;p&gt;여기에 값들을 대입해보면&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$-3.010 ≈ 10\log(\frac{0.5}{1})$&lt;/li&gt;
+&lt;li&gt;$0 = 10\log(\frac{1}{1})$&lt;/li&gt;
+&lt;li&gt;$3.010 ≈ 10\log(\frac{2}{1})$&lt;/li&gt;
+&lt;li&gt;$10 = 10\log(\frac{10}{1})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이런 식으로 dB을 구할 수 있다. 표로 나타내면 다음과 같다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$\mathrm{dB}$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;소리의 세기&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Loudness&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-6\mathrm{dB}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\frac{1}{4}$배&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-3\mathrm{dB}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\frac{1}{2}$배&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$0\mathrm{dB}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1배&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;1배&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10\mathrm{dB}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10배&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;2배&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$20\mathrm{dB}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;20배&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;4배&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;여기서 Loudness는 인간이 느끼는 음량의 정도를 말한다. 즉 10dB만큼 높아지면 2배 크게 들리는 것이다.&lt;/p&gt;
+&lt;p&gt;그렇다고 A라는 소리가 소리 B와 -3dB의 차이가 날 때, A가 B보다 작은 소리인 것은 아니다.&lt;br&gt;
+dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는 아니기 때문이다.&lt;/p&gt;
+&lt;p&gt;만일 음압을 구하고 싶다면 음압과 세기의 비례는 $\mathrm{Pressure}^2 ∝ \mathrm{Intensity}$이기 때문에&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+\mathrm{dB} &amp;amp;= 10\log(\frac{P}{P_{ref}}) \
+&amp;amp;= 10\log_{10}(\frac{\frac{P^2}{I}}{\frac{P_{ref}^2}{I}}) \
+&amp;amp;= 10\log_{10}(\frac{P^2}{P_{ref}^{2}}) \
+&amp;amp;= 10\log_{10}(\frac{P}{P_{ref}})^2 \
+&amp;amp;= 20\log_{10}(\frac{P}{P_{ref}})&lt;/p&gt;
+&lt;p&gt;\end{aligned}&lt;/p&gt;
+&lt;p&gt;그리고 공기 중에서의 기준이 되는 크기가 $\mathrm{dB_{spl}}$이다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;mathrmdb_spl&#34;&gt;$\mathrm{dB_{spl}}$&lt;/h1&gt;
+&lt;p&gt;$\mathrm{dB_{spl}}$은 Sound Pressure Level(음압 레벨)을 뜻하고 사람이 들을 수 있는 가장 작은 소리의 음압을 기준으로 $0.00020 \mathrm{dyn/cm^2} = 20μPa$을 절대값으로 한다.&lt;/p&gt;
+&lt;p&gt;이를 식으로 표현한 것이 아래의 식이다.
+$$L_{\mathrm{dB_{spl}}}/\mathrm{dB_{spl}} = 20\log_{10}(\frac{P}{20μPa})$$&lt;/p&gt;
+&lt;p&gt;이 $\mathrm{dB_{spl}}$이 보통 소음 측정등에서 말하는 데시벨 측정이다. 통상 spl을 생략하여 말하기 때문에 dB와 혼동하는 경우가 많다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;mathrmdbm&#34;&gt;$\mathrm{dBm}$&lt;/h1&gt;
+&lt;p&gt;$\mathrm{dBm}$은 1mW을 기준으로 하는 dB scale이다. 1mW를 기준으로 하긴 하지만 임피던스에 따라 바뀔 수도 있다. 통상, 50Ω이나 75Ω에서 1mW를 0dBm이라고 한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;mathrmdbu&#34;&gt;$\mathrm{dBu}$&lt;/h1&gt;
+&lt;p&gt;$\mathrm{dBu}$는 $\mathrm{dBm}$에서 600Ω에서의 1mW를 기준으로 잡는 방식이다. 계산하면,
+$$V_{ref} = √(1mW × 600Ω) ≈ 0.775V_{rms}$$
+0.775Vrms를 기준점으로 한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;mathrmdbv&#34;&gt;$\mathrm{dBV}$&lt;/h1&gt;
+&lt;p&gt;$\mathrm{dBV}$는 dBu와 달리 전압이 아닌 절대값인 1V를 Vref로 잡는 방식이다. 식으로 표현하면,
+$$L\mathrm{&lt;em&gt;{dBV}} = 20\log&lt;/em&gt;{10}(\frac{V_1}{V_{ref}})$$&lt;/p&gt;
+&lt;p&gt;사실상 식은 크게 바뀌지 않고 기준만 바뀔 뿐이다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;mathrmdbfs&#34;&gt;$\mathrm{dBFS}$&lt;/h1&gt;
+&lt;p&gt;디지털에서의 0dB는 아날로그와 달리 Max Level을 의미한다. 아날로그의 Dynamic Range가 0dB이상으로 Head Room이 존재하는 것과 다르게 디지털에서의 DR은 전체에서의 최고점과 최저점이다. 결국 ADC에서 1로 변환되는 경우가 0dBFS이다.&lt;/p&gt;
+&lt;p&gt;이를 통해 bit에 따른 디지털에서의 DR을 알 수 있는데 식으로 표현하면,
+$$\mathrm{dBFS} = 20\log_{10}(\frac{2^n}{1})$$
+여기서의 $n$은 bit, 디지털에서의 진폭이다.&lt;/p&gt;
+&lt;p&gt;예를 들어 24-bit 환경에서의 DR을 계산한다면,
+$$\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈ 144$$
+즉, 24-bit 환경에서의 다이나믹 레인지는 144dBFS를 가질 수 있다.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

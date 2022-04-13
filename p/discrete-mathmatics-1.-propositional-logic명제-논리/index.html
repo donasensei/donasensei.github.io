@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Discrete Mathematics and Its Applications - Eighth Edition을 기준으로 작성. Propositions(명제) 우선 명제의 정의는 이렇다. A proposition is a declarative sentence that is either true or false 번역하면 True or Fa'><title>[Discrete Mathmatics] 1. Propositional Logic(명제 논리)</title>
+
+<link rel='canonical' href='https://donasensei.github.io/p/discrete-mathmatics-1.-propositional-logic%EB%AA%85%EC%A0%9C-%EB%85%BC%EB%A6%AC/'>
+
+<link rel="stylesheet" href="/scss/style.min.d9e0562edde3d2bdf9d3d81365095a29d062ddaaa5d671f22168e57dfdb18b4f.css"><meta property='og:title' content='[Discrete Mathmatics] 1. Propositional Logic(명제 논리)'>
+<meta property='og:description' content='Discrete Mathematics and Its Applications - Eighth Edition을 기준으로 작성. Propositions(명제) 우선 명제의 정의는 이렇다. A proposition is a declarative sentence that is either true or false 번역하면 True or Fa'>
+<meta property='og:url' content='https://donasensei.github.io/p/discrete-mathmatics-1.-propositional-logic%EB%AA%85%EC%A0%9C-%EB%85%BC%EB%A6%AC/'>
+<meta property='og:site_name' content='TEMPLATE'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='discrete_mathmatics' /><meta property='article:tag' content='propositional_logic' /><meta property='article:published_time' content='2022-03-29T00:48:00&#43;09:00'/><meta property='article:modified_time' content='2022-03-29T00:48:00&#43;09:00'/>
+<meta name="twitter:title" content="[Discrete Mathmatics] 1. Propositional Logic(명제 논리)">
+<meta name="twitter:description" content="Discrete Mathematics and Its Applications - Eighth Edition을 기준으로 작성. Propositions(명제) 우선 명제의 정의는 이렇다. A proposition is a declarative sentence that is either true or false 번역하면 True or Fa">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu7575788f610c2f928d59f776ea5d63e3_45713_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">TEMPLATE</a></h1>
+            <h2 class="site-description">DonaSensei</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/donasensei'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/discrete-mathmatics/" >
+                Discrete Mathmatics
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/discrete-mathmatics-1.-propositional-logic%EB%AA%85%EC%A0%9C-%EB%85%BC%EB%A6%AC/">[Discrete Mathmatics] 1. Propositional Logic(명제 논리)</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 29, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을 기준으로 작성.</p>
+<hr>
+<h1 id="propositions명제">Propositions(명제)</h1>
+<p>우선 명제의 정의는 이렇다.</p>
+<blockquote>
+<p>A proposition is a declarative sentence that is either <em><strong>true or false</strong></em></p>
+</blockquote>
+<p>번역하면 True or False로 나올 수 있는 평서문이 명제가 된다.</p>
+<p>예로 이 문장들은 명제이다.</p>
+<ul>
+<li>The Moon is made of green cheese.</li>
+<li>$1 + 0 = 1$</li>
+<li>$0 + 0 = 2$</li>
+</ul>
+<p>첫 번째 문장의 경우 <strong>달은 녹색 치즈로 만들어졌다</strong> 라는 뜻인데, 달이 실제로 녹색 치즈인지 아닌지 알 방법은 없지만 True/False로 답할 수 있기에 명제이다.</p>
+<p>이 문장들은 명제가 아니다.</p>
+<ul>
+<li>What time is it?</li>
+<li>$x + 1 = 2$</li>
+<li>$x + y = z$</li>
+</ul>
+<p>이런 명제들을 나타내기 위해 **Propositional Variable(명제 변수)**를 사용한다.
+통상 $p, q, r, s, &hellip;$ 등이 있다.</p>
+<p>하나 또는 여러 명제를 조합하여 새로운 수학적 명제를 만들 수 있으며,<br>
+이를 **복합명제(Compound Proposition)**라 한다.</p>
+<p>이를 만들 때 쓰이는 연산자를 **논리 연산자(Logical Operator)**라고 한다. (접속사)</p>
+<hr>
+<h1 id="논리-연산자logical-operator">논리 연산자(Logical Operator)</h1>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">English</th>
+<th style="text-align:center">Korean</th>
+<th style="text-align:center">Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Negation</td>
+<td style="text-align:center">부정</td>
+<td style="text-align:center">$¬$</td>
+</tr>
+<tr>
+<td style="text-align:center">Conjunction</td>
+<td style="text-align:center">논리곱</td>
+<td style="text-align:center">$∧$</td>
+</tr>
+<tr>
+<td style="text-align:center">Disjunction</td>
+<td style="text-align:center">논리합</td>
+<td style="text-align:center">$∨$</td>
+</tr>
+<tr>
+<td style="text-align:center">Implication</td>
+<td style="text-align:center">조건명제</td>
+<td style="text-align:center">$→$</td>
+</tr>
+<tr>
+<td style="text-align:center">Biconditional</td>
+<td style="text-align:center">쌍조건문</td>
+<td style="text-align:center">$↔$</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 id="negation부정">Negation(부정)</h2>
+<p>부정의 정의는 이렇다.</p>
+<blockquote>
+<p>The <strong>negation</strong> of a proposition $p$ is denoted by $¬p$ and has this <strong>truth table</strong>:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$¬p$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>즉, 참이면 거짓이고, 거짓이면 참이다.</p>
+<hr>
+<h2 id="conjunction논리곱">Conjunction(논리곱)</h2>
+<p>논리곱의 정의는 이렇다.</p>
+<blockquote>
+<p>The <strong>conjunction</strong> of propositions $p$ and $q$ is denoted by $p ∧ q$ and has this <strong>truth table</strong>:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p ∧ q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>통상 AND로 잘 알려져 있다. 즉, $p ∧ q$는 $p$와 $q$, 모두 참일 경우만 참이다.<br>
+예를 들면, 나랑 내가 짠 코드는 버그가 없다. 라고 했을 때, &lsquo;나&rsquo;와 &lsquo;내가 짠 코드&rsquo;가 전부 버그가 없어야 참이다.</p>
+<hr>
+<h2 id="disjunction논리합">Disjunction(논리합)</h2>
+<p>논리합의 정의는 이렇다.</p>
+<blockquote>
+<p>The <strong>disjunction</strong> of propositions $p$ and $q$ is denoted by $p ∨ q$ and has this <strong>truth table</strong>:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p ∨ q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>통상 OR로 잘 알려져 있다. 즉, $p ∨ q$일 경우, 적어도 하나가 True일 때 성립한다. 양쪽 다 True여도 성립한다.<br>
+한국어로 해석하면 &ldquo;또는&rdquo; 정도로 해석되는데 보통 &ldquo;또는&quot;을 배타적으로 인식하는 경향이 있다. 아래쪽에서 설명한다.</p>
+<hr>
+<h3 id="inclusive-or--exclusive-or">Inclusive Or / Exclusive Or</h3>
+<p>Or의 경우 두 개의 의미가 존재하는데, <strong>Inclusive Or(논리합)</strong> 와 <strong>Exclusive Or(배타적 논리합)</strong> 이다.</p>
+<p><strong>Inclusive Or</strong>가 위에서 설명한 논리합이다. 예를 들어, &ldquo;Java 아니면 Python을 알아야 수강이 가능하다.&rdquo; 일 때, Java나 Python 둘 중 하나를 알고 있거나 둘 다 알고 있을 경우에 True이기 때문에 $p ∨ q$가 성립하며 <strong>disjunction</strong>이다.</p>
+<p>그러나 **Exclusive Or(배타적 논리합)**의 경우 조금 차이가 있다.
+배타적 논리합의 정의는 이렇다.</p>
+<blockquote>
+<p>In $p ⊕ q$ , <strong>one of $p$ and $q$ must be true</strong>, but not both. The <strong>truth table</strong> for $⊕$ is:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">p</th>
+<th style="text-align:center">q</th>
+<th style="text-align:center">$p ⊕ q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>즉 $p$나 $q$, 중 하나는 True여야 하지만 둘 다 True일 수는 없다. 예를 들어, 게임 점검 보상으로 유료 재화 아니면 인게임 아이템으로 보상한다고 했을 때, 유료 재화나 인게임 아이템으로 보상을 받을 수는 있으나 둘 다 받을 수 있는 경우는 없다.</p>
+<hr>
+<h2 id="implication조건명제">Implication(조건명제)</h2>
+<p>조건명제의 정의는 이렇다.</p>
+<blockquote>
+<p>If p and q are propositions, then $p → q$ is a conditional statement or <strong>implication</strong> which is read as “if $p$, then $q$” and has this <strong>truth table</strong>:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p → q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>&lsquo;if $p$, then $q$($p$이면 $q$이다.)&rsquo;</li>
+<li>&lsquo;$p$ implies $q$($p$는 $q$를 함의한다.)&rsquo;</li>
+<li>&lsquo;$p$ is sufficient for $q$($p$는 $q$의 충분조건이다.)&rsquo;</li>
+<li>&lsquo;$q$ is necessary for $p$($q$는 $p$의 필요조건이다.)&rsquo;</li>
+</ul>
+<p>모두가 $p → q$로 표시될 수 있다.</p>
+<hr>
+<h3 id="converse-contrapositive-and-inverse역-대우-이">Converse, Contrapositive, and Inverse(역, 대우, 이)</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">English</th>
+<th style="text-align:center">Korean</th>
+<th style="text-align:center">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Converse</td>
+<td style="text-align:center">역</td>
+<td style="text-align:center">$q → p$</td>
+</tr>
+<tr>
+<td style="text-align:center">Contrapositive</td>
+<td style="text-align:center">대우</td>
+<td style="text-align:center">$¬q → ¬p$</td>
+</tr>
+<tr>
+<td style="text-align:center">Inverse</td>
+<td style="text-align:center">이</td>
+<td style="text-align:center">$¬p → ¬q$</td>
+</tr>
+</tbody>
+</table></div>
+<p>그럼 $p → q$형태에 대해 3가지 변형된 명제를 생각 할 수 있는데 이것이</p>
+<ul>
+<li><strong>Converse(역)</strong></li>
+<li><strong>Contrapositive(대우)</strong></li>
+<li><strong>Inverse(이)</strong> 이다.</li>
+</ul>
+<p><strong>역</strong>의 경우, $p → q$가 $q → p$가 된 형태로 명제에서 가정과 결론이 바뀐 형태이다.
+예로, 명제가 If I am at home then it is raining일 경우의 역은 If I do not go to town, then it is raining이 된다.</p>
+<p><strong>대우</strong>의 경우, 본래 명제와 논리 값이 같은, 근본적으로는 같은 명제라고 할 수 있다.</p>
+<p>만약 $p → q$가 참이면 $P ⊂ Q$인 Truth Set(진리집합)이고 그 경우 $Q^c ⊂ P^c$가 되어 $¬q → ¬p$는 참이 된다.</p>
+<p><strong>이</strong>의 경우, $p → q$가 $¬p → ¬q$가 된 것으로 기존 명제의 부정인 명제이다.</p>
+<hr>
+<h2 id="biconditional쌍조건문">Biconditional(쌍조건문)</h2>
+<p>쌍조건문의 정의는 이렇다.</p>
+<blockquote>
+<p>If $p$ and $q$ are propositions, then we can form the <strong>biconditional proposition</strong> $p ↔ q$ , read as “$p$ <strong>if and only if</strong> $q$.” The biconditional $p ↔ q$ denotes the proposition with this truth table:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$p ↔ q$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>통상 영어로 “$p$ if and only if $q$.”라고 쓰고 $p$ iff $q$처럼 쓰기도 한다.
+해석하면 &ldquo;오직 $p$인 경우에만(iff) $q$이다.&rdquo; 이고, $p$랑 $q$는 **Equivalent Propositions(동치)**라고 하기도 한다.</p>
+<p>이를 다시 정리하면 $(p → q) ∧ (q → p)$라고 쓸 수 있다. 즉, $p$와 $q$의 **Truth Value(진리값)**이 같아야 True이다.</p>
+<hr>
+<h1 id="equivalent-propositions동등-명제">Equivalent Propositions(동등 명제)</h1>
+<h2 id="equivalent동치">Equivalent(동치)</h2>
+<p>동치의 정의는 이렇다.</p>
+<blockquote>
+<p>Two propositions are <strong>equivalent</strong> if they always have the same <strong>truth value</strong>.</p>
+</blockquote>
+<p>해석하면 같은 진리값을 가진다면 동치라고 할 수 있다.</p>
+<p>예를 들어 조건명제와 그 대우가 동치임을 진리표로 나타낸 예시가,</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$¬p$</th>
+<th style="text-align:center">$¬q$</th>
+<th style="text-align:center">$p → q$</th>
+<th style="text-align:center">$¬q → ¬p$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>F</strong></td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>T</strong></td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>진리표를 보면 $p → q$와 $¬q → ¬p$의 진리값이 같기 떄문에 둘은 동치이고 대우이다.</p>
+<p>그리고 조건명제의 이와 역은 동치가 아닌데 이를 진리표로 나타내면,</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$p$</th>
+<th style="text-align:center">$q$</th>
+<th style="text-align:center">$¬p$</th>
+<th style="text-align:center">$¬q$</th>
+<th style="text-align:center">$p → q$</th>
+<th style="text-align:center">$¬p → ¬q$</th>
+<th style="text-align:center">$q → p$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center"><strong>F</strong></td>
+<td style="text-align:center"><strong>T</strong></td>
+<td style="text-align:center"><strong>T</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center"><strong>T</strong></td>
+<td style="text-align:center"><strong>F</strong></td>
+<td style="text-align:center"><strong>F</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">F</td>
+<td style="text-align:center">F</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+<td style="text-align:center">T</td>
+</tr>
+</tbody>
+</table></div>
+<p>위와 같이 진리값이 다름을 볼 수 있다. 그렇기에 이나 역은 조견명제와 동치가 아니다.
+그러나 조건명제의 역은 그 명제의 이와 동치이다.</p>
+<hr>
+<h1 id="논리-연산자의-우선순위">논리 연산자의 우선순위</h1>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">Operator</th>
+<th style="text-align:center">Precedence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">¬</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">∧</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">∨</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">→</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">↔</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table></div>
+<p>논리연산자는 순서대로 NOT, AND, OR, Implication, Biconditional 우선순위를 가진다.<br>
+예를 들면, $¬p ∨ q → ¬r$라면 $((¬p) ∨ q) → ¬r$이다.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/discrete_mathmatics/">discrete_mathmatics</a>
+        
+            <a href="/tags/propositional_logic/">propositional_logic</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">Related contents</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/discrete-mathmatics-3.-predicates-and-quantifiers%EC%88%A0%EC%96%B4%EC%99%80-%ED%95%9C%EC%A0%95%EC%9E%90/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Discrete Mathmatics] 3. Predicates and Quantifiers(술어와 한정자)</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/p/discrete-mathmatics-2.-propositional-equivalences%EB%AA%85%EC%A0%9C-%EB%8F%99%EC%B9%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Discrete Mathmatics] 2. Propositional Equivalences(명제 동치)</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="donasensei/blog-comments"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 TEMPLATE
+    </section>
+    
+    <section class="powerby">
+        
+            あの一等星の輝きにも <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#negation부정">Negation(부정)</a></li>
+    <li><a href="#conjunction논리곱">Conjunction(논리곱)</a></li>
+    <li><a href="#disjunction논리합">Disjunction(논리합)</a>
+      <ol>
+        <li><a href="#inclusive-or--exclusive-or">Inclusive Or / Exclusive Or</a></li>
+      </ol>
+    </li>
+    <li><a href="#implication조건명제">Implication(조건명제)</a>
+      <ol>
+        <li><a href="#converse-contrapositive-and-inverse역-대우-이">Converse, Contrapositive, and Inverse(역, 대우, 이)</a></li>
+      </ol>
+    </li>
+    <li><a href="#biconditional쌍조건문">Biconditional(쌍조건문)</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#equivalent동치">Equivalent(동치)</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

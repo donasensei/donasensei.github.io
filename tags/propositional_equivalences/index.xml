@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>propositional_equivalences on TEMPLATE</title>
+        <link>https://donasensei.github.io/tags/propositional_equivalences/</link>
+        <description>Recent content in propositional_equivalences on TEMPLATE</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 29 Mar 2022 23:05:59 +0000</lastBuildDate><atom:link href="https://donasensei.github.io/tags/propositional_equivalences/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Discrete Mathmatics] 2. Propositional Equivalences(명제 동치)</title>
+        <link>https://donasensei.github.io/p/discrete-mathmatics-2.-propositional-equivalences%EB%AA%85%EC%A0%9C-%EB%8F%99%EC%B9%98/</link>
+        <pubDate>Tue, 29 Mar 2022 23:05:59 +0000</pubDate>
+        
+        <guid>https://donasensei.github.io/p/discrete-mathmatics-2.-propositional-equivalences%EB%AA%85%EC%A0%9C-%EB%8F%99%EC%B9%98/</guid>
+        <description>&lt;p&gt;&lt;em&gt;Discrete Mathematics and Its Applications - Eighth Edition&lt;/em&gt;을 기준으로 작성.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;compound합성-명제&#34;&gt;Compound(합성 명제)&lt;/h1&gt;
+&lt;p&gt;합성 명제는 truth value에 따라 세 종류로 나눌 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tautology(항진명제)&lt;/li&gt;
+&lt;li&gt;Contradiction(모순명제)&lt;/li&gt;
+&lt;li&gt;Contingency(사건명제)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tautology항진명제&#34;&gt;Tautology(항진명제)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A &lt;strong&gt;tautology&lt;/strong&gt; is a proposition which is &lt;strong&gt;always true&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;항상 True값을 가지는 명제를 항진명제라고 한다. $p∨¬p$의 경우 $p$가 $T$일 때 $¬p$는 $F$가 되어 $T∨F$이기 때문에 항상 참이 된다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contradiction모순명제&#34;&gt;Contradiction(모순명제)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A  &lt;strong&gt;contradiction&lt;/strong&gt; is a proposition which is &lt;strong&gt;always false&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;항진명제와 반대로 항상 False값을 가지는 명제를 모순명제라고 한다. $p∧¬p$은 $T∧F$이기 때문에 항상 거짓이다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contingency사건명제&#34;&gt;Contingency(사건명제)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A &lt;strong&gt;contingency&lt;/strong&gt; is a proposition which is &lt;strong&gt;neither&lt;/strong&gt; a tautology nor a contradiction, such as p&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;항진명제도, 모순명제도 아닌 명제를 사건명제라고 한다. 정의의 예시처럼 $p$의 경우 $T$도 가능하고 $F$도 가능하기 때문에 사건명제다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;logically-equivalent동치&#34;&gt;Logically Equivalent(동치)&lt;/h1&gt;
+&lt;p&gt;그래서 만일 $p↔q$가 항진명제면 p와 q는 논리적으로 동치이고 $p≡q$, $p⇔q$로 나타낸다.&lt;br&gt;
+그리고 진리표에서 열의 값이 동일하면 동치이다. 예를 들면,&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$p$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$q$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$¬p$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$¬q$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$p → q$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$¬q → ¬p$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;F&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;F&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;F&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;T&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이 진리표에서 $p → q$와 $¬q → ¬p$의 진리값이 같기 때문에 $p → q$와 $¬q → ¬p$는 동치이다.&lt;/p&gt;
+&lt;h2 id=&#34;논리적-동치법칙&#34;&gt;논리적 동치법칙&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;논리적 동치&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;법칙&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p∧T≡p$&lt;br&gt;$p∨F≡p$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Identity Law(항등법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p∧F≡F$&lt;br&gt;$p∨T≡T$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Domination Law(지배법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p∧¬p=F$&lt;br&gt;$p∨¬p=T$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Negation Law(부정법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$¬(¬p)≡p$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Double Negation Law(이중 부정법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p∧p≡p$&lt;br&gt;$p∨p≡p$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Idempotent Law(멱등법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p∧q≡q∧p$&lt;br&gt;$p∨q≡q∨p$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Commutative Law(교환법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(p∧q)∧r≡p∧(q∧r)$&lt;br&gt;$(p∨q)∨r≡p∨(q∨r)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Associative Law(결합법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(p∧q)∧r≡p∧(q∧r)$&lt;br&gt;$(p∨q)∨r≡p∨(q∨r)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Distributive Law(분배법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$¬(p∧q)≡¬p∨¬q$&lt;br&gt;$¬(p∨q)≡¬p∧¬q$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;De Morgan&amp;rsquo;s Law(드 모르간 법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p∧(p∨q)≡p$&lt;br&gt;$p∨(p∧q)≡p$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Absorption Law(흡수법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$p→q≡¬p∨q$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Implication Law(함축법칙)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;예로 $¬(p∨(¬p∧q)) ≡ ¬p∧¬q$를 증명하면,
+\begin{aligned}
+¬(p∨(¬p∧q)) &amp;amp;≡ ¬p∧¬(¬p∧q) \
+&amp;amp;≡ ¬p∧[¬(¬p)∨¬q] \
+&amp;amp;≡ ¬p∧(p∨¬q) \
+&amp;amp;≡ (¬p∧p)∨(¬p∧¬q) \
+&amp;amp;≡ F∨(¬p∧¬q) \
+&amp;amp;≡ (¬p∧¬q)∨F \
+&amp;amp;≡ ¬p∧¬q
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;한줄씩 따라가보면,&lt;br&gt;
+$¬p∧¬(¬p∧q)$은 드 모르간의 제 2법칙으로 $¬(p∨q)≡¬p∧¬q$를 적용해 $¬p∧¬(¬p∧q)$가 된다.&lt;br&gt;
+$¬p∧¬(¬p∧q)$은 드 모르간의 제 1법칙으로 $¬(p∧q)≡¬p∨¬q$를 적용해 $¬p∧[¬(¬(p)∨¬q]$가 된다.&lt;br&gt;
+$¬p∧[¬(¬(p)∨¬q]$은 이중 부정법칙으로 $¬(¬p)≡p$가 되어 $¬p∧(p∨¬q)$가 된다.&lt;br&gt;
+$¬p∧(p∨¬q)$은 분배법칙으로 괄호 밖에 있는 $¬p∧$를 분배해 $(¬p∧p)∨(¬p∧¬q)$가 된다.&lt;br&gt;
+$(¬p∧p)∨(¬p∧¬q)$에서 $(¬p∧p)$는 항상 거짓이기 때문에(모순명제) $F∨(¬p∧¬q)$가 된다.&lt;br&gt;
+$F∨(¬p∧¬q)$은 논리합에서의 교환법칙에 따라 $(¬p∧¬q)∨F$처럼 바꿔 쓸 수 있다.&lt;br&gt;
+$(¬p∧¬q)∨F$은 항등법칙에 의해 $p∨F≡p$, $¬(p∨(¬p∧q)) ≡ ¬p∧¬q$가 되어 증명이 완료된다.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

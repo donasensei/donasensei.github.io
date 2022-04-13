@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on TEMPLATE</title>
+        <link>https://donasensei.github.io/categories/</link>
+        <description>Recent content in Categories on TEMPLATE</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 30 Mar 2022 22:08:16 +0000</lastBuildDate><atom:link href="https://donasensei.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Discrete Mathmatics</title>
+        <link>https://donasensei.github.io/categories/discrete-mathmatics/</link>
+        <pubDate>Wed, 30 Mar 2022 22:08:16 +0000</pubDate>
+        
+        <guid>https://donasensei.github.io/categories/discrete-mathmatics/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Digital Sound</title>
+        <link>https://donasensei.github.io/categories/digital-sound/</link>
+        <pubDate>Tue, 29 Mar 2022 13:59:21 +0000</pubDate>
+        
+        <guid>https://donasensei.github.io/categories/digital-sound/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Guide</title>
+        <link>https://donasensei.github.io/categories/guide/</link>
+        <pubDate>Sun, 27 Mar 2022 02:10:00 +0900</pubDate>
+        
+        <guid>https://donasensei.github.io/categories/guide/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://donasensei.github.io/categories/test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://donasensei.github.io/categories/test/</guid>
+        <description>&lt;img src="https://donasensei.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

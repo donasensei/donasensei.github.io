@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='$\mathrm{dB}$ dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다. dB에서 d는 deci는 $×10^{-1} = ×\frac{1}{10}$을 표현하'><title>[디지털사운드] dB(데시벨)</title>
+
+<link rel='canonical' href='https://donasensei.github.io/p/%EB%94%94%EC%A7%80%ED%84%B8%EC%82%AC%EC%9A%B4%EB%93%9C-db%EB%8D%B0%EC%8B%9C%EB%B2%A8/'>
+
+<link rel="stylesheet" href="/scss/style.min.d9e0562edde3d2bdf9d3d81365095a29d062ddaaa5d671f22168e57dfdb18b4f.css"><meta property='og:title' content='[디지털사운드] dB(데시벨)'>
+<meta property='og:description' content='$\mathrm{dB}$ dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다. dB에서 d는 deci는 $×10^{-1} = ×\frac{1}{10}$을 표현하'>
+<meta property='og:url' content='https://donasensei.github.io/p/%EB%94%94%EC%A7%80%ED%84%B8%EC%82%AC%EC%9A%B4%EB%93%9C-db%EB%8D%B0%EC%8B%9C%EB%B2%A8/'>
+<meta property='og:site_name' content='TEMPLATE'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='dB' /><meta property='article:tag' content='dBspl' /><meta property='article:tag' content='dBm' /><meta property='article:tag' content='dBV' /><meta property='article:tag' content='dBu' /><meta property='article:tag' content='dBFS' /><meta property='article:published_time' content='2022-03-29T13:59:21&#43;00:00'/><meta property='article:modified_time' content='2022-03-29T13:59:21&#43;00:00'/>
+<meta name="twitter:title" content="[디지털사운드] dB(데시벨)">
+<meta name="twitter:description" content="$\mathrm{dB}$ dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다. dB에서 d는 deci는 $×10^{-1} = ×\frac{1}{10}$을 표현하">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu7575788f610c2f928d59f776ea5d63e3_45713_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">TEMPLATE</a></h1>
+            <h2 class="site-description">DonaSensei</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/donasensei'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/digital-sound/" >
+                Digital Sound
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%EB%94%94%EC%A7%80%ED%84%B8%EC%82%AC%EC%9A%B4%EB%93%9C-db%EB%8D%B0%EC%8B%9C%EB%B2%A8/">[디지털사운드] dB(데시벨)</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 29, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="mathrmdb">$\mathrm{dB}$</h1>
+<p>dB(데시벨)은 소리와 소리의 크기 차이를 비교하기 위한 단위이다.</p>
+<p>dB에서 <strong>d</strong>는 deci는 $×10^{-1} = ×\frac{1}{10}$을 표현하는 SI 접두어고 <strong>B</strong>는 Alexander Graham Bell의 이름에서 가져왔다.</p>
+<p>과거 전화는 전선의 저항 때문에 거리가 멀어지면 멀어질수록 신호가 약해져서 일정 간격마다 증폭기를 이용해서 손실된 만큼 다시 증폭을 해주는 방식이였는데 이 기준을 위해 만들어진 것이 dB이다.</p>
+<p>식으로 보면 이렇다.
+$$\mathrm{dB} = 10\log_{10}(\frac{P}{P_{ref}})$$</p>
+<p>여기서 $P$는 전력이나 소리의 세기의 양이고 $Pref$는 그 기준이다.</p>
+<p>여기에 값들을 대입해보면</p>
+<ul>
+<li>$-3.010 ≈ 10\log(\frac{0.5}{1})$</li>
+<li>$0 = 10\log(\frac{1}{1})$</li>
+<li>$3.010 ≈ 10\log(\frac{2}{1})$</li>
+<li>$10 = 10\log(\frac{10}{1})$</li>
+</ul>
+<p>이런 식으로 dB을 구할 수 있다. 표로 나타내면 다음과 같다.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">$\mathrm{dB}$</th>
+<th style="text-align:center">소리의 세기</th>
+<th style="text-align:center">Loudness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$-6\mathrm{dB}$</td>
+<td style="text-align:center">$\frac{1}{4}$배</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">$-3\mathrm{dB}$</td>
+<td style="text-align:center">$\frac{1}{2}$배</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">$0\mathrm{dB}$</td>
+<td style="text-align:center">1배</td>
+<td style="text-align:center"><strong>1배</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">$10\mathrm{dB}$</td>
+<td style="text-align:center">10배</td>
+<td style="text-align:center"><strong>2배</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">$20\mathrm{dB}$</td>
+<td style="text-align:center">20배</td>
+<td style="text-align:center"><strong>4배</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>여기서 Loudness는 인간이 느끼는 음량의 정도를 말한다. 즉 10dB만큼 높아지면 2배 크게 들리는 것이다.</p>
+<p>그렇다고 A라는 소리가 소리 B와 -3dB의 차이가 날 때, A가 B보다 작은 소리인 것은 아니다.<br>
+dB는 두 소리의 크기만 비교할 뿐, Sound Pressure(음압)의 차이는 아니기 때문이다.</p>
+<p>만일 음압을 구하고 싶다면 음압과 세기의 비례는 $\mathrm{Pressure}^2 ∝ \mathrm{Intensity}$이기 때문에</p>
+<p>\begin{aligned}
+\mathrm{dB} &amp;= 10\log(\frac{P}{P_{ref}}) \
+&amp;= 10\log_{10}(\frac{\frac{P^2}{I}}{\frac{P_{ref}^2}{I}}) \
+&amp;= 10\log_{10}(\frac{P^2}{P_{ref}^{2}}) \
+&amp;= 10\log_{10}(\frac{P}{P_{ref}})^2 \
+&amp;= 20\log_{10}(\frac{P}{P_{ref}})</p>
+<p>\end{aligned}</p>
+<p>그리고 공기 중에서의 기준이 되는 크기가 $\mathrm{dB_{spl}}$이다.</p>
+<hr>
+<h1 id="mathrmdb_spl">$\mathrm{dB_{spl}}$</h1>
+<p>$\mathrm{dB_{spl}}$은 Sound Pressure Level(음압 레벨)을 뜻하고 사람이 들을 수 있는 가장 작은 소리의 음압을 기준으로 $0.00020 \mathrm{dyn/cm^2} = 20μPa$을 절대값으로 한다.</p>
+<p>이를 식으로 표현한 것이 아래의 식이다.
+$$L_{\mathrm{dB_{spl}}}/\mathrm{dB_{spl}} = 20\log_{10}(\frac{P}{20μPa})$$</p>
+<p>이 $\mathrm{dB_{spl}}$이 보통 소음 측정등에서 말하는 데시벨 측정이다. 통상 spl을 생략하여 말하기 때문에 dB와 혼동하는 경우가 많다.</p>
+<hr>
+<h1 id="mathrmdbm">$\mathrm{dBm}$</h1>
+<p>$\mathrm{dBm}$은 1mW을 기준으로 하는 dB scale이다. 1mW를 기준으로 하긴 하지만 임피던스에 따라 바뀔 수도 있다. 통상, 50Ω이나 75Ω에서 1mW를 0dBm이라고 한다.</p>
+<hr>
+<h1 id="mathrmdbu">$\mathrm{dBu}$</h1>
+<p>$\mathrm{dBu}$는 $\mathrm{dBm}$에서 600Ω에서의 1mW를 기준으로 잡는 방식이다. 계산하면,
+$$V_{ref} = √(1mW × 600Ω) ≈ 0.775V_{rms}$$
+0.775Vrms를 기준점으로 한다.</p>
+<hr>
+<h1 id="mathrmdbv">$\mathrm{dBV}$</h1>
+<p>$\mathrm{dBV}$는 dBu와 달리 전압이 아닌 절대값인 1V를 Vref로 잡는 방식이다. 식으로 표현하면,
+$$L\mathrm{<em>{dBV}} = 20\log</em>{10}(\frac{V_1}{V_{ref}})$$</p>
+<p>사실상 식은 크게 바뀌지 않고 기준만 바뀔 뿐이다.</p>
+<hr>
+<h1 id="mathrmdbfs">$\mathrm{dBFS}$</h1>
+<p>디지털에서의 0dB는 아날로그와 달리 Max Level을 의미한다. 아날로그의 Dynamic Range가 0dB이상으로 Head Room이 존재하는 것과 다르게 디지털에서의 DR은 전체에서의 최고점과 최저점이다. 결국 ADC에서 1로 변환되는 경우가 0dBFS이다.</p>
+<p>이를 통해 bit에 따른 디지털에서의 DR을 알 수 있는데 식으로 표현하면,
+$$\mathrm{dBFS} = 20\log_{10}(\frac{2^n}{1})$$
+여기서의 $n$은 bit, 디지털에서의 진폭이다.</p>
+<p>예를 들어 24-bit 환경에서의 DR을 계산한다면,
+$$\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈ 144$$
+즉, 24-bit 환경에서의 다이나믹 레인지는 144dBFS를 가질 수 있다.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/db/">dB</a>
+        
+            <a href="/tags/dbspl/">dBspl</a>
+        
+            <a href="/tags/dbm/">dBm</a>
+        
+            <a href="/tags/dbv/">dBV</a>
+        
+            <a href="/tags/dbu/">dBu</a>
+        
+            <a href="/tags/dbfs/">dBFS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script src="https://utteranc.es/client.js" 
+        repo="donasensei/blog-comments"
+        issue-term="pathname"
+        
+        crossorigin="anonymous"
+        async
+        >
+</script>
+
+<style>
+    .utterances {
+        max-width: unset;
+    }
+</style>
+
+<script>
+    function setUtterancesTheme(theme) {
+        let utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: `github-${theme}`
+                },
+                'https://utteranc.es'
+            );
+        }
+    }
+
+    addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') return;
+        setUtterancesTheme(document.documentElement.dataset.scheme)
+    });
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setUtterancesTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 TEMPLATE
+    </section>
+    
+    <section class="powerby">
+        
+            あの一等星の輝きにも <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>quantifiers on TEMPLATE</title>
+        <link>https://donasensei.github.io/tags/quantifiers/</link>
+        <description>Recent content in quantifiers on TEMPLATE</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 30 Mar 2022 22:08:16 +0000</lastBuildDate><atom:link href="https://donasensei.github.io/tags/quantifiers/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Discrete Mathmatics] 3. Predicates and Quantifiers(술어와 한정자)</title>
+        <link>https://donasensei.github.io/p/discrete-mathmatics-3.-predicates-and-quantifiers%EC%88%A0%EC%96%B4%EC%99%80-%ED%95%9C%EC%A0%95%EC%9E%90/</link>
+        <pubDate>Wed, 30 Mar 2022 22:08:16 +0000</pubDate>
+        
+        <guid>https://donasensei.github.io/p/discrete-mathmatics-3.-predicates-and-quantifiers%EC%88%A0%EC%96%B4%EC%99%80-%ED%95%9C%EC%A0%95%EC%9E%90/</guid>
+        <description>&lt;p&gt;&lt;em&gt;Discrete Mathematics and Its Applications - Eighth Edition&lt;/em&gt;을 기준으로 작성.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;propositional-function&#34;&gt;Propositional Function&lt;/h1&gt;
+&lt;p&gt;예를 들어 &amp;ldquo;$x$ is greather than 3&amp;quot;라는 명제가 있다고 하면 이는 True인가 False인가.
+이 경우, variable(변수)와 predicate(술어)에 관한 정보가 필요하다.&lt;/p&gt;
+&lt;p&gt;위 예시를 명제 함수로 표현하면 $P(x) =$ &amp;ldquo;$x$ is greather than 3&amp;rdquo; 처럼 표현하고&lt;br&gt;
+$P(x)$가 명제 함수, $x$가 변수, $P$가 술어가 된다.&lt;/p&gt;
+&lt;p&gt;만약 $x=6$라면 $P(x)$는 True가 되고 $x=2$라면 $P(x)$는 False가 된다.&lt;br&gt;
+즉, $x$의 domain(정의역)이 &amp;lsquo;4 이상인 모든 실수&amp;rsquo;라면, $P(x)$는 True이다.&lt;/p&gt;
+&lt;p&gt;여기서 변수 $x$에 값이 할당되거나 한정자가 적용되면, $x$를 bound variables(종속 변수)라고 한다.&lt;br&gt;
+$x$에 값이 할당되지 않았거나 한정자가 적용되지 않은 경우에는 $x$를 free variables(자유 변수)라고 한다.&lt;/p&gt;
+&lt;h1 id=&#34;quantifiers한정자&#34;&gt;Quantifiers(한정자)&lt;/h1&gt;
+&lt;p&gt;한정 기호는 두 종류가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Universal Quantifier($∀$)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;$∀xP(x)$ asserts $P(x)$ is true for &lt;strong&gt;every&lt;/strong&gt; $x$ in the &lt;strong&gt;domain&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;정의역에 속하는 모든 $x$에 대해 $P(x)$는 참이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Existential Quantifier($∃$)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;$∃xP(x)$ asserts $P(x)$ is true for &lt;strong&gt;some&lt;/strong&gt; $x$ in the &lt;strong&gt;domain&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;정의역에 속하는 적어도 하나의 값 $x$에 대해 $P(x)$는 참이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;한정자가 적용되는 부분을 한정자의 scope(범위)라고 한다.&lt;/p&gt;
+&lt;h2 id=&#34;universal-quantifier&#34;&gt;Universal Quantifier&lt;/h2&gt;
+&lt;p&gt;만일 정의역의 모든 값을 $x_1, x_2, x_3, &amp;hellip;, x_n$처럼 나열할 수 있을 경우,&lt;br&gt;
+$∀xP(x)$는 $P(x_1)∧P(x_2)∧P(x_3)∧&amp;hellip;∧P(x_n)$와 동일하다.&lt;/p&gt;
+&lt;p&gt;$U$를 정의역이라 하고 만약 $P(x)$가 $x&amp;gt;0$이고 $U$가 $ℤ$라면 False이다.&lt;br&gt;
+$U$를 정의역이라 하고 만약 $P(x)$가 $x&amp;gt;0$이고 $U$가 $ℤ^+$라면 True이다.&lt;/p&gt;
+&lt;p&gt;ℤ는 정수의 집합이다.&lt;/p&gt;
+&lt;h2 id=&#34;existential-quantifier&#34;&gt;Existential Quantifier&lt;/h2&gt;
+&lt;p&gt;만일 정의역의 모든 값을 $x_1, x_2, x_3, &amp;hellip;, x_n$처럼 나열할 수 있을 경우,&lt;br&gt;
+$∀xP(x)$는 $P(x_1)∨P(x_2)∨P(x_3)∨&amp;hellip;∨P(x_n)$와 동일하다.&lt;/p&gt;
+&lt;p&gt;$U$를 정의역이라 하고 만약 $P(x)$가 $x&amp;gt;0$이고 $U$가 $ℤ$라면 True이다. 이 경우, $U$가 $ℤ^+$라도 True이다.&lt;br&gt;
+그러나 $U$를 정의역이라 하고 만약 $P(x)$가 $x&amp;gt;0$이고 $U$가 $ℤ^-$라면 False이다.&lt;/p&gt;
+&lt;h3 id=&#34;counterexmaple반례&#34;&gt;Counterexmaple(반례)&lt;/h3&gt;
+&lt;p&gt;반레란 어떤 명제가 참이 아님을 증명하기 위해서 그 명제가 성립하지 않는 예를 든 것을 말한다.&lt;br&gt;
+Domain에 속하는 값 중 단 하나의 값이라도 거짓인 예만 있으면 된다.&lt;/p&gt;
+&lt;p&gt;예를 들어 $U$를 정의역이라 하고 만약 $∀P(x)$가 $x^2&amp;gt;0$이고 $U$가 $ℝ$일 때,&lt;br&gt;
+$∀P(x)$의 반례는 if $x=0$, $x^2=0$가 되어 $x^2 &amp;gt; 0$이 된다. 따라서 $∀P(x)$는 거짓이 된다.&lt;/p&gt;
+&lt;p&gt;ℝ은 실수의 집합이다.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
