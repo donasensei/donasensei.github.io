@@ -1126,7 +1126,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Square Peg, IBM Plex Sans KR, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Nanum Myeongjo, IBM Plex Sans KR, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
@@ -2619,7 +2619,7 @@ mjx-container[display='true'] + br {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #66f101;
+  background: #b1e8ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);

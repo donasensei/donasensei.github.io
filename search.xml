@@ -155,6 +155,237 @@ class="math display">\[\mathrm{dBFS} = 20\log_{10}(\frac{2^{24}}{1}) ≈
       </tags>
   </entry>
   <entry>
+    <title>[Discrete Mathmatics] 2. Propositional Equivalences(명제 동치)</title>
+    <url>/2022/03/29/2022/03/discrete-mathmatics-02-propositional-equivalences/</url>
+    <content><![CDATA[<p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
+기준으로 작성.</p>
+<hr />
+<h1 id="compound합성-명제">Compound(합성 명제)</h1>
+<p>합성 명제는 truth value에 따라 세 종류로 나눌 수 있다.</p>
+<ul>
+<li>Tautology(항진명제)</li>
+<li>Contradiction(모순명제)</li>
+<li>Contingency(사건명제)</li>
+</ul>
+<hr />
+<h2 id="tautology항진명제">Tautology(항진명제)</h2>
+<blockquote>
+<p>A <strong>tautology</strong> is a proposition which is <strong>always
+true</strong>.</p>
+</blockquote>
+<p>항상 True값을 가지는 명제를 항진명제라고 한다. <span
+class="math inline">\(p∨¬p\)</span>의 경우 <span
+class="math inline">\(p\)</span>가 <span
+class="math inline">\(T\)</span>일 때 <span
+class="math inline">\(¬p\)</span>는 <span
+class="math inline">\(F\)</span>가 되어 <span
+class="math inline">\(T∨F\)</span>이기 때문에 항상 참이 된다.</p>
+<hr />
+<h2 id="contradiction모순명제">Contradiction(모순명제)</h2>
+<blockquote>
+<p>A <strong>contradiction</strong> is a proposition which is
+<strong>always false</strong>.</p>
+</blockquote>
+<p>항진명제와 반대로 항상 False값을 가지는 명제를 모순명제라고 한다.
+<span class="math inline">\(p∧¬p\)</span>은 <span
+class="math inline">\(T∧F\)</span>이기 때문에 항상 거짓이다.</p>
+<hr />
+<h2 id="contingency사건명제">Contingency(사건명제)</h2>
+<blockquote>
+<p>A <strong>contingency</strong> is a proposition which is
+<strong>neither</strong> a tautology nor a contradiction, such as p</p>
+</blockquote>
+<p>항진명제도, 모순명제도 아닌 명제를 사건명제라고 한다. 정의의 예시처럼
+<span class="math inline">\(p\)</span>의 경우 <span
+class="math inline">\(T\)</span>도 가능하고 <span
+class="math inline">\(F\)</span>도 가능하기 때문에 사건명제다.</p>
+<hr />
+<h1 id="logically-equivalent동치">Logically Equivalent(동치)</h1>
+<p>그래서 만일 <span class="math inline">\(p↔q\)</span>가 항진명제면 p와
+q는 논리적으로 동치이고 <span class="math inline">\(p≡q\)</span>, <span
+class="math inline">\(p⇔q\)</span>로 나타낸다.<br />
+그리고 진리표에서 열의 값이 동일하면 동치이다. 예를 들면,</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(¬p\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(¬q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p →
+q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(¬q →
+¬p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td style="text-align: center;"><strong>T</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td style="text-align: center;"><strong>T</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td style="text-align: center;"><strong>T</strong></td>
+</tr>
+</tbody>
+</table>
+<p>이 진리표에서 <span class="math inline">\(p → q\)</span>와 <span
+class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 때문에 <span
+class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q →
+¬p\)</span>는 동치이다.</p>
+<h2 id="논리적-동치법칙">논리적 동치법칙</h2>
+<table>
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">논리적 동치</th>
+<th style="text-align: center;">법칙</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p∧T≡p\)</span><br><span
+class="math inline">\(p∨F≡p\)</span></td>
+<td style="text-align: center;">Identity Law(항등법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(p∧F≡F\)</span><br><span
+class="math inline">\(p∨T≡T\)</span></td>
+<td style="text-align: center;">Domination Law(지배법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p∧¬p=F\)</span><br><span
+class="math inline">\(p∨¬p=T\)</span></td>
+<td style="text-align: center;">Negation Law(부정법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(¬(¬p)≡p\)</span></td>
+<td style="text-align: center;">Double Negation Law(이중 부정법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p∧p≡p\)</span><br><span
+class="math inline">\(p∨p≡p\)</span></td>
+<td style="text-align: center;">Idempotent Law(멱등법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(p∧q≡q∧p\)</span><br><span
+class="math inline">\(p∨q≡q∨p\)</span></td>
+<td style="text-align: center;">Commutative Law(교환법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
+class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
+<td style="text-align: center;">Associative Law(결합법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
+class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
+<td style="text-align: center;">Distributive Law(분배법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span><br><span
+class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span></td>
+<td style="text-align: center;">De Morgan's Law(드 모르간 법칙)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\(p∧(p∨q)≡p\)</span><br><span
+class="math inline">\(p∨(p∧q)≡p\)</span></td>
+<td style="text-align: center;">Absorption Law(흡수법칙)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(p→q≡¬p∨q\)</span></td>
+<td style="text-align: center;">Implication Law(함축법칙)</td>
+</tr>
+</tbody>
+</table>
+예로 <span class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>를
+증명하면,
+<span class="math display">\[\begin{aligned}
+¬(p∨(¬p∧q)) &amp;≡ ¬p∧¬(¬p∧q) \\
+  &amp;≡ ¬p∧[¬(¬p)∨¬q] \\
+  &amp;≡ ¬p∧(p∨¬q) \\
+  &amp;≡ (¬p∧p)∨(¬p∧¬q) \\
+  &amp;≡ F∨(¬p∧¬q) \\
+  &amp;≡ (¬p∧¬q)∨F \\
+  &amp;≡ ¬p∧¬q
+\end{aligned}\]</span>
+<p>한줄씩 따라가보면,<br />
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
+2법칙으로 <span class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span>를 적용해
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
+1법칙으로 <span class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span>를 적용해
+<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>은 이중 부정법칙으로
+<span class="math inline">\(¬(¬p)≡p\)</span>가 되어 <span
+class="math inline">\(¬p∧(p∨¬q)\)</span>가 된다.<br />
+<span class="math inline">\(¬p∧(p∨¬q)\)</span>은 분배법칙으로 괄호 밖에
+있는 <span class="math inline">\(¬p∧\)</span>를 분배해 <span
+class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>가 된다.<br />
+<span class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>에서 <span
+class="math inline">\((¬p∧p)\)</span>는 항상 거짓이기 때문에(모순명제)
+<span class="math inline">\(F∨(¬p∧¬q)\)</span>가 된다.<br />
+<span class="math inline">\(F∨(¬p∧¬q)\)</span>은 논리합에서의 교환법칙에
+따라 <span class="math inline">\((¬p∧¬q)∨F\)</span>처럼 바꿔 쓸 수
+있다.<br />
+<span class="math inline">\((¬p∧¬q)∨F\)</span>은 항등법칙에 의해 <span
+class="math inline">\(p∨F≡p\)</span>, <span
+class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명이
+완료된다.</p>
+]]></content>
+      <categories>
+        <category>Discrete Mathmatics</category>
+      </categories>
+      <tags>
+        <tag>discrete_mathmatics</tag>
+        <tag>이산수학</tag>
+        <tag>propositional_equivalences</tag>
+        <tag>동치</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[Discrete Mathmatics] 1. Propositional Logic(명제 논리)</title>
     <url>/2022/03/29/2022/03/discrete-mathmatics-01-propositional-logic/</url>
     <content><![CDATA[<p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
@@ -1089,237 +1320,6 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
       <tags>
         <tag>kramdown</tag>
         <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[Discrete Mathmatics] 2. Propositional Equivalences(명제 동치)</title>
-    <url>/2022/03/29/2022/03/discrete-mathmatics-02-propositional-equivalences/</url>
-    <content><![CDATA[<p><em>Discrete Mathematics and Its Applications - Eighth Edition</em>을
-기준으로 작성.</p>
-<hr />
-<h1 id="compound합성-명제">Compound(합성 명제)</h1>
-<p>합성 명제는 truth value에 따라 세 종류로 나눌 수 있다.</p>
-<ul>
-<li>Tautology(항진명제)</li>
-<li>Contradiction(모순명제)</li>
-<li>Contingency(사건명제)</li>
-</ul>
-<hr />
-<h2 id="tautology항진명제">Tautology(항진명제)</h2>
-<blockquote>
-<p>A <strong>tautology</strong> is a proposition which is <strong>always
-true</strong>.</p>
-</blockquote>
-<p>항상 True값을 가지는 명제를 항진명제라고 한다. <span
-class="math inline">\(p∨¬p\)</span>의 경우 <span
-class="math inline">\(p\)</span>가 <span
-class="math inline">\(T\)</span>일 때 <span
-class="math inline">\(¬p\)</span>는 <span
-class="math inline">\(F\)</span>가 되어 <span
-class="math inline">\(T∨F\)</span>이기 때문에 항상 참이 된다.</p>
-<hr />
-<h2 id="contradiction모순명제">Contradiction(모순명제)</h2>
-<blockquote>
-<p>A <strong>contradiction</strong> is a proposition which is
-<strong>always false</strong>.</p>
-</blockquote>
-<p>항진명제와 반대로 항상 False값을 가지는 명제를 모순명제라고 한다.
-<span class="math inline">\(p∧¬p\)</span>은 <span
-class="math inline">\(T∧F\)</span>이기 때문에 항상 거짓이다.</p>
-<hr />
-<h2 id="contingency사건명제">Contingency(사건명제)</h2>
-<blockquote>
-<p>A <strong>contingency</strong> is a proposition which is
-<strong>neither</strong> a tautology nor a contradiction, such as p</p>
-</blockquote>
-<p>항진명제도, 모순명제도 아닌 명제를 사건명제라고 한다. 정의의 예시처럼
-<span class="math inline">\(p\)</span>의 경우 <span
-class="math inline">\(T\)</span>도 가능하고 <span
-class="math inline">\(F\)</span>도 가능하기 때문에 사건명제다.</p>
-<hr />
-<h1 id="logically-equivalent동치">Logically Equivalent(동치)</h1>
-<p>그래서 만일 <span class="math inline">\(p↔q\)</span>가 항진명제면 p와
-q는 논리적으로 동치이고 <span class="math inline">\(p≡q\)</span>, <span
-class="math inline">\(p⇔q\)</span>로 나타낸다.<br />
-그리고 진리표에서 열의 값이 동일하면 동치이다. 예를 들면,</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span
-class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(q\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬p\)</span></th>
-<th style="text-align: center;"><span
-class="math inline">\(¬q\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(p →
-q\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(¬q →
-¬p\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;"><strong>T</strong></td>
-<td style="text-align: center;"><strong>T</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;"><strong>F</strong></td>
-<td style="text-align: center;"><strong>F</strong></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;"><strong>T</strong></td>
-<td style="text-align: center;"><strong>T</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;"><strong>T</strong></td>
-<td style="text-align: center;"><strong>T</strong></td>
-</tr>
-</tbody>
-</table>
-<p>이 진리표에서 <span class="math inline">\(p → q\)</span>와 <span
-class="math inline">\(¬q → ¬p\)</span>의 진리값이 같기 때문에 <span
-class="math inline">\(p → q\)</span>와 <span class="math inline">\(¬q →
-¬p\)</span>는 동치이다.</p>
-<h2 id="논리적-동치법칙">논리적 동치법칙</h2>
-<table>
-<colgroup>
-<col style="width: 52%" />
-<col style="width: 47%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">논리적 동치</th>
-<th style="text-align: center;">법칙</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p∧T≡p\)</span><br><span
-class="math inline">\(p∨F≡p\)</span></td>
-<td style="text-align: center;">Identity Law(항등법칙)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(p∧F≡F\)</span><br><span
-class="math inline">\(p∨T≡T\)</span></td>
-<td style="text-align: center;">Domination Law(지배법칙)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p∧¬p=F\)</span><br><span
-class="math inline">\(p∨¬p=T\)</span></td>
-<td style="text-align: center;">Negation Law(부정법칙)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(¬(¬p)≡p\)</span></td>
-<td style="text-align: center;">Double Negation Law(이중 부정법칙)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p∧p≡p\)</span><br><span
-class="math inline">\(p∨p≡p\)</span></td>
-<td style="text-align: center;">Idempotent Law(멱등법칙)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(p∧q≡q∧p\)</span><br><span
-class="math inline">\(p∨q≡q∨p\)</span></td>
-<td style="text-align: center;">Commutative Law(교환법칙)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
-class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
-<td style="text-align: center;">Associative Law(결합법칙)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\((p∧q)∧r≡p∧(q∧r)\)</span><br><span
-class="math inline">\((p∨q)∨r≡p∨(q∨r)\)</span></td>
-<td style="text-align: center;">Distributive Law(분배법칙)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span><br><span
-class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span></td>
-<td style="text-align: center;">De Morgan's Law(드 모르간 법칙)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(p∧(p∨q)≡p\)</span><br><span
-class="math inline">\(p∨(p∧q)≡p\)</span></td>
-<td style="text-align: center;">Absorption Law(흡수법칙)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(p→q≡¬p∨q\)</span></td>
-<td style="text-align: center;">Implication Law(함축법칙)</td>
-</tr>
-</tbody>
-</table>
-예로 <span class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>를
-증명하면,
-<span class="math display">\[\begin{aligned}
-¬(p∨(¬p∧q)) &amp;≡ ¬p∧¬(¬p∧q) \\
-  &amp;≡ ¬p∧[¬(¬p)∨¬q] \\
-  &amp;≡ ¬p∧(p∨¬q) \\
-  &amp;≡ (¬p∧p)∨(¬p∧¬q) \\
-  &amp;≡ F∨(¬p∧¬q) \\
-  &amp;≡ (¬p∧¬q)∨F \\
-  &amp;≡ ¬p∧¬q
-\end{aligned}\]</span>
-<p>한줄씩 따라가보면,<br />
-<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
-2법칙으로 <span class="math inline">\(¬(p∨q)≡¬p∧¬q\)</span>를 적용해
-<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>가 된다.<br />
-<span class="math inline">\(¬p∧¬(¬p∧q)\)</span>은 드 모르간의 제
-1법칙으로 <span class="math inline">\(¬(p∧q)≡¬p∨¬q\)</span>를 적용해
-<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>가 된다.<br />
-<span class="math inline">\(¬p∧[¬(¬(p)∨¬q]\)</span>은 이중 부정법칙으로
-<span class="math inline">\(¬(¬p)≡p\)</span>가 되어 <span
-class="math inline">\(¬p∧(p∨¬q)\)</span>가 된다.<br />
-<span class="math inline">\(¬p∧(p∨¬q)\)</span>은 분배법칙으로 괄호 밖에
-있는 <span class="math inline">\(¬p∧\)</span>를 분배해 <span
-class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>가 된다.<br />
-<span class="math inline">\((¬p∧p)∨(¬p∧¬q)\)</span>에서 <span
-class="math inline">\((¬p∧p)\)</span>는 항상 거짓이기 때문에(모순명제)
-<span class="math inline">\(F∨(¬p∧¬q)\)</span>가 된다.<br />
-<span class="math inline">\(F∨(¬p∧¬q)\)</span>은 논리합에서의 교환법칙에
-따라 <span class="math inline">\((¬p∧¬q)∨F\)</span>처럼 바꿔 쓸 수
-있다.<br />
-<span class="math inline">\((¬p∧¬q)∨F\)</span>은 항등법칙에 의해 <span
-class="math inline">\(p∨F≡p\)</span>, <span
-class="math inline">\(¬(p∨(¬p∧q)) ≡ ¬p∧¬q\)</span>가 되어 증명이
-완료된다.</p>
-]]></content>
-      <categories>
-        <category>Discrete Mathmatics</category>
-      </categories>
-      <tags>
-        <tag>discrete_mathmatics</tag>
-        <tag>이산수학</tag>
-        <tag>propositional_equivalences</tag>
-        <tag>동치</tag>
       </tags>
   </entry>
 </search>
